@@ -1,0 +1,4 @@
+interface:
+  display_name: "Novel Director"
+  short_description: "中文长篇小说规划、写作训练、章节创作与因果审校"
+  default_prompt: "Use $novel-director to 规划、创作或审校我的中文小说，先确认既有设定与章节目标，再输出结果。"

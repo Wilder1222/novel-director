@@ -1,0 +1,180 @@
+{
+  "research": {
+    "roles": [
+      "researcher",
+      "director"
+    ],
+    "artifacts": [
+      "research_memo",
+      "source_register",
+      "iteration_plan"
+    ],
+    "refs": [
+      "references/development-research-protocol.md"
+    ]
+  },
+  "worldbuilding": {
+    "roles": [
+      "world-architect",
+      "character-director",
+      "continuity-auditor"
+    ],
+    "artifacts": [
+      "world_rule_table",
+      "dramatic_cost_table"
+    ],
+    "refs": [
+      "references/temporal-ledger.md",
+      "references/craft.md"
+    ]
+  },
+  "outline": {
+    "roles": [
+      "story-architect",
+      "character-director",
+      "mystery-director",
+      "emotion-director",
+      "continuity-auditor"
+    ],
+    "artifacts": [
+      "master_outline",
+      "unit_map",
+      "chapter_cards",
+      "foreshadow_register"
+    ],
+    "refs": [
+      "references/output-contracts.md",
+      "references/craft.md"
+    ]
+  },
+  "chapter": {
+    "roles": [
+      "narrator",
+      "core-character",
+      "ordinary-cast",
+      "continuity-auditor",
+      "development-editor"
+    ],
+    "artifacts": [
+      "ensemble_contract",
+      "isolated_actor_packets",
+      "adjudicated_events",
+      "unified_candidate",
+      "review_report"
+    ],
+    "refs": [
+      "references/ensemble-writing.md",
+      "references/story-memory.md",
+      "references/workflow.md"
+    ]
+  },
+  "revision": {
+    "roles": [
+      "development-editor",
+      "chapter-writer",
+      "continuity-auditor"
+    ],
+    "artifacts": [
+      "verified_issue_selection",
+      "frozen_revision_plan",
+      "bounded_patch",
+      "revised_candidate",
+      "before_after_assessment",
+      "explicit_author_approval"
+    ],
+    "refs": [
+      "references/directed-revision.md",
+      "references/evidence-review.md",
+      "references/revision-learning.md",
+      "references/workflow.md"
+    ]
+  },
+  "screenplay": {
+    "roles": [
+      "screenwriter",
+      "character-director",
+      "development-editor"
+    ],
+    "artifacts": [
+      "scene_cards",
+      "fountain_skeleton"
+    ],
+    "refs": [
+      "references/workflow.md"
+    ]
+  },
+  "learning": {
+    "roles": [
+      "learning-coach",
+      "development-editor"
+    ],
+    "artifacts": [
+      "exercise_card",
+      "feedback_record",
+      "retry_plan"
+    ],
+    "refs": [
+      "references/learning.md",
+      "references/workflow.md",
+      "references/craft-lab.md"
+    ]
+  },
+  "audit": {
+    "roles": [
+      "continuity-auditor",
+      "development-editor"
+    ],
+    "artifacts": [
+      "deterministic_diagnostics",
+      "reader_quality_report"
+    ],
+    "refs": [
+      "references/temporal-ledger.md",
+      "references/story-memory.md",
+      "references/evidence-review.md"
+    ]
+  },
+  "impact": {
+    "roles": [
+      "director",
+      "continuity-auditor"
+    ],
+    "artifacts": [
+      "read_only_impact_paths",
+      "unresolved_dependencies"
+    ],
+    "refs": [
+      "references/revision-impact.md"
+    ]
+  },
+  "compare": {
+    "roles": [
+      "development-editor",
+      "director"
+    ],
+    "artifacts": [
+      "anonymous_packets",
+      "order_consistency_report"
+    ],
+    "refs": [
+      "references/blind-evaluation.md"
+    ]
+  },
+  "ensemble": {
+    "roles": [
+      "narrator",
+      "core-character",
+      "ordinary-cast"
+    ],
+    "artifacts": [
+      "cast_registry",
+      "scoped_packets",
+      "rehearsal_candidate",
+      "partitioned_candidate_memory"
+    ],
+    "refs": [
+      "references/ensemble-writing.md",
+      "references/ensemble-host.md"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.4",
+  "title": "未命名小说",
+  "language": "zh-CN",
+  "genre": "待确定",
+  "premise": "待作者确定",
+  "age_anchor_date": "2032-10-20",
+  "expected_ages": {},
+  "time_rules": {
+    "max_stay_hours": 72
+  },
+  "canon_policy": "author-approval-only"
+}

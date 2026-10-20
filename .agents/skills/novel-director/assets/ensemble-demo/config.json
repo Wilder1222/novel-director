@@ -1,0 +1,230 @@
+{
+  "schema_version": "0.7",
+  "core_ids": [
+    "chen-xu",
+    "xu-zhiwei"
+  ],
+  "profiles": {
+    "chen-xu": {
+      "name": "陈叙",
+      "voice": "先抓现场细节，再追问人；不发表成熟记者式长演说。",
+      "values": "救人重要，但不能替所有人决定。",
+      "abilities": "20岁新闻传播学生的访谈、查资料和拍摄能力。",
+      "limits": "无官方数据库权限，不会随意破解系统。"
+    },
+    "xu-zhiwei": {
+      "name": "许知微",
+      "voice": "先区分事实和猜测，用追问而非术语纠正别人。",
+      "values": "核实信息，也认真对待他人的恐惧。",
+      "abilities": "20岁数据科学学生的基本核验能力。",
+      "limits": "不凭直觉全知，不无条件信任陌生人。"
+    },
+    "archive-clerk": {
+      "name": "登记员",
+      "voice": "简短、讲流程，不故意卖关子。",
+      "values": "不愿泄露私人信息，但愿意指出公开查证方法。",
+      "abilities": "知道值班登记和阅览流程。",
+      "limits": "不知道全书穿越真相。",
+      "provisional": true
+    },
+    "guard-worker": {
+      "name": "保安",
+      "voice": "直接，先问来访目的。",
+      "values": "维持秩序。",
+      "abilities": "知道出入口和当班情况。",
+      "limits": "不知道登记员的私人生活。",
+      "provisional": true
+    }
+  },
+  "instances": [
+    {
+      "id": "cx20",
+      "character_id": "chen-xu",
+      "history_id": "H0",
+      "from_at": "2032-10-20T11:00:00",
+      "to_at": "2032-10-20T20:17:00",
+      "age": 20,
+      "goal": "核实信件由谁放入收件格。",
+      "private_fear": "我暂时隐瞒信封里的另一行字。",
+      "relationship_view": "只代表我对他人的看法，不代表对方实际感情。",
+      "knowledge": [
+        {
+          "id": "cx-secret",
+          "text": "我暂时隐瞒信封里的另一行字。",
+          "kind": "belief",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": false
+        },
+        {
+          "id": "cx20-public",
+          "text": "今天两位年轻来访者均20岁。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": true
+        },
+        {
+          "id": "cx20-later",
+          "text": "尚未经历的后续事件，不得提前知道。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 10,
+          "can_disclose": true
+        }
+      ],
+      "presence_id": "P-CX-2032"
+    },
+    {
+      "id": "xz20",
+      "character_id": "xu-zhiwei",
+      "history_id": "H0",
+      "from_at": "2032-10-20T11:00:00",
+      "to_at": "2032-10-20T20:17:00",
+      "age": 20,
+      "goal": "查清发现时间和送达时间的区别。",
+      "private_fear": "女主私密暗号：不能告诉陌生人的家庭疑点。",
+      "relationship_view": "只代表我对他人的看法，不代表对方实际感情。",
+      "knowledge": [
+        {
+          "id": "xz-secret",
+          "text": "女主私密暗号：不能告诉陌生人的家庭疑点。",
+          "kind": "belief",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": false
+        },
+        {
+          "id": "xz20-public",
+          "text": "今天两位年轻来访者均20岁。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": true
+        },
+        {
+          "id": "xz20-later",
+          "text": "尚未经历的后续事件，不得提前知道。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 10,
+          "can_disclose": true
+        }
+      ],
+      "presence_id": "P-XZ-2032"
+    },
+    {
+      "id": "clerk",
+      "character_id": "archive-clerk",
+      "history_id": "H0",
+      "from_at": "2032-10-20T11:00:00",
+      "to_at": "2032-10-22T20:17:00",
+      "age": 42,
+      "goal": "帮助合理查询，不泄露私人档案。",
+      "private_fear": "登记员私事：下班要去接孩子。",
+      "relationship_view": "只代表我对他人的看法，不代表对方实际感情。",
+      "knowledge": [
+        {
+          "id": "clerk-secret",
+          "text": "登记员私事：下班要去接孩子。",
+          "kind": "belief",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": false
+        },
+        {
+          "id": "clerk-public",
+          "text": "知道自己的当班安排。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": true
+        },
+        {
+          "id": "clerk-later",
+          "text": "尚未经历的后续事件，不得提前知道。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 10,
+          "can_disclose": true
+        }
+      ]
+    },
+    {
+      "id": "guard",
+      "character_id": "guard-worker",
+      "history_id": "H0",
+      "from_at": "2032-10-20T11:00:00",
+      "to_at": "2032-10-22T20:17:00",
+      "age": 38,
+      "goal": "问清访问目的。",
+      "private_fear": "保安私事：有一封未寄出的信。",
+      "relationship_view": "只代表我对他人的看法，不代表对方实际感情。",
+      "knowledge": [
+        {
+          "id": "guard-secret",
+          "text": "保安私事：有一封未寄出的信。",
+          "kind": "belief",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": false
+        },
+        {
+          "id": "guard-public",
+          "text": "知道自己的当班安排。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": true
+        },
+        {
+          "id": "guard-later",
+          "text": "尚未经历的后续事件，不得提前知道。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 10,
+          "can_disclose": true
+        }
+      ]
+    },
+    {
+      "id": "cx29",
+      "character_id": "chen-xu",
+      "history_id": "H0",
+      "from_at": "2041-10-20T20:17:00",
+      "to_at": "2041-10-22T20:17:00",
+      "age": 29,
+      "goal": "面对旧历史的后果。",
+      "private_fear": "未来婚礼密钥，20岁陈叙不可知。",
+      "relationship_view": "只代表我对他人的看法，不代表对方实际感情。",
+      "knowledge": [
+        {
+          "id": "future-secret",
+          "text": "未来婚礼密钥，20岁陈叙不可知。",
+          "kind": "belief",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": false
+        },
+        {
+          "id": "cx29-public",
+          "text": "知道自己的当班安排。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 0,
+          "can_disclose": true
+        },
+        {
+          "id": "cx29-later",
+          "text": "尚未经历的后续事件，不得提前知道。",
+          "kind": "fact",
+          "source": "演示配置，非正式小说事实",
+          "known_from_step": 10,
+          "can_disclose": true
+        }
+      ],
+      "presence_id": "P-CX-2041-N"
+    }
+  ],
+  "max_packet_chars": 24000
+}

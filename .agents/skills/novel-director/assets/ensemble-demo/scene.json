@@ -1,0 +1,38 @@
+{
+  "id": "first-cooperation",
+  "chapter_id": "V01-C04",
+  "history_id": "H0",
+  "at": "2032-10-20T14:00:00",
+  "cast": [
+    "cx20",
+    "xz20",
+    "clerk"
+  ],
+  "pov_instance": "xz20",
+  "steps": {
+    "cx20": 0,
+    "xz20": 0,
+    "clerk": 0
+  },
+  "turn_order": [
+    "cx20",
+    "xz20",
+    "clerk"
+  ],
+  "location": "临江大学阅览登记台",
+  "public_brief": "两位学生拿着一封信，询问来信何时被放入收件格；登记员按流程接待。",
+  "director_goal": "把错误推定送达时间变成可验证的问题；形成有限合作，不直接确立爱情。此目标不可整体交给人物。",
+  "reader_brief": "第三人称限知，许知微视角。自然中文，日常环境，无科普长讲，不新增穿越规则。",
+  "opening_observations": [
+    {
+      "text": "柜台上放着一本登记册，信封上的日期暂时无法核验。",
+      "observers": [
+        "cx20",
+        "xz20",
+        "clerk"
+      ],
+      "reader_visible": true
+    }
+  ],
+  "allow_pov_interior": true
+}

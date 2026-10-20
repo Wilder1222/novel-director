@@ -1,0 +1,18 @@
+# Private writing projects and execution state
+/books/
+/.studio/
+/runs/
+/receipts/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+*.db
+__pycache__/
+*.py[cod]
+.DS_Store
+*.log
+/dist/

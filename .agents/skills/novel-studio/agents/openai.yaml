@@ -1,0 +1,6 @@
+interface:
+  display_name: "Novel Studio · Codex 小说协作"
+  short_description: "自然语言想法到多角色协作、候选稿和证据审校"
+  default_prompt: "使用 $novel-studio，读取当前项目，把我的想法转为创作任务并按角色分工协作。"
+policy:
+  allow_implicit_invocation: true

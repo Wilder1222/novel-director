@@ -1,0 +1,20 @@
+# 场景卡模板
+
+- scene_id:
+- chapter_id:
+- history_id:
+- in_world_at:
+- pov_character_id:
+- location:
+- goal:
+- obstacle:
+- what_character_believes:
+- what_reader_knows:
+- event_or_discovery:
+- irreversible_choice:
+- immediate_consequence:
+- emotional_reaction:
+- clue_setup_ids:
+- clue_payoff_ids:
+- next_scene_cause:
+- drafting_constraints:

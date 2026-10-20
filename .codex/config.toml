@@ -1,0 +1,4 @@
+# 新工作区默认。合并到旧项目时保留已有配置，不覆盖用户权限或模型。
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 6

@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.4",
+  "description": "非写作阶段保留专业角色；写作阶段使用主线叙述、每个核心角色独立worker、普通角色共用且记忆分区的worker。模型调用由宿主提供。",
+  "roles": [
+    {
+      "id": "director",
+      "objective": "维护用户明确批准的世界事实、工作版本与创作范围",
+      "must_read": [
+        "references/development-research-protocol.md",
+        "references/output-contracts.md"
+      ],
+      "must_not": "不能将推测/候选/市场榜单视为已确立 Canon"
+    },
+    {
+      "id": "researcher",
+      "objective": "每次升级前核查最新小说写作研究、公开热门作品与开源小说/剧本 Skills",
+      "must_read": [
+        "references/development-research-protocol.md"
+      ],
+      "must_not": "不能把未经验证的热度指数、未经阅读的小说细节写成事实"
+    },
+    {
+      "id": "world-architect",
+      "objective": "把世界观规则转化为限制、代价、具体场景冲突",
+      "must_read": [
+        "references/craft.md",
+        "references/temporal-ledger.md"
+      ],
+      "must_not": "不得偷偷引入万能穿越或不可验证的世界规则"
+    },
+    {
+      "id": "story-architect",
+      "objective": "全书/分卷/单元/章节事件用因果连接，每单元有局部答案",
+      "must_read": [
+        "references/craft.md",
+        "references/output-contracts.md"
+      ],
+      "must_not": "不能连续多单元仅提出问题而不兑现答案"
+    },
+    {
+      "id": "character-director",
+      "objective": "维持动机、成长缺陷、人物关系与20岁双主角能力边界",
+      "must_read": [
+        "references/craft.md",
+        "references/output-contracts.md"
+      ],
+      "must_not": "不能让人物为剧情需要做违背既有人格的选择"
+    },
+    {
+      "id": "emotion-director",
+      "objective": "通过可观察行为、共同风险、误读与修复推进慢热关系",
+      "must_read": [
+        "references/output-contracts.md"
+      ],
+      "must_not": "不能仅凭一段内心宣言将陌生人瞬间设为相爱"
+    },
+    {
+      "id": "mystery-director",
+      "objective": "谜底逆推、可见线索、合理误导、可检验回收",
+      "must_read": [
+        "references/craft.md",
+        "references/story-memory.md"
+      ],
+      "must_not": "不能靠临时新设定、突发超能力解决谜题"
+    },
+    {
+      "id": "chapter-writer",
+      "objective": "根据已核准章卡和视角范围创作自然中文小说正文",
+      "must_read": [
+        "references/story-memory.md",
+        "references/craft.md"
+      ],
+      "must_not": "不得读取未来章真相/扮演拥有作者全知的叙述角色或模仿特定在世作者的语言"
+    },
+    {
+      "id": "continuity-auditor",
+      "objective": "运行 validate/context、检查时间、在场、物证、知识和情感证据",
+      "must_read": [
+        "references/temporal-ledger.md",
+        "references/story-memory.md"
+      ],
+      "must_not": "不能以强行改写既定 Canon 的方式消除逻辑错误"
+    },
+    {
+      "id": "development-editor",
+      "objective": "独立审核因果、人物、情感、伏笔、语言及章节结构，举证给出建议",
+      "must_read": [
+        "references/output-contracts.md",
+        "references/workflow.md"
+      ],
+      "must_not": "不能以无证据评分冒充文学客观结论"
+    },
+    {
+      "id": "screenwriter",
+      "objective": "把已计划场景转为可拍动作、冲突、转折及 Fountain 场景结构",
+      "must_read": [
+        "references/workflow.md"
+      ],
+      "must_not": "不能直接把小说内心描写当作可拍动作或声称骨架已是成片剧本"
+    },
+    {
+      "id": "learning-coach",
+      "objective": "用范例分析、独立练习、重写、反馈和间隔复练提升指定技法",
+      "must_read": [
+        "references/learning.md",
+        "references/workflow.md"
+      ],
+      "must_not": "不能声称离线记录反馈就自动训练或微调大模型"
+    },
+    {
+      "id": "narrator",
+      "objective": "主线组织、情景后果裁定、限定POV下统一成稿",
+      "must_read": [
+        "references/ensemble-writing.md"
+      ],
+      "must_not": "不能偷偷替角色改动机或广播私心；裁定和成稿须隔离上下文"
+    },
+    {
+      "id": "core-character",
+      "objective": "为每个核心人物注册独立worker，按实例和历史载入自身知识与目标",
+      "must_read": [
+        "references/ensemble-writing.md"
+      ],
+      "must_not": "不能知道其他人物私心或未来自己的知识，不能自行判定动作成功"
+    },
+    {
+      "id": "ordinary-cast",
+      "objective": "一个共享NPC worker依次扮演普通角色，逐人隔离上下文和记忆",
+      "must_read": [
+        "references/ensemble-writing.md"
+      ],
+      "must_not": "不能把甲的秘密放入乙的会话，不能把普通角色都写成全知线索发放者"
+    }
+  ]
+}
