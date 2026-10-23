@@ -21,10 +21,10 @@
 ## 使用命令
 
 ```bash
-python3 scripts/novel.py init ./novel --title "小说名"
-python3 scripts/novel.py validate ./novel
-python3 scripts/novel.py context ./novel V01-C01
-python3 scripts/novel.py status ./novel
+python3 .agents/skills/novel-director/scripts/novel.py init ./novel --title "小说名"
+python3 .agents/skills/novel-director/scripts/novel.py validate ./novel
+python3 .agents/skills/novel-director/scripts/novel.py context ./novel V01-C01
+python3 .agents/skills/novel-director/scripts/novel.py status ./novel
 ```
 
 `validate` 返回值：0 = 无结构错误（可有警告），1 = 发现结构错误，2 = 找不到请求章节/不允许覆盖等错误。`context` 给起草代理提供当前章、近期先前摘要、当前章可用线索和全球已确认事实；未主动加载未来全局真相。它无法自动阻止作者把未来剧透写在章节卡里。

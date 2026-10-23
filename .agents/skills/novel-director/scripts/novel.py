@@ -19,7 +19,7 @@ from screenplay_handoff import export as export_screenplay
 from narrative_audit import validate as narrative_audit
 from writing_coach import create as create_exercise, record as record_exercise
 from agent_router import route as route_agent
-from evidence_audit import verify_review, read_utf8
+from evidence_audit import verify_review, read_utf8, author_destination
 from revision_impact import analyze as analyze_impact
 from blind_evaluation import create as create_evaluation, summarize as summarize_evaluation
 
@@ -103,7 +103,9 @@ def audit(path: Path):
     events = index(data["events"].get("events", []), "id", "events", issues)
     knowledge = index(data["knowledge"].get("knowledge", []), "id", "knowledge", issues)
     chapter_order = {}
-    anchor = parse_date(p.get("age_anchor_date", "2032-10-20"), "project.age_anchor_date", issues)
+    anchor = parse_date(p['age_anchor_date'], "project.age_anchor_date", issues) if p.get('age_anchor_date') is not None else None
+    if p.get('expected_ages') and anchor is None:
+        issues.append(('ERROR', 'AGE_ANCHOR_REQUIRED', 'project.age_anchor_date', '锚点年龄需要显式日期'))
     for cid, ch in characters.items():
         bd = parse_date(ch.get("birth_date"), f"characters.{cid}.birth_date", issues)
         expected = p.get("expected_ages", {}).get(cid)
@@ -122,10 +124,10 @@ def audit(path: Path):
                 break
             ancestors.add(cursor)
             cursor = versions[cursor].get("parent")
-    max_stay = p.get("time_rules", {}).get("max_stay_hours", 72)
-    if not isinstance(max_stay, (int, float)) or isinstance(max_stay, bool) or max_stay <= 0:
+    max_stay = p.get("time_rules", {}).get("max_stay_hours")
+    if (trips or max_stay is not None) and (not isinstance(max_stay, (int, float)) or isinstance(max_stay, bool) or max_stay <= 0):
         issues.append(("ERROR", "STAY_CONFIG_INVALID", "project.time_rules", "max_stay_hours 必须是正数"))
-        max_stay = 72
+        max_stay = None
     for tid, trip in trips.items():
         if trip.get("traveler_id") not in characters:
             issues.append(("ERROR", "TRAVELER_UNKNOWN", tid, str(trip.get("traveler_id"))))
@@ -138,7 +140,7 @@ def audit(path: Path):
         if not isinstance(hours, (float, int)) or isinstance(hours, bool) or hours <= 0:
             issues.append(("ERROR", "STAY_INVALID", tid, "stay_hours 必须为正数"))
             continue
-        if hours > max_stay:
+        if max_stay is not None and hours > max_stay:
             issues.append(("ERROR", "STAY_LIMIT", tid, f"{hours}h 超过 {max_stay}h 的上限"))
         if a and c and abs((c - a).total_seconds() / 3600 - hours) > 1 / 60:
             issues.append(("ERROR", "RETURN_CLOCK", tid, "出发与回归的原时间线流逝时间不等于主观停留时长"))
@@ -262,6 +264,7 @@ def cmd_migrate(args):
     if source==target or source in target.parents:
         print('迁移目标不能位于原项目内部',file=sys.stderr);return 2
     try:
+        author_destination(target)
         src_ver=read_data(source/'project.json',[]).get('schema_version','unknown')
         if src_ver not in ('0.1','0.2','0.3','0.4'):
             raise ValueError('不支持的旧数据结构版本：'+str(src_ver))
@@ -290,6 +293,11 @@ def cmd_migrate(args):
 
 def cmd_init(args):
     base = Path(__file__).resolve().parents[1] / "assets" / "project-template"
+    try:
+        author_destination(Path(args.project).expanduser())
+    except ValueError as exc:
+        print(f'初始化被拒绝：{exc}', file=sys.stderr)
+        return 2
     dest = Path(args.project).expanduser().resolve()
     if dest.exists():
         print(f"拒绝覆盖已有路径：{dest}", file=sys.stderr)
@@ -378,7 +386,7 @@ def cmd_workflow(args):
     project=Path(args.project).expanduser().resolve()
     try:
         if args.command=='run-start':result=flow.start(project,args.chapter)
-        elif args.command=='run-submit':result=flow.submit(project,args.run_id,Path(args.draft))
+        elif args.command=='run-submit':result=flow.submit(project,args.run_id,Path(args.draft),content_map=json.loads(read_utf8(Path(args.content_map))[0]) if getattr(args,'content_map',None) else None)
         elif args.command=='run-review':result=flow.review(project,args.run_id,Path(args.review))
         elif args.command=='run-approve':result=flow.approve(project,args.run_id,args.by)
         elif args.command=='run-publish':result=flow.publish(project,args.run_id,replace=args.replace)
@@ -425,6 +433,13 @@ def cmd_skillcheck(args):
     for relative in ("references/craft.md", "references/learning.md", "references/time-travel.md", "references/development-research-protocol.md", "references/story-memory.md", "references/temporal-ledger.md", "references/workflow.md", "references/output-contracts.md", "agents/routes.json", "agents/roles.json", "assets/project-template/project.json", "references/evidence-review.md", "references/revision-impact.md", "references/blind-evaluation.md", "references/craft-lab.md", "scripts/evidence_audit.py", "scripts/revision_impact.py", "scripts/blind_evaluation.py", "scripts/directed_revision.py", "references/directed-revision.md", "references/revision-learning.md", "assets/revision-spec-example.json", "scripts/ensemble_runtime.py", "references/ensemble-writing.md", "references/ensemble-host.md", "agents/narrator.md", "agents/core-character-template.md", "agents/ordinary-cast.md"):
         if not (root / relative).is_file():
             print(f"ERROR: missing {relative}")
+            return 1
+    for relative in ('scripts/stage_gates.py', 'assets/stage-contracts.json', 'references/staged-workflow.md',
+                     'scripts/writing_spec.py','references/writing-spec.md','scripts/prose_risks.py',
+                     'assets/prose-risk-corpus.json','references/prose-risks.md','scripts/reference_library.py',
+                     'assets/reference-library/catalog.json','references/reference-library.md'):
+        if not (root / relative).is_file():
+            print(f'ERROR: missing {relative}')
             return 1
     print(f"Skill metadata and required resources: PASS ({root.name}); not an official skills-ref validation")
     return 0
@@ -496,9 +511,114 @@ def cmd_ensemble(args):
         return 2
 
 
+def cmd_v08(args):
+    import chapter_tools as chapter
+    import writing_profile
+    try:
+        project = Path(args.project).expanduser().resolve()
+        if args.command == 'profile-template': result = writing_profile.template(project)
+        elif args.command == 'profile-check':
+            result = {'writing_profile': writing_profile.projection(project), 'approval_inferred': False}
+        elif args.command == 'assembly-plan':
+            result = chapter.assembly_plan(project, args.chapter, json.loads(read_utf8(Path(args.spec))[0]))
+        elif args.command == 'assembly-packet': result = chapter.assembly_packet(project, args.assembly_id)
+        elif args.command == 'assembly-submit':
+            result = chapter.assembly_submit(project, args.assembly_id, json.loads(read_utf8(Path(args.response))[0]), source=args.source)
+        elif args.command == 'arc-packet': result = chapter.arc_packet(project, args.chapter, args.budget)
+        else: result = chapter.arc_accept(project, json.loads(read_utf8(Path(args.packet))[0]), json.loads(read_utf8(Path(args.report))[0]))
+        if getattr(args, 'out', None):
+            flow.atomic_write(Path(args.out), flow._pretty(result))
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0
+    except (OSError, ValueError, TypeError, KeyError, UnicodeError) as exc:
+        print(f'操作被拒绝：{exc}', file=sys.stderr)
+        return 2
+
+
+def cmd_stages(args):
+    import stage_gates as stages
+    try:
+        project = Path(args.project).expanduser()
+        # Do not resolve away symlinks before checking them.
+        from evidence_audit import no_symlink_components
+        no_symlink_components(project)
+        project = project.resolve()
+        if args.command == 'stage-start': result = stages.start(project, json.loads(read_utf8(Path(args.spec))[0]))
+        elif args.command == 'stage-status': result = stages.status(project, args.pipeline_id)
+        elif args.command == 'stage-packet': result = stages.packet(project, args.pipeline_id, args.stage)
+        elif args.command == 'stage-submit': result = stages.submit(project, args.pipeline_id, args.stage, json.loads(read_utf8(Path(args.spec))[0]))
+        else: result = stages.review(project, args.pipeline_id, args.stage, json.loads(read_utf8(Path(args.report))[0]), json.loads(read_utf8(Path(args.receipt))[0]))
+        if getattr(args, 'out', None):
+            flow.atomic_write(Path(args.out), flow._pretty(result))
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0
+    except (OSError, ValueError, TypeError, KeyError, UnicodeError) as exc:
+        print(f'操作被拒绝：{exc}', file=sys.stderr)
+        return 2
+
+
+def cmd_writing_spec(args):
+    import writing_spec as writing
+    try:
+        project=Path(args.project).expanduser()
+        from evidence_audit import no_symlink_components
+        no_symlink_components(project); project=project.resolve()
+        if args.command=='spec-template': result=writing.template(project)
+        elif args.command=='spec-check':
+            spec=writing.load(project)
+            result={'status':'spec_not_configured'} if spec is None else {'status':'valid_budget_plan','spec_sha256':spec['sha256'],
+                'counter':spec['counter'],'unicode_version':spec['unicode_version'],'chapters':[x['chapter_id'] for x in spec['value']['chapters']],
+                'literary_quality_proven':False}
+        elif args.command=='spec-budget': result={'budget':writing.render_budget(project,args.chapter)}
+        else:
+            text=read_utf8(Path(args.draft))[0]
+            content_map=json.loads(read_utf8(Path(args.content_map))[0]) if args.content_map else None
+            result=writing.check(project,args.chapter,text,content_map,scene_id=args.scene)
+        print(json.dumps(result,ensure_ascii=False,indent=2)); return 0
+    except (OSError,ValueError,TypeError,KeyError,UnicodeError) as exc:
+        print(f'操作被拒绝：{exc}',file=sys.stderr); return 2
+
+
+def cmd_prose(args):
+    import prose_risks as prose
+    try:
+        project=Path(args.project).expanduser()
+        from evidence_audit import no_symlink_components
+        no_symlink_components(project);project=project.resolve()
+        if args.command=='prose-template':result=prose.template(project)
+        elif args.command=='prose-corpus-check':
+            c=prose.corpus(project)
+            result={'status':'structurally_valid','entries':len(c['entries']),'categories':list(prose.CATEGORIES),
+                    'metadata':prose.metadata(project),'semantic_quality_verified':False}
+        else:
+            text=read_utf8(Path(args.draft))[0]
+            if args.command=='prose-packet':result=prose.review_packet(project,args.chapter,text)
+            elif args.command=='prose-report-check':result=prose.verify_report(project,args.chapter,text,json.loads(read_utf8(Path(args.report))[0]))
+            else:result=prose.scan(project,args.chapter,text)
+        if getattr(args,'out',None):flow.atomic_write(Path(args.out),flow._pretty(result))
+        print(json.dumps(result,ensure_ascii=False,indent=2));return 0
+    except (OSError,ValueError,TypeError,KeyError,UnicodeError) as exc:
+        print(f'操作被拒绝：{exc}',file=sys.stderr);return 2
+
+
+def cmd_reference(args):
+    import reference_library as refs
+    try:
+        if args.command in ('reference-techniques','reference-read'):
+            import reference_study
+            result=reference_study.search(refs.LIBRARY,args.book,args.dimension,args.query) if args.command=='reference-techniques' else reference_study.read(refs.LIBRARY,args.book,args.chapter)
+        elif args.command=='reference-show':result=refs.show(args.work_id)
+        elif args.command=='reference-search':result=refs.search(genre=args.genre,status=args.status,topic=args.topic,query=args.query)
+        elif args.samples:result=refs.validate_file(Path(args.samples),required_ids=args.require or [])
+        else:result=refs.validate_samples(refs.load(),required_ids=args.require or [])
+        print(json.dumps(result,ensure_ascii=False,indent=2));return 0
+    except (OSError,ValueError,TypeError,KeyError,UnicodeError) as exc:
+        print(f'操作被拒绝：{exc}',file=sys.stderr);return 2
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--version", action="version", version="Novel Director 0.7.0")
+    parser.add_argument("--version", action="version", version="Novel Director 0.11.0")
     sub = parser.add_subparsers(dest="command", required=True)
     sp = sub.add_parser("init", help="复制空白项目模板，拒绝覆盖")
     sp.add_argument("project")
@@ -531,7 +651,7 @@ def main():
     sp=sub.add_parser('run-start',help='创建一次不可覆盖的章节创作契约')
     sp.add_argument('project');sp.add_argument('chapter');sp.set_defaults(func=cmd_workflow)
     sp=sub.add_parser('run-submit',help='提交候选稿版本，不修改正式正文')
-    sp.add_argument('project');sp.add_argument('run_id');sp.add_argument('draft');sp.set_defaults(func=cmd_workflow)
+    sp.add_argument('project');sp.add_argument('run_id');sp.add_argument('draft');sp.add_argument('--content-map');sp.set_defaults(func=cmd_workflow)
     sp=sub.add_parser('run-review',help='提交独立审稿 JSON；不自动批准')
     sp.add_argument('project');sp.add_argument('run_id');sp.add_argument('review');sp.set_defaults(func=cmd_workflow)
     sp=sub.add_parser('run-approve',help='作者显式批准已经审校的确切候选版本')
@@ -581,6 +701,46 @@ def main():
     sp.add_argument('project'); sp.add_argument('ensemble_id'); sp.add_argument('response')
     sp.add_argument('--source', choices=('manual','host_supplied','synthetic_test'), default='manual')
     sp.set_defaults(func=cmd_ensemble)
+    for command in ('profile-template', 'profile-check'):
+        sp = sub.add_parser(command); sp.add_argument('project'); sp.set_defaults(func=cmd_v08)
+    sp = sub.add_parser('assembly-plan', help='冻结本章有序完成场景，不创建正式稿')
+    sp.add_argument('project'); sp.add_argument('chapter'); sp.add_argument('spec'); sp.set_defaults(func=cmd_v08)
+    sp = sub.add_parser('assembly-packet', help='生成独立narrator整章汇编包')
+    sp.add_argument('project'); sp.add_argument('assembly_id'); sp.add_argument('--out'); sp.set_defaults(func=cmd_v08)
+    sp = sub.add_parser('assembly-submit', help='核验汇编响应并提交一个整章候选，不批准')
+    sp.add_argument('project'); sp.add_argument('assembly_id'); sp.add_argument('response')
+    sp.add_argument('--source', choices=('manual', 'host_supplied', 'synthetic_test'), default='manual'); sp.set_defaults(func=cmd_v08)
+    sp = sub.add_parser('arc-packet', help='准备3–5章有序连续正式稿的审查包')
+    sp.add_argument('project'); sp.add_argument('--chapter', action='append', required=True)
+    sp.add_argument('--budget', type=int, default=100000); sp.add_argument('--out'); sp.set_defaults(func=cmd_v08)
+    sp = sub.add_parser('arc-review', help='核验跨章报告原文证据，不改Run或Canon')
+    sp.add_argument('project'); sp.add_argument('packet'); sp.add_argument('report'); sp.set_defaults(func=cmd_v08)
+    sp = sub.add_parser('stage-start', help='按意图冻结阶段产物/核验契约，不调用模型')
+    sp.add_argument('project'); sp.add_argument('--spec', required=True); sp.set_defaults(func=cmd_stages)
+    sp = sub.add_parser('stage-status', help='重核上游版本、作品、逐项审查与停止点')
+    sp.add_argument('project'); sp.add_argument('pipeline_id'); sp.set_defaults(func=cmd_stages)
+    for name in ('stage-packet', 'stage-submit', 'stage-review'):
+        sp = sub.add_parser(name); sp.add_argument('project'); sp.add_argument('pipeline_id'); sp.add_argument('stage')
+        if name == 'stage-submit': sp.add_argument('--spec', required=True)
+        if name == 'stage-review': sp.add_argument('--report', required=True); sp.add_argument('--receipt', required=True)
+        if name == 'stage-packet': sp.add_argument('--out')
+        sp.set_defaults(func=cmd_stages)
+    sp=sub.add_parser('reference-check');sp.add_argument('--samples');sp.add_argument('--require',action='append');sp.set_defaults(func=cmd_reference)
+    sp=sub.add_parser('reference-search');sp.add_argument('--genre');sp.add_argument('--status');sp.add_argument('--topic');sp.add_argument('--query');sp.set_defaults(func=cmd_reference)
+    sp=sub.add_parser('reference-show');sp.add_argument('work_id');sp.set_defaults(func=cmd_reference)
+    sp=sub.add_parser('reference-techniques');sp.add_argument('--book');sp.add_argument('--dimension',choices=('world','plot','character','emotion','detail','setup'));sp.add_argument('--query');sp.set_defaults(func=cmd_reference)
+    sp=sub.add_parser('reference-read');sp.add_argument('--book',required=True);sp.add_argument('--chapter',type=int);sp.set_defaults(func=cmd_reference)
+    for name in ('prose-template','prose-corpus-check'):
+        sp=sub.add_parser(name);sp.add_argument('project');sp.set_defaults(func=cmd_prose)
+    for name in ('prose-scan','prose-packet','prose-report-check'):
+        sp=sub.add_parser(name);sp.add_argument('project');sp.add_argument('chapter');sp.add_argument('draft')
+        if name=='prose-report-check':sp.add_argument('report')
+        sp.add_argument('--out');sp.set_defaults(func=cmd_prose)
+    for name in ('spec-template','spec-check'):
+        sp=sub.add_parser(name); sp.add_argument('project'); sp.set_defaults(func=cmd_writing_spec)
+    sp=sub.add_parser('spec-budget'); sp.add_argument('project'); sp.add_argument('chapter'); sp.set_defaults(func=cmd_writing_spec)
+    sp=sub.add_parser('spec-map-check'); sp.add_argument('project'); sp.add_argument('chapter'); sp.add_argument('draft')
+    sp.add_argument('--content-map'); sp.add_argument('--scene'); sp.set_defaults(func=cmd_writing_spec)
     args = parser.parse_args()
     return args.func(args)
 

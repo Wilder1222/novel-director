@@ -219,7 +219,7 @@ def _load_plan(project, run_dir, m, rid, expected_sha=None):
 
 def _transform(before: str, plan_data: dict, plan_sha: str, patch: dict):
     """Replay only exact, non-overlapping edits inside their own declared scope."""
-    _object(patch, ('plan_sha256', 'edits'))
+    _object(patch, ('plan_sha256', 'edits'), ('content_map',))
     if patch['plan_sha256'] != plan_sha:
         raise ValueError('补丁针对不同计划')
     tasks = {t['id']: t for t in plan_data['tasks']}
@@ -279,16 +279,32 @@ def apply(project: Path, run_id: str, revision_id: str, patch_file: Path):
     if m['status'] != 'reviewed':
         raise ValueError('提交定向补丁需要处于已审稿状态')
     patch, _ = _load(patch_file)
-    _object(patch, ('plan_sha256', 'edits'))
+    _object(patch, ('plan_sha256', 'edits'), ('content_map',))
     folder, p, plan_sha, before = _load_plan(project, run_dir, m, revision_id, patch['plan_sha256'])
     if m['current_candidate'] != p['base_candidate'] or m['latest_review'] != p['base_review']:
         raise ValueError('候选稿或最新审稿已改变，旧计划失效')
     if (folder/'record.json').exists() or (folder/'patch.json').exists():
         raise ValueError('本计划已应用或留有中断产物，请从当前状态创建新计划')
     after, edits, kept = _transform(before, p, plan_sha, patch)
+    from stage_gates import assert_operation, assert_submission
+    assert_operation(project,m['chapter_id'],'submit',run_id)
+    assert_submission(project,m['chapter_id'],after,revision_apply=True)
+    flow._check_contract(run_dir,m)
+    if len(after.strip())<30 or len(after.encode('utf-8'))>MAX_TEXT: raise ValueError('新正文不符合Run长度/文件容量，尚未写入补丁')
+    import writing_spec
+    writing_spec.assert_contract(project,m['chapter_id'],flow.getjson(run_dir/'contract.json'))
+    content_map = patch.get('content_map')
+    if writing_spec.load(project) is not None:
+        if content_map is None:
+            if m.get('content_map'):
+                content_map = writing_spec.remap(project,m['chapter_id'],before,after,flow.getjson(run_dir/m['content_map']),edits)
+            else:
+                content_map = writing_spec.check(project,m['chapter_id'],after)['content_map']
+        writing_spec.check(project,m['chapter_id'],after,content_map)
+    elif content_map is not None: raise ValueError('没有创作规格不能提交映射')
     patch_sha = _save(folder/'patch.json', {'plan_sha256': plan_sha, 'edits': edits})
     flow.atomic_write(folder/'proposal.md', after)
-    result = flow.submit(project, run_id, folder/'proposal.md', _revision_apply=True)
+    result = flow.submit(project, run_id, folder/'proposal.md', _revision_apply=True, content_map=content_map)
     record = {'schema_version': SCHEMA, 'revision_id': revision_id, 'plan_sha256': plan_sha,
               'patch_sha256': patch_sha, 'after_candidate': result['candidate'],
               'after_sha256': result['sha256'], 'assessment_file': None, 'assessment_sha256': None,

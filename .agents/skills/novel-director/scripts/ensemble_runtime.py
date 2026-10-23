@@ -15,7 +15,7 @@ import json
 import os
 import re
 import creative_workflow as flow
-from evidence_audit import no_symlink_components, read_utf8
+from evidence_audit import no_symlink_components, read_utf8, author_destination
 
 DIRECTORY = '.novel_ensemble'
 IDENTIFIER = re.compile(r'^[A-Za-z][A-Za-z0-9_-]{0,79}$')
@@ -27,14 +27,27 @@ belief/report不是客观事实。声明used_fact_ids/disclosed_fact_ids，不�
 输出speech、action_intent、private_intent，以及可选pov_interior；private_intent是角色动机摘要，
 不是模型推理过程。不要写整章，不要为预设感情结局强行改变角色。允许沉默、拒绝、误判和试探。
 JSON字段严格遵守契约。共享NPC worker每次只能载入当前实例，禁止复用其他角色的会话历史。'''
+ACTOR_INSTRUCTION += '''
+人物称呼默认用当前包获准显示的全名、已设绰号或昵称；单姓称人须有明确特殊语境，不临时造昵称，
+不知道真名就用获准代称，不从后台补姓名。清楚的代词、职业/关系称谓可以保留，不逐句机械喊全名。
+对白依据自身voice、年龄经历、当时目标、现场观察、情绪和身体状态、对方及relationship_view来选择措辞、
+句长、停顿、直说/回避与接话方式。只依据本包可知情境，不推断他人私密心理或披露未许可信息。
+写自然口语，有作用的省略、打断、沉默、潜台词可以保留；不把人设标签念成台词、替作者轮流讲解背景，
+不机械加语气词/方言/现代梗或每句舞台动作。正式场合可简洁庄重，强情绪也可克制，不把所有人写同一腔。'''
 NARRATOR_INSTRUCTION = '''你是唯一主线叙述Agent。本阶段只裁定当前行动意图是否被采纳及可观察后果。
 speech由人物Agent负责，不改写其意思；不得强行宣布另一个角色的思想或感情。遵守场景规则，
 不要添加新能力或新正式设定。只向实际观察者分发结果。拒绝时给修改理由而不广播未发生的行动。
 所有结果只属于排练候选。必要时提前结束；不要为了推进而让人物失去独立动机。'''
+NARRATOR_INSTRUCTION += '''
+称呼无依据或对白违背人物当前目标、情境和关系时，给具体拒绝理由，不代写speech。
+拒绝仍推进当前轮次；需由人物在后续允许轮次或新排练修正，不能假称已自动原地重试。'''
 COMPOSE_INSTRUCTION = '''你是主线叙述Agent的成稿阶段。只使用此包，不沿用裁定阶段的私有上下文。
 生成统一文风的中文小说场景，不输出Agent聊天记录或JSON日志。保持限定POV，不能知道其他角色私心。
 保留包中已采纳的直接对白原句，组织动作、场景、节奏与过渡；不要发明新关键事实或替人物作出新选择。
 人物的沉默与拒绝可以保留。未提供的内心不要断言。结果是待审候选，不是正式正文。'''
+COMPOSE_INSTRUCTION += '''
+叙述称呼用获准全名/已设绰号昵称，特殊单姓须有语境；不补未知真名或编新昵称。
+已采纳speech若存在称呼或口语问题，交回人物重新排练/相应修订，不以统一文风为由擅改对白。'''
 
 
 def _json(obj: Any) -> str:
@@ -192,6 +205,13 @@ def _load(project: Path, sid: str) -> tuple[Path,dict]:
     s=json.loads(read_utf8(folder/'state.json')[0]);old=s.pop('integrity_sha256',None)
     if old!=_hash(s):raise ValueError('排练文件被改动；恢复可信快照或新建排练')
     if s['ensemble_id']!=sid or s['project_signature']!=flow.signature(project):raise ValueError('项目已变化或排练身份不一致')
+    if 'writing_spec' in s:
+        import writing_spec
+        current=writing_spec.metadata(project,s['scene']['chapter_id'])
+        if current is None or any(s['writing_spec'].get(k)!=v for k,v in current.items()):raise ValueError('排练冻结规格/Unicode计数版本已变化，须重建，不能由parts重签')
+    if 'prose_risks' in s:
+        import prose_risks
+        if s['prose_risks']!=prose_risks.metadata(project):raise ValueError('编辑语料/检查器已更新，请重建排练')
     return folder,s
 
 
@@ -205,9 +225,12 @@ def _lock(folder: Path):
 
 
 def start(project: Path, config: dict, scene: dict, memories: list | None = None) -> dict:
+    author_destination(project)
     no_symlink_components(project);project=project.resolve()
     config=deepcopy(config);scene=deepcopy(scene)
     validate_config(project,config,scene)
+    from stage_gates import assert_operation
+    assert_operation(project, scene['chapter_id'], 'start')
     imports={aid:[] for aid in scene['cast']}
     imported_ids=set()
     for mem in _list(memories or [],'memories'):
@@ -241,6 +264,16 @@ def start(project: Path, config: dict, scene: dict, memories: list | None = None
     state={'version':'0.7.0','ensemble_id':sid,'project_signature':flow.signature(project),
            'config':config,'scene':scene,'stage':'actor','turn':0,'events':events,'private':[],
            'imports':imports,'pending':None,'calls':[],'candidate':None,'handoff':None}
+    from writing_profile import projection
+    style = projection(project)
+    if style is not None:
+        state['writing_profile'] = style
+    import writing_spec
+    spec = writing_spec.projection(project, scene['chapter_id'], scene['id'])
+    if spec is not None:
+        state['writing_spec'] = spec
+        import prose_risks
+        state['prose_risks'] = prose_risks.metadata(project)
     _save(folder,state,replace=False)
     return {'ensemble_id':sid,'stage':'actor','directory':str(folder),'status':'ready_for_external_host','workers':sorted({worker(config,a) for a in scene['cast']}|{'narrator'})}
 
@@ -279,8 +312,15 @@ def _build_packet(state: dict) -> dict:
             events.append(item)
         inp={'chapter_id':sc['chapter_id'],'at':sc['at'],'location':sc['location'],'pov_instance':sc['pov_instance'],
              'reader_brief':sc['reader_brief'],'cast':cast_names,'events':events}
+        if 'writing_profile' in state:
+            inp['writing_profile'] = deepcopy(state['writing_profile'])
         wid='narrator';session=f'{sid}:narrator:compose';instruction=COMPOSE_INSTRUCTION
         schema={'required':['request_id','text']}
+        if 'writing_spec' in state:
+            inp['writing_spec'] = deepcopy(state['writing_spec'])
+            schema = {'required':['request_id'],'optional':['text','parts','content_map'],
+                      'prose_choice':'parts:[{part_id,text}] 或 text+content_map；单部件text可确定性归属。'}
+            instruction += '\n严格遵守当前场景与剧情部件LN范围。推荐按顺序返回parts:[{part_id,text}]，主会话工具逐字拼接并算偏移/SHA；不要自己猜哈希。不写标题/PS，不为凑字重复。不为生动凭空添加动作、物件或动机；保护人物声音、有作用的重复和意象。'
     packet={'schema_version':'0.7','ensemble_id':sid,'role':stage,'worker_id':wid,'session_key':session,
             'context_policy':'replace_with_scoped_packet','allowed_tools':[],
             'system':instruction,'input':deepcopy(inp),'response_contract':schema,
@@ -300,6 +340,10 @@ def respond(project: Path, sid: str, response: dict, source: str = 'manual') -> 
     folder=_folder(project,sid)
     with _lock(folder):
         _,s=_load(project,sid);p=_build_packet(s)
+        from stage_gates import assert_operation
+        assert_operation(project, s['scene']['chapter_id'], 'start')
+        from stage_gates import assert_response_source
+        assert_response_source(project, s['scene']['chapter_id'], source)
         if not isinstance(response,dict) or response.get('request_id')!=p['request_id']:raise ValueError('响应对应的调用已过期或错误')
         r=deepcopy(response);stage=s['stage'];sc=s['scene']
         if stage=='actor':
@@ -333,11 +377,30 @@ def respond(project: Path, sid: str, response: dict, source: str = 'manual') -> 
             s['turn']+=1;s['pending']=None
             s['stage']='compose' if r['end_scene'] or s['turn']>=len(sc['turn_order']) else 'actor'
         else:
-            _only(r,{'request_id','text'});_text(r['text'],'text')
-            if len(r['text'].strip())<30:raise ValueError('场景成稿过短')
+            if 'writing_spec' in s:
+                _only(r,{'request_id'},{'text','parts','content_map'})
+                if 'parts' in r:
+                    if 'content_map' in r: raise ValueError('parts和content_map二选一')
+                    import writing_spec
+                    candidate,cm=writing_spec.compile_parts(project,sc['chapter_id'],r['parts'],scene_id=sc['id'])
+                    if 'text' in r and r['text']!=candidate: raise ValueError('text与parts原文不符')
+                else: candidate=r.get('text');cm=r.get('content_map')
+            else:
+                _only(r,{'request_id','text'});candidate=r['text']
+            _text(candidate,'text')
+            if len(candidate.strip())<30:raise ValueError('场景成稿过短')
+            cursor=0
             for item in p['input']['events']:
-                if item.get('speech') and item['speech'] not in r['text']:raise ValueError('成稿遗漏/改变了已采纳且对POV可见的对白；先重新排练或修订')
-            s['candidate']=r['text'];s['stage']='complete'
+                speech=item.get('speech')
+                if not speech:continue
+                found=candidate.find(speech,cursor)
+                if found<0:raise ValueError('成稿遗漏、改变或倒排了已采纳且对POV可见的对白；先重新排练或修订')
+                cursor=found+len(speech)
+            if 'writing_spec' in s:
+                import writing_spec
+                checked = writing_spec.check(project, sc['chapter_id'], candidate, cm, scene_id=sc['id'])
+                s['content_map'] = checked['content_map']
+            s['candidate']=candidate;s['stage']='complete'
         s['calls'].append({'request_id':p['request_id'],'worker_id':p['worker_id'],'session_key':p['session_key'],
                            'role':stage,'source':source,'response_digest':_hash(r)})
         _save(folder,s)
@@ -400,6 +463,6 @@ def handoff(project: Path,sid: str) -> dict:
             if read_utf8(path)[0]!=s['candidate']:raise ValueError('交接候选文件已被改变')
         else:flow.atomic_write(path,s['candidate'])
         run=flow.start(project,s['scene']['chapter_id'])
-        result=flow.submit(project,run['run_id'],path)
+        result=flow.submit(project,run['run_id'],path, content_map=s.get('content_map'))
         s['handoff']=result;_save(folder,s)
         return deepcopy(result)

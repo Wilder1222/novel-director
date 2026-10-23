@@ -1,0 +1,632 @@
+{
+  "schema_version": "1",
+  "work": {
+    "title": "十日终焉",
+    "author": "杀虫队队员",
+    "platform": "番茄小说",
+    "official_url": "https://fanqienovel.com/page/7143038691944959011",
+    "book_id": "7143038691944959011"
+  },
+  "observed_at": "2026-10-22T09:23:22.377815+00:00",
+  "directory_probe": {
+    "method": "normal_public_https_get",
+    "http_status": 200,
+    "final_url": "https://fanqienovel.com/page/7143038691944959011",
+    "response_sha256": "46bcf0034367e5cb3a646104dee5dca1a4e780204ce10836972b9f1b985fec2f",
+    "front_50_entries": 50,
+    "missing_ordinals": [],
+    "unique_urls": 50,
+    "unique_item_ids": 50
+  },
+  "first_chapter_probe": {
+    "url": "https://fanqienovel.com/reader/7173216089122439711",
+    "method": "ordinary_web_tool_read",
+    "status": "blocked_custom_font_private_use_codepoints",
+    "observation": "Reader extraction contains many private-use glyph characters; no font mapping, decryption, app/API substitution or login bypass attempted.",
+    "web_observation_refs": [
+      "turn116view1",
+      "turn117view0"
+    ],
+    "platform_reported_words": 2345,
+    "platform_words_not_LN": true,
+    "actual_readable_full_body_collected": false,
+    "body_text_saved": false
+  },
+  "acquisition": {
+    "required_chapters": 50,
+    "complete_readable_chapters": 0,
+    "status": "blocked",
+    "remaining_chapters_requested": false,
+    "restriction": "stop_after_non_plaintext_probe; do_not_claim_all_50_unreadable_without_individual_requests",
+    "unique_body_urls_probed": 1,
+    "transport_request_count": "not_observable_from_web_tool"
+  },
+  "chapters": [
+    {
+      "ordinal": 1,
+      "title": "空屋",
+      "url": "https://fanqienovel.com/reader/7173216089122439711",
+      "item_id": "7173216089122439711",
+      "body_status": "blocked_custom_font_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 2,
+      "title": "说谎",
+      "url": "https://fanqienovel.com/reader/7173217408294453791",
+      "item_id": "7173217408294453791",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 3,
+      "title": "有技术的人",
+      "url": "https://fanqienovel.com/reader/7173615024101917184",
+      "item_id": "7173615024101917184",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 4,
+      "title": "灾难？",
+      "url": "https://fanqienovel.com/reader/7173615518858150414",
+      "item_id": "7173615518858150414",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 5,
+      "title": "医生",
+      "url": "https://fanqienovel.com/reader/7174036345160106536",
+      "item_id": "7174036345160106536",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 6,
+      "title": "警官",
+      "url": "https://fanqienovel.com/reader/7174036649100182048",
+      "item_id": "7174036649100182048",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 7,
+      "title": "赢面",
+      "url": "https://fanqienovel.com/reader/7174384733579641383",
+      "item_id": "7174384733579641383",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 8,
+      "title": "摊牌",
+      "url": "https://fanqienovel.com/reader/7174384955785478686",
+      "item_id": "7174384955785478686",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 9,
+      "title": "难以接受的真相",
+      "url": "https://fanqienovel.com/reader/7174727955141427752",
+      "item_id": "7174727955141427752",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 10,
+      "title": "结束了？",
+      "url": "https://fanqienovel.com/reader/7174728215427514938",
+      "item_id": "7174728215427514938",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 11,
+      "title": "继续吧",
+      "url": "https://fanqienovel.com/reader/7175147347041911356",
+      "item_id": "7175147347041911356",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 12,
+      "title": "你们的家乡",
+      "url": "https://fanqienovel.com/reader/7175147697563927099",
+      "item_id": "7175147697563927099",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 13,
+      "title": "一场雨",
+      "url": "https://fanqienovel.com/reader/7175520908897944079",
+      "item_id": "7175520908897944079",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 14,
+      "title": "雨后见",
+      "url": "https://fanqienovel.com/reader/7175521407520997888",
+      "item_id": "7175521407520997888",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 15,
+      "title": "一波未平",
+      "url": "https://fanqienovel.com/reader/7175887957453668901",
+      "item_id": "7175887957453668901",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 16,
+      "title": "一波又起",
+      "url": "https://fanqienovel.com/reader/7175888546631418380",
+      "item_id": "7175888546631418380",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 17,
+      "title": "羊和狗",
+      "url": "https://fanqienovel.com/reader/7176259067000652320",
+      "item_id": "7176259067000652320",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 18,
+      "title": "是非题",
+      "url": "https://fanqienovel.com/reader/7176259295829623296",
+      "item_id": "7176259295829623296",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 19,
+      "title": "无所不能",
+      "url": "https://fanqienovel.com/reader/7176601374652793396",
+      "item_id": "7176601374652793396",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 20,
+      "title": "寻道",
+      "url": "https://fanqienovel.com/reader/7176601650042241568",
+      "item_id": "7176601650042241568",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 21,
+      "title": "腹地",
+      "url": "https://fanqienovel.com/reader/7177005107865715215",
+      "item_id": "7177005107865715215",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 22,
+      "title": "店员",
+      "url": "https://fanqienovel.com/reader/7177005316209377850",
+      "item_id": "7177005316209377850",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 23,
+      "title": "交易",
+      "url": "https://fanqienovel.com/reader/7177386477654180387",
+      "item_id": "7177386477654180387",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 24,
+      "title": "离群",
+      "url": "https://fanqienovel.com/reader/7177386691639345720",
+      "item_id": "7177386691639345720",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 25,
+      "title": "分歧点",
+      "url": "https://fanqienovel.com/reader/7177771974037340707",
+      "item_id": "7177771974037340707",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 26,
+      "title": "死者",
+      "url": "https://fanqienovel.com/reader/7177772137724248610",
+      "item_id": "7177772137724248610",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 27,
+      "title": "愚蠢",
+      "url": "https://fanqienovel.com/reader/7178114585374196280",
+      "item_id": "7178114585374196280",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 28,
+      "title": "分道扬镳",
+      "url": "https://fanqienovel.com/reader/7178115529260040762",
+      "item_id": "7178115529260040762",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 29,
+      "title": "谜团",
+      "url": "https://fanqienovel.com/reader/7178515264781156897",
+      "item_id": "7178515264781156897",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 30,
+      "title": "人鼠",
+      "url": "https://fanqienovel.com/reader/7178515502145208869",
+      "item_id": "7178515502145208869",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 31,
+      "title": "鼠类游戏",
+      "url": "https://fanqienovel.com/reader/7178851502831141431",
+      "item_id": "7178851502831141431",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 32,
+      "title": "赌命",
+      "url": "https://fanqienovel.com/reader/7178854673225351717",
+      "item_id": "7178854673225351717",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 33,
+      "title": "雀跃",
+      "url": "https://fanqienovel.com/reader/7179235334029476392",
+      "item_id": "7179235334029476392",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 34,
+      "title": "我的战术",
+      "url": "https://fanqienovel.com/reader/7179235508386529827",
+      "item_id": "7179235508386529827",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 35,
+      "title": "传单是什么",
+      "url": "https://fanqienovel.com/reader/7179597681915134464",
+      "item_id": "7179597681915134464",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 36,
+      "title": "地牛",
+      "url": "https://fanqienovel.com/reader/7179598415683944975",
+      "item_id": "7179598415683944975",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 37,
+      "title": "分队",
+      "url": "https://fanqienovel.com/reader/7179989118384865829",
+      "item_id": "7179989118384865829",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 38,
+      "title": "黑色来客",
+      "url": "https://fanqienovel.com/reader/7179989337487245880",
+      "item_id": "7179989337487245880",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 39,
+      "title": "铁板",
+      "url": "https://fanqienovel.com/reader/7180305803138564664",
+      "item_id": "7180305803138564664",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 40,
+      "title": "二八定律",
+      "url": "https://fanqienovel.com/reader/7180306214759170593",
+      "item_id": "7180306214759170593",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 41,
+      "title": "我母鸡啊",
+      "url": "https://fanqienovel.com/reader/7180528145358520869",
+      "item_id": "7180528145358520869",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 42,
+      "title": "趋利避害",
+      "url": "https://fanqienovel.com/reader/7180686873298534969",
+      "item_id": "7180686873298534969",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 43,
+      "title": "二十秒",
+      "url": "https://fanqienovel.com/reader/7181081397883470371",
+      "item_id": "7181081397883470371",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 44,
+      "title": "张山",
+      "url": "https://fanqienovel.com/reader/7181082688710214184",
+      "item_id": "7181082688710214184",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 45,
+      "title": "擒贼擒王",
+      "url": "https://fanqienovel.com/reader/7181466093352354341",
+      "item_id": "7181466093352354341",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 46,
+      "title": "一山二虎",
+      "url": "https://fanqienovel.com/reader/7181466428376416808",
+      "item_id": "7181466428376416808",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 47,
+      "title": "逃离",
+      "url": "https://fanqienovel.com/reader/7181805893581799971",
+      "item_id": "7181805893581799971",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 48,
+      "title": "收获",
+      "url": "https://fanqienovel.com/reader/7181826700060131840",
+      "item_id": "7181826700060131840",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 49,
+      "title": "因特网",
+      "url": "https://fanqienovel.com/reader/7182886288109306425",
+      "item_id": "7182886288109306425",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    },
+    {
+      "ordinal": 50,
+      "title": "熊掌",
+      "url": "https://fanqienovel.com/reader/7182886411417158159",
+      "item_id": "7182886411417158159",
+      "body_status": "not_requested_after_platform_probe",
+      "LN": null,
+      "raw_sha256": null,
+      "clean_sha256": null,
+      "semantic_review": "not_read"
+    }
+  ],
+  "cleaning": {
+    "extraction": "chapter anchor labels only; no copyright chapter body stored",
+    "body_counts": "not_computed_unreadable_input",
+    "anchors": "none_saved"
+  },
+  "research_scope": "directory and readability probe only; no semantic study",
+  "selection_basis": [
+    {
+      "url": "https://fanqienovel.com/page/7143038691944959011",
+      "kind": "official_work_page",
+      "supports": "exact title/author/category and chapter directory; promotional popularity statements remain platform claims"
+    },
+    {
+      "url": "https://wyb.chinawriter.com.cn/attachment/202605/22/28a0a57a-c8ce-45c1-a94f-2ab847f89bd1.pdf",
+      "kind": "official_literary_review_and_author_essay",
+      "date": "2026-05-22",
+      "title": "勇敢而有力的“我们”与“世界”——评杀虫队队员《十日终焉》；角色不是匆匆来往的过客",
+      "supports": "critical relevance and author craft discussion; not a popularity ranking and not a substitute for reading chapters"
+    }
+  ],
+  "optional_alternatives_not_substituted": [
+    {
+      "title": "我的治愈系游戏",
+      "author": "我会修空调",
+      "official_entry": "https://book.qidian.com/info/1025901449",
+      "official_campaign": "https://acts.qidian.com/2021/20210126/index.html",
+      "probe": "official campaign links identity; work-page web fetch timed out; first50 availability not assessed"
+    },
+    {
+      "title": "我有一座冒险屋",
+      "author": "我会修空调",
+      "official_entry": "https://book.qidian.com/info/1012284323",
+      "official_campaign": "https://acts.qidian.com/2021/20210126/index.html",
+      "probe": "official campaign links identity; work-page web fetch returned403; first50 availability not assessed"
+    }
+  ]
+}

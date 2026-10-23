@@ -12,7 +12,7 @@ import json
 import os
 import re
 import tempfile
-from evidence_audit import verify_review, no_symlink_components, read_utf8, PROJECT_SOURCES
+from evidence_audit import verify_review, no_symlink_components, read_utf8, PROJECT_SOURCES, author_destination
 
 RUNS='.novel_runs'
 CHAPTER_ID=re.compile(r'^V\d{2,3}-C\d{2,4}$')
@@ -30,7 +30,7 @@ def _absent_symlink(path:Path):
 
 def atomic_write(path:Path, text:str, replace:bool=False):
     """Write a new file atomically. For existing files require explicit replace."""
-    _absent_symlink(path)
+    author_destination(path)
     path.parent.mkdir(parents=True,exist_ok=True)
     _absent_symlink(path.parent)
     if path.exists() and not replace: raise FileExistsError(f'拒绝覆盖：{path}')
@@ -46,6 +46,11 @@ def atomic_write(path:Path, text:str, replace:bool=False):
 def signature(project:Path):
     # Runtime V0.5 includes craft constraints and all current manuscript chapters.
     paths = set(PROJECT_SOURCES)
+    # Optional v0.8 sources do not change the signature of projects that lack them.
+    for name in ('writing_profile.json','writing_spec.json','prose_risks.json'):
+        _absent_symlink(project/name)
+        if (project/name).exists():
+            paths.add(name)
     manuscript = project/'manuscript'
     _absent_symlink(manuscript)
     if manuscript.exists():
@@ -94,14 +99,22 @@ def _chapters(project:Path):
     return {c['id']:c for c in getjson(project/'chapters.json')['chapters']}
 
 
-def start(project:Path,chapter_id:str):
+def start(project:Path,chapter_id:str, *, run_id:str|None=None):
+    author_destination(project)
     project=project.resolve()
+    from stage_gates import assert_operation
+    assert_operation(project, chapter_id, 'start')
     if not CHAPTER_ID.fullmatch(chapter_id):raise ValueError('章节 ID 格式错误')
     chapters=_chapters(project)
     if chapter_id not in chapters:raise ValueError('未登记的章节，先建立章卡')
     chapter=chapters[chapter_id]
-    run_id='run-'+uuid4().hex[:12]
-    run_dir=project/RUNS/run_id
+    run_id=run_id or 'run-'+uuid4().hex[:12]
+    if not re.fullmatch(r'run-[0-9a-f]{12}', run_id):raise ValueError('run_id格式错误')
+    final_dir=project/RUNS/run_id
+    _absent_symlink(final_dir)
+    if final_dir.exists():raise FileExistsError('Run已存在，拒绝覆盖')
+    # Publish the complete initial directory only after both contract and manifest exist.
+    run_dir=project/RUNS/('.initializing-'+run_id+'-'+uuid4().hex[:12])
     _absent_symlink(run_dir)
     run_dir.mkdir(parents=True,exist_ok=False)
     _absent_symlink(run_dir)
@@ -123,6 +136,12 @@ def start(project:Path,chapter_id:str):
     for clue in getjson(project/'clues.json').get('clues',[]):
         if chapter_id in (clue.get('setup_chapter'),clue.get('payoff_chapter')):
             plan['allowed_current_chapter_clue_ids'].append(clue['id'])
+    import writing_spec
+    spec = writing_spec.metadata(project, chapter_id)
+    if spec is not None:
+        plan['writing_spec'] = spec
+        import prose_risks
+        plan['prose_risks'] = prose_risks.metadata(project)
     atomic_write(run_dir/'contract.json',_pretty(plan))
     manifest={'runtime_version':'0.5.0','contract_sha256':digest((run_dir/'contract.json').read_bytes()),'run_id':run_id,'chapter_id':chapter_id,'status':'planned',
               'created_at':timestamp(),'updated_at':timestamp(),'source_signature':signature(project),
@@ -130,7 +149,8 @@ def start(project:Path,chapter_id:str):
               'candidate_sha':None,'latest_review':None,'approval':None,
               'journal':[{'at':timestamp(),'action':'start'}]}
     atomic_write(run_dir/'manifest.json',_pretty(manifest))
-    return {'run_id':run_id,'state':manifest['status'],'directory':str(run_dir),'contract':str(run_dir/'contract.json')}
+    os.rename(run_dir,final_dir)
+    return {'run_id':run_id,'state':manifest['status'],'directory':str(final_dir),'contract':str(final_dir/'contract.json')}
 
 
 def _read_draft(path:Path):
@@ -148,17 +168,40 @@ def _read_draft(path:Path):
     return text
 
 
-def submit(project:Path,run_id:str,draft_file:Path, *, _revision_apply:bool=False):
+def submit(project:Path,run_id:str,draft_file:Path, *, _revision_apply:bool=False, content_map:dict|None=None):
     project=project.resolve();folder,m=_manifest(project,run_id)
+    from stage_gates import assert_operation
+    assert_operation(project, m['chapter_id'], 'submit', run_id)
     if m['status'] not in ('planned','drafted','reviewed'):
         raise ValueError('当前状态不能更换候选稿')
     if m.get('current_revision') and not _revision_apply:
         raise ValueError('当前稿件绑定定向修订；请用新的 revision-plan/apply 或另建 Run，不可绕过验收')
     text=_read_draft(draft_file)
+    from stage_gates import assert_submission
+    assert_submission(project, m['chapter_id'], text, _revision_apply)
+    import writing_spec
+    writing_spec.assert_contract(project, m['chapter_id'], getjson(folder/'contract.json'))
+    from stage_gates import is_revision_baseline
+    baseline = not _revision_apply and is_revision_baseline(project, m['chapter_id'], text)
+    checked = None
+    if writing_spec.load(project) is not None:
+        if baseline:
+            try: checked = writing_spec.check(project, m['chapter_id'], text, content_map)
+            except ValueError: checked = None  # Original remains diagnostic evidence, never a compliant new draft.
+        else: checked = writing_spec.check(project, m['chapter_id'], text, content_map)
+    elif content_map is not None: raise ValueError('没有writing_spec不能提交内容映射')
     n=1
     while (folder/f'candidate-v{n}.md').exists():n+=1
     dest=folder/f'candidate-v{n}.md'
     atomic_write(dest,text)
+    if writing_spec.load(project) is not None:
+        m['writing_baseline'] = baseline
+        m['content_map'] = None
+        m['content_map_sha256'] = None
+        if checked:
+            map_path = dest.with_suffix('.map.json')
+            atomic_write(map_path, _pretty(checked['content_map']))
+            m.update(content_map=map_path.name, content_map_sha256=digest(map_path.read_bytes()))
     m.update(status='drafted',current_candidate=dest.name,candidate_sha=digest(dest.read_bytes()),
              latest_review=None,approval=None)
     m.pop('current_revision',None)
@@ -185,6 +228,10 @@ def _validate_review(report):
 
 def review(project:Path,run_id:str,review_file:Path):
     project=project.resolve();folder,m=_manifest(project,run_id)
+    from stage_gates import assert_operation
+    assert_operation(project, m['chapter_id'], 'review', run_id)
+    import writing_spec
+    writing_spec.assert_run(project, run_id)
     if m['status'] not in ('drafted','reviewed'):raise ValueError('只有待审稿或待重审正文可以进入审稿')
     draft=folder/m['current_candidate']
     if digest(draft.read_bytes())!=m['candidate_sha']:raise ValueError('候选正文在提交后发生变化')
@@ -192,6 +239,13 @@ def review(project:Path,run_id:str,review_file:Path):
     data=json.loads(read_utf8(review_file)[0])
     _validate_review(data)
     data, evidence_result = verify_review(project, draft, data)
+    if writing_spec.load(project) is not None and not m.get('writing_baseline'):
+        content_map = getjson(folder/m['content_map'])
+        data['writing_spec_review'] = writing_spec.verify_review(project, m['chapter_id'], read_utf8(draft)[0], content_map,
+            data.get('writing_spec_review'), require_satisfied=False)
+        import prose_risks
+        data['prose_risks_review'] = prose_risks.verify_report(project,m['chapter_id'],read_utf8(draft)[0],data.get('prose_risks_review'),require_resolved=False)
+        prose_risks.assert_issue_coverage(data['prose_risks_review'],data['issues'])
     data.update(reviewed_candidate_sha256=m['candidate_sha'],reviewed_at=timestamp())
     n=1
     while (folder/f'review-v{n}.json').exists():n+=1
@@ -212,6 +266,10 @@ def _check_contract(folder:Path,m:dict):
 
 def approve(project:Path,run_id:str,by:str):
     project=project.resolve();folder,m=_manifest(project,run_id)
+    from stage_gates import assert_operation
+    assert_operation(project, m['chapter_id'], 'approve', run_id)
+    import writing_spec
+    writing_spec.assert_run(project, run_id, require_review=True, final_operation=True)
     if m['status']!='reviewed':raise ValueError('只有已审稿正文可以审批')
     if not isinstance(by,str) or not by.strip():raise ValueError('必须显式提供执行审批者标识')
     draft=folder/m['current_candidate'];reviewp=folder/m['latest_review']
@@ -242,6 +300,10 @@ def approve(project:Path,run_id:str,by:str):
 
 def publish(project:Path,run_id:str,replace=False):
     project=project.resolve();folder,m=_manifest(project,run_id)
+    from stage_gates import assert_operation
+    assert_operation(project, m['chapter_id'], 'publish', run_id)
+    import writing_spec
+    writing_spec.assert_run(project, run_id, require_review=True, final_operation=True)
     if m['status']!='approved' or not m.get('approval'):
         raise ValueError('稿件未获得显式批准，不能发布')
     _check_contract(folder,m)

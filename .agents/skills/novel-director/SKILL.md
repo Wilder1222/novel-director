@@ -3,7 +3,7 @@ name: novel-director
 description: Designs, learns, outlines, drafts, revises and continuity-audits original Chinese long-form fiction. Use for 小说创作、小说写作学习、人物塑造、世界观、分卷大纲、章节剧情、悬疑伏笔、时间穿越、双主角、多时间线、续写、审稿和影视剧本改编. Supports author-approved canon, structured story memory, spoiler-aware chapter context and offline validators.
 metadata:
   author: novel-director-research
-  version: "0.7.0"
+  version: "0.11.0"
 ---
 
 # Novel Director · 中文长篇小说导演
@@ -18,9 +18,17 @@ metadata:
 
 开发 `novel-director` 的下一版本或修改核心创作逻辑前，必须先阅读 [development-research-protocol](references/development-research-protocol.md)，完成公开热门小说及其具体写作技术、真实开源小说/剧本 Skill 与文学研究的来源核对，建立包含世界观、情节、人物、情感的研究档案、测试用例和实施方案，**之后**才能改动代码。用户仅要求日常写小说时，不强制重新做完整版本研究。
 
-任务分工见 [workflow](references/workflow.md) 和 [output contracts](references/output-contracts.md)；机器可读路由在 `agents/routes.json`，通过 `python3 scripts/novel.py route <project> --task chapter` 查询。它只准备任务，不会自动调用模型。
+作品参考使用[采集与索引](references/reference-library.md)：作者当前要求逐部实际采集20–50章；目录或跨书/跨平台拼数不算。10部专题逐部至少20章完整细读，须有逐章六维分析、跨章因果链和带章段出处/前提/局限的技巧卡，实际独立审查后入库。按题材、作品、维度检索并只加载目标书；未语义阅读的章节不能用作已验证写作技巧。旧50章采集证据保留其真实范围，不能冒充新细读。当前作者排除天蚕土豆作品，以权威清单excluded_authors执行，不能换书ID或检索入口重新采用。
+
+任务分工见 [workflow](references/workflow.md) 和 [output contracts](references/output-contracts.md)；机器可读路由在 `agents/routes.json`，通过 `python3 .agents/skills/novel-director/scripts/novel.py route <project> --task chapter` 查询。它只准备任务，不会自动调用模型。
+
+## 路径与安装边界
+
+下列命令以源码仓库根为执行目录。独立安装时，先定位本 Skill 的实际绝对目录，再用该目录下 `scripts/novel.py` 的绝对路径替换命令前缀；项目参数仍是作者书目录。不要猜 cwd，不写入插件缓存。`novel-studio` 的接线需要完整 workspace 或完整插件包，Director 单独 Skill 包只含离线引擎。
 
 ## 激活后按意图路由
+
+**所有新任务先执行[阶段产物与核验](references/staged-workflow.md)。** 按意图选择路径，逐阶段交真实可读作品、覆盖索引、逐项证据审查和真实宿主回执；未核验通过不推进。有漏项、unknown、未决问题或依赖过期就修订/停止，不自报完成。主会话生成结构化输入，作者只说自然语言。代码结构通过、语义满意和作者批准分开，不宣称文学绝对正确。已启用章节的底层命令也受门槛约束；旧流程未启用不称阶段验收通过。
 
 | 模式 | 用户表达 | 加载参考 | 交付 |
 |---|---|---|---|
@@ -52,28 +60,30 @@ metadata:
 2. 以合法可用的文本做**结构拆解**：人物目标、阻碍、场景变化、伏笔信息的出现顺序。研究作品的技巧，不复制原文长段，不模仿指定在世作家的独特声音。
 3. 生成与原作不同的原创练习；作者或模型先写一个短样本。
 4. 按观察证据给反馈；提供针对性重写任务，隔一段时间做同类不同题复练。
-5. 把改进落实到 `references/learning.md` 的练习记录。只记录作者已经认可的风格偏好。
+5. 使用 `practice-plan --save` 与 `practice-record` 把练习保存在当前书的 `learning/`；公共 `references/learning.md` 只读。作者文风偏好另存当前书 `writing_profile.json`，保留原话、范围和例证，未经确认不投影。
 
 ### B. 小说设计（concept → plan）
 
 1. 写清类型、主角、欲望与需要、代价、核心问题、终局价值选择。
 2. **先锁故事真相，再安排展示顺序**。建立事件真实年表、人物所知、读者已知三份互不混同的视图。
 3. 采用“全书 → 卷 → 故事单元 → 章节 → 场景 → 节拍”分层规划，粒度随任务需求递进，不要直接一口气输出几百章空洞目录。
-4. 各卷至少有一次可独立交付的谜题解答和角色变化。单元通常包含：目标、证据、阻碍、关键选择、结果、新问题。
+4. 加载[开场与分卷结构](references/opening-volume-structure.md)，先交开场卡、卷目标卡和高潮兑现表：开场由重大冲突切入，再随行动补足前因；每卷核心目标可验成败，大小高潮与爽点有前证、选择、代价和余波。局部任务引用卷卡，不扩编未授权全书。各卷兑现对应题材的读者承诺与角色变化；悬疑卷应有阶段性谜题解答。单元通常包含目标、阻碍、关键选择、结果和新的处境，不把案件结构强加给所有题材。
 5. 悬疑题材为关键揭示设置真实线索、合理误解、复读后可回溯的证据。详见 [mystery](references/mystery.md)。
 6. 为时间旅行类作品，先审 [time-travel](references/time-travel.md) 中的版本、个体主观时间、年龄与物件规则。
 
 ### C. 章节创作（write）
 
-1. 确定章卡：章节目标、视角人物、历史版本、时间地点、冲突、转折、结果、伏笔、关系变化。至少应明确目标、冲突、变化。
-2. 调入上文摘要、所需人物、规则、已显露线索与允许当前章兑现的真相。不要把未来全书剧透交给自由写作子代理。
-3. 使用V0.7角色协作：主线准备场景，各核心角色与普通角色池各自提出行动/对白，经裁定后由主线统一成稿。按原生中文写动作、感官与有限内心，不直接拼聊天记录。
+1. 先加载[硬篇幅与细节规格](references/writing-spec.md)和[反AI味语境检查](references/prose-risks.md)。主会话按章卡准备writing_spec：章/剧情/parts均有明确硬上下限与任务，人物、事件、细节、情感和铺垫有具体可举证要求。作者当前明确要求每章3000–6000 LN，作为新章硬范围；除作者后续明确调整，不自行按题材放宽。剧情默认仍500–2500 LN，须按章卡给出可行剧情/parts预算；冻结后不能为过检暗放宽。确认章节目标、视角、历史、时间地点、变化和进出状态。
+2. 按[开场与分卷结构](references/opening-volume-structure.md)说明当前章职责，将本场可见义务落实到独占plot的detail_requirements，跨场/整章义务整章核；抽象已确认偏好才进安全profile。调入上文摘要、所需人物、规则、已显露线索与允许当前章兑现的真相。不要把未来全书剧透交给自由写作子代理。
+3. 使用V0.7角色协作：主线准备场景，各核心角色与普通角色池各自提出行动/对白，经裁定后由主线统一成稿。称呼默认获准全名/已设绰号昵称，单姓须特殊语境依据；演员按人设、场景、情绪和关系写自然口语，不临时造昵称或补未知真名。成稿保留已采纳speech，需改先回排练/修订。按原生中文写动作、感官与有限内心，不直接拼聊天记录。
 4. 章节结束必须产生变化，允许余韵结尾，不强迫每一章都制造反转。
-5. 提交候选正文 + 状态变更提案；未经审校和作者同意，不自动将提案写入 canonical 文件。
+5. compose按有序原始parts回正文，由工具计算偏移/哈希；整章重新核算各硬范围。提交候选正文与状态提案；细节/铺垫要求及八类风格须逐项有实际原文，零字面命中也复审。需改/不确定阻断，合理口头禅/诗性/重复可保留。改写不凭空添事实。未经审校与作者同意不写canon。
 
 ### D. 复核与修改（review）
 
 审校顺序：时间/身份与禁用事实等硬性矛盾 → 剧情因果 → 角色动机 → 信息公平性 → 场景推进 → 人物声音与中文语言 → 标点错别字。优先提出**最大影响的三个问题**，附具体章节或句子定位；区分“确定错误”“高风险推断”“审美建议”。每次修订保留原稿。
+
+反AI味使用36条原创语境对照和可扩充书内案例；字面与重复仅定位，不鉴定作者、不自动删心理/修辞。需改入Run问题，修改后重扫重审；正文/语料/保护/检查器/参数变化使旧报告失效。具体接口按需读prose-risks，不把整库灌给人物。
 
 ## V0.7 写作阶段：主线一个、核心角色各一个、普通角色共用一个
 
@@ -124,17 +134,17 @@ metadata:
 
 ## 项目初始化与确定性工具
 
-工具均为离线 Python 3.10+ 标准库，不联网、不调用模型、不发送作品：
+工具均为离线 Python 3.11+ 标准库，不联网、不调用模型、不发送作品：
 
 ```bash
-python3 scripts/novel.py skillcheck
-python3 scripts/novel.py init ./my-story --title "我的小说"
-python3 scripts/novel.py validate ./my-story
-python3 scripts/novel.py memory-index ./my-story
-python3 scripts/novel.py route ./my-story --task outline
-python3 scripts/novel.py practice-plan ./my-story --focus mystery
-python3 scripts/novel.py status ./my-story
-python3 scripts/novel.py context ./my-story V01-C01
+python3 .agents/skills/novel-director/scripts/novel.py skillcheck
+python3 .agents/skills/novel-director/scripts/novel.py init ./my-story --title "我的小说"
+python3 .agents/skills/novel-director/scripts/novel.py validate ./my-story
+python3 .agents/skills/novel-director/scripts/novel.py memory-index ./my-story
+python3 .agents/skills/novel-director/scripts/novel.py route ./my-story --task outline
+python3 .agents/skills/novel-director/scripts/novel.py practice-plan ./my-story --focus mystery
+python3 .agents/skills/novel-director/scripts/novel.py status ./my-story
+python3 .agents/skills/novel-director/scripts/novel.py context ./my-story V01-C01
 ```
 
 熟悉 [data-schema](references/data-schema.md) 后维护项目数据。`context` 尽量仅暴露当前章必要事实，不能保证对手动混入文件的全部剧透进行语义级隔离。`validate` 只检查已编码的确定性规则，人工叙事逻辑审查仍必要。
@@ -149,6 +159,10 @@ python3 scripts/novel.py context ./my-story V01-C01
 - 不越权编造真实历史、科学或制度细节；现实背景需研究与证据，架空城市须明确。
 - 不在尚未通过逻辑检查时批量扩写几十章；先做一组章卡、样章、修订与回归测试。
 
-## 《昨日归档》项目固定输入
+## V0.8 恢复、文风、整章与跨章
 
-如果当前小说是《昨日归档》，以**男女主均为20岁、双穿、现代中国时间悬疑**为作者已确认约束。**2032年开端、陈叙至2009年、许知微至2041年、肉身穿越、虚构临江市、慢热关系**属于已经讨论并正在采用的工作方案，但并非每个细节都被单独锁定。具体生日、事故分钟、婚礼照片和归档机制等也仅为 `planned`，未经作者明确认可不得自动提升为 `confirmed`。样例见发布包外的 `examples/昨日归档/`，需先核对其 provisional 标注。
+- 写章前按需读 [长篇执行契约](references/long-form-execution.md)。`profile-template/profile-check` 管理当前书文风；只有作者明确确认、标 reader_safe 的白名单规则及短正反例进入 compose，不能直接透传作者私密资料。
+- 多场景章使用 `assembly-plan → assembly-packet → assembly-submit`；由唯一 narrator 的独立 chapter_compose 实例汇编，核验场序/对白后提交一个整章候选 Run，仍须整章审稿和明确批准。单场演示不称整章完成。
+- 连续3–5章用 `arc-packet → arc-review` 做有版本和引文的回顾，区分确定错误、风险推论和审美建议；重复段落只作提示，允许有意复沓。跨章审稿不改变单章审批。
+- 题材只改变检查侧重，不固定年龄、人物、转折或情感频率。角色引擎当前限知；全知叙述须另行设计，不能假装已有支持。
+- Studio 的 `checkpoint/resume` 核对当前书、源摘要、产物及请求；恢复不重放角色聊天。宿主探针仅是实际观察记录，不创建沙箱，合成/缺权限的探针不能授权正式人物调用。

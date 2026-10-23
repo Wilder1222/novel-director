@@ -1,0 +1,320 @@
+{
+  "schema_version": "1",
+  "profiles": {
+    "explore": [
+      "brief",
+      "concept",
+      "delivery"
+    ],
+    "plan": [
+      "brief",
+      "design",
+      "outline",
+      "delivery"
+    ],
+    "draft": [
+      "brief",
+      "scene_plan",
+      "rehearsal",
+      "draft",
+      "editorial",
+      "delivery"
+    ],
+    "revise": [
+      "brief",
+      "diagnosis",
+      "revision",
+      "editorial",
+      "delivery"
+    ],
+    "review": [
+      "brief",
+      "diagnosis",
+      "delivery"
+    ],
+    "learn": [
+      "brief",
+      "exercise",
+      "feedback",
+      "delivery"
+    ],
+    "adapt": [
+      "brief",
+      "adaptation",
+      "adaptation_review",
+      "delivery"
+    ],
+    "develop": [
+      "brief",
+      "research",
+      "implementation_plan",
+      "implementation",
+      "validation",
+      "delivery"
+    ]
+  },
+  "stages": {
+    "brief": {
+      "product": "任务简报",
+      "sections": [
+        "goal",
+        "constraints",
+        "assumptions",
+        "acceptance"
+      ],
+      "checks": {
+        "scope": "目标和非目标对应作者原话，无未授权扩写或正式设定变更",
+        "testable": "假设显式标候选，交付物和成功标准可逐项核对"
+      }
+    },
+    "concept": {
+      "product": "创意备选与取舍",
+      "sections": [
+        "alternatives",
+        "tradeoffs",
+        "open_choices"
+      ],
+      "checks": {
+        "distinct": "备选有实质差异且不冒充作者已选",
+        "scope": "只完成探讨授权范围"
+      }
+    },
+    "design": {
+      "product": "故事设计候选",
+      "sections": [
+        "world",
+        "plot",
+        "character",
+        "emotion",
+        "opening_promise",
+        "volume_goals"
+      ],
+      "checks": {
+        "causality": "世界限制和代价实际约束情节选择",
+        "agency": "人物当时信息、目标、矛盾与情感余波相互成立",
+        "opening": "开场重大事件与核心矛盾相关，当前目标/阻力/选择/后果可理解，不以设定百科或陌生名词代替冲突；未授权开场设计的局部任务明确不适用与理由，不补编开场",
+        "volume_goal": "各规划卷的核心目标有主体、成败判据、代价与卷末状态；局部任务引用现有卷卡或明确范围不适用，不编未授权全书"
+      }
+    },
+    "outline": {
+      "product": "有序大纲与线索清单",
+      "sections": [
+        "sequence",
+        "causes",
+        "setups_payoffs",
+        "continuity",
+        "opening_sequence",
+        "volume_progression",
+        "peaks_payoffs"
+      ],
+      "checks": {
+        "progression": "每单元有任务、阻碍、选择、后果且承接前后",
+        "fairness": "伏笔和回收有来源，有意隐瞒与逻辑错误分开",
+        "reveal_order": "真实时序与揭示顺序分开，补叙改变当前判断/关系/行动，不隐去POV当前必知信息或凭空造因；未涉及开场/揭示的局部任务说明不适用及当前范围",
+        "payoff_curve": "各规划卷大高潮检验核心目标、不同局部高潮改变条件，多种期待兑现有前证/选择/代价/余波及未结边界，不标未写情节已兑现；局部范围引用卷卡；无卷卡且未授权分卷的局部任务明确不适用及理由，不补编全书"
+      }
+    },
+    "scene_plan": {
+      "product": "章卡和有序场景卡",
+      "sections": [
+        "purpose",
+        "pov_knowledge",
+        "entry_exit",
+        "beats",
+        "protected",
+        "narrative_function",
+        "speech_context"
+      ],
+      "checks": {
+        "state": "出入状态、位置、物件、伤势、关系与悬念能承接",
+        "information": "人物只用当时可知信息，选择和行动归属清楚",
+        "narrative_link": "说明当前单元承担开场/铺陈/局部高潮/卷高潮/余波何种职责，所需义务落实到实际当前plot规格；跨场或整章义务留整章核，不预泄后场真相",
+        "addressing_dialogue": "人物称呼有当前依据，说明对白目的、对象、场景压力、情绪与关系；无对白或不适用依当前计划说明，不补未授权对白/昵称/未知真名"
+      }
+    },
+    "rehearsal": {
+      "product": "完成排练的可读候选及事件核验",
+      "sections": [
+        "events",
+        "choices",
+        "state_changes",
+        "gaps"
+      ],
+      "checks": {
+        "actual": "绑定真实完成的当前章节ensemble，不以调用计划充当结果",
+        "causality": "行动裁定、可见结果、后续回应串行闭合，未决执行缺口为零"
+      }
+    },
+    "draft": {
+      "product": "完整章节候选正文",
+      "sections": [
+        "manuscript",
+        "continuity",
+        "voice",
+        "emotion"
+      ],
+      "checks": {
+        "complete": "实际Run全文完整，不以提纲、摘要或片段取代",
+        "craft": "检查因果、限知、人物声音和情感触发/反应/余波"
+      }
+    },
+    "diagnosis": {
+      "product": "原稿问题与修订边界",
+      "sections": [
+        "issues",
+        "evidence",
+        "protected",
+        "impact"
+      ],
+      "checks": {
+        "actionable": "问题有原文、原因和可验收方向，意图性歧义不误判成矛盾",
+        "protection": "保护原稿好句、伏笔、风格与授权外范围"
+      }
+    },
+    "revision": {
+      "product": "修订全文及变更说明",
+      "sections": [
+        "manuscript",
+        "changes",
+        "protected",
+        "regression"
+      ],
+      "checks": {
+        "resolved": "实际新候选解决指定问题，保护项保留",
+        "effects": "回查连带影响，不把字数缩减当作质量提升"
+      }
+    },
+    "editorial": {
+      "product": "绑定当前正文的审稿与处理结果",
+      "sections": [
+        "findings",
+        "coverage",
+        "disposition",
+        "limitations"
+      ],
+      "checks": {
+        "evidence": "引文对应确切正文，六维覆盖有实际判断",
+        "closure": "阻塞和重要问题闭合，不以未决事项换取通过",
+        "narrative_execution": "按当前章职责逐项核开场冲突、补叙作用、期待兑现的前证/选择/代价/后果及状态变化；不强制每章高潮，不把旁白震惊或未决结果当兑现",
+        "addressing_dialogue": "用当前实际语句核全名/已设别称与特殊单姓理由、对白人设/场景/情绪/关系和口语自然度；保留合理正式语体/无对白，不能以润色擅改已采纳speech"
+      }
+    },
+    "research": {
+      "product": "可核对来源的研究档案",
+      "sections": [
+        "sources",
+        "findings",
+        "comparisons",
+        "limits"
+      ],
+      "checks": {
+        "primary": "来源真实、日期和样本明确，事实与设计推断分开",
+        "transfer": "覆盖四维、两个开源对照与适用边界，不夸大外推"
+      }
+    },
+    "implementation_plan": {
+      "product": "实现与验收方案",
+      "sections": [
+        "contracts",
+        "sequence",
+        "tests",
+        "compatibility"
+      ],
+      "checks": {
+        "design": "产物、入口/退出条件、失败回退和依赖明确",
+        "coverage": "正反测试对应需求，旧项目和回滚有方案"
+      }
+    },
+    "implementation": {
+      "product": "实际源码变更与使用说明",
+      "sections": [
+        "changes",
+        "behavior",
+        "usage",
+        "risks"
+      ],
+      "checks": {
+        "actual": "引用实际代码改动，不把计划当实现",
+        "consistency": "入口、底层实现、文档和安装投影一致"
+      }
+    },
+    "validation": {
+      "product": "实际检查结果与失败记录",
+      "sections": [
+        "commands",
+        "results",
+        "failures",
+        "coverage_limits"
+      ],
+      "checks": {
+        "executed": "记录实际命令、结果、版本和未覆盖项，不编造测试运行",
+        "meaning": "结构测试、模型判断、读者验收和宿主隔离证明分开"
+      }
+    },
+    "exercise": {
+      "product": "完整原创练习与训练目标",
+      "sections": [
+        "target",
+        "sample",
+        "technique",
+        "constraints"
+      ],
+      "checks": {
+        "actual": "有实际练习作品而不只是练习指令",
+        "original": "与参考情节和独特文风分离，聚焦选定弱项"
+      }
+    },
+    "feedback": {
+      "product": "有原文的训练反馈与复练计划",
+      "sections": [
+        "evidence",
+        "strengths",
+        "weaknesses",
+        "retry"
+      ],
+      "checks": {
+        "specific": "判断有练习原文，建议能指导下一次改写",
+        "honesty": "模型意见不伪称作者反馈或外部验收"
+      }
+    },
+    "adaptation": {
+      "product": "可拍场景或完整剧本候选",
+      "sections": [
+        "source",
+        "scenes",
+        "actions",
+        "changes"
+      ],
+      "checks": {
+        "filmable": "内部叙述转为可观察动作和视听信息",
+        "authority": "明确改编范围和保留项，不把新设定提升为canon"
+      }
+    },
+    "adaptation_review": {
+      "product": "改编核验及处理记录",
+      "sections": [
+        "evidence",
+        "continuity",
+        "filmability",
+        "disposition"
+      ],
+      "checks": {
+        "scope": "核对原作授权、场景承接与改动影响",
+        "closure": "没有未处理的阻塞问题"
+      }
+    },
+    "delivery": {
+      "product": "可交付作品及版本清单",
+      "sections": [
+        "deliverables",
+        "verification",
+        "remaining",
+        "next_action"
+      ],
+      "checks": {
+        "current": "交付确切版本与完整产物，所有上游当前有效",
+        "honesty": "说明残余限制、实际停止点和批准边界，无自动批准或发布"
+      }
+    }
+  }
+}

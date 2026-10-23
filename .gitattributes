@@ -1,0 +1,10 @@
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.txt text eol=lf
+# These JSON records are linked by raw-byte SHA256, including CRLF when present.
+research/samples/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+.agents/skills/novel-director/assets/reference-library/studies/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

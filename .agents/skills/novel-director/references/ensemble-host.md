@@ -39,17 +39,17 @@ class YourHostTransport:
 ## CLI（无须编程接口，也能给兼容宿主逐步调度）
 
 ```bash
-python3 novel-director/scripts/novel.py ensemble-start STORY \
- --config novel-director/assets/ensemble-demo/config.json \
- --scene novel-director/assets/ensemble-demo/scene.json
+python3 .agents/skills/novel-director/scripts/novel.py ensemble-start STORY \
+ --config .agents/skills/novel-director/assets/ensemble-demo/config.json \
+ --scene .agents/skills/novel-director/assets/ensemble-demo/scene.json
 # 返回ens-开头的实际ID。用返回值替代下面ENS。
-python3 novel-director/scripts/novel.py ensemble-packet STORY ENS
+python3 .agents/skills/novel-director/scripts/novel.py ensemble-packet STORY ENS
 # 宿主将包交给指定worker并把真实响应存为response.json
-python3 novel-director/scripts/novel.py ensemble-respond STORY ENS response.json --source host_supplied
-python3 novel-director/scripts/novel.py ensemble-status STORY ENS
+python3 .agents/skills/novel-director/scripts/novel.py ensemble-respond STORY ENS response.json --source host_supplied
+python3 .agents/skills/novel-director/scripts/novel.py ensemble-status STORY ENS
 # 重复直到complete，然后只提交候选，原审校与作者批准仍不可跳过。
-python3 novel-director/scripts/novel.py ensemble-handoff STORY ENS
-python3 novel-director/scripts/novel.py ensemble-memory STORY ENS > memory-candidate.json
+python3 .agents/skills/novel-director/scripts/novel.py ensemble-handoff STORY ENS
+python3 .agents/skills/novel-director/scripts/novel.py ensemble-memory STORY ENS > memory-candidate.json
 ```
 
 导出的memory-candidate.json含所有人物的分区记忆，只供控制器读取。后续场景显式`--memory memory-candidate.json`，并为对应实例增加steps主观序号。导入同配置、同实例、同历史的先前排练数据；它仍是rehearsal_candidate。跨历史/年龄实例转移必须由作者在新配置中明确重建来源，不能自动继承未来人生。
@@ -62,4 +62,4 @@ compose：request_id, text。text须包含全部已采纳且对POV可见的直�
 
 调用账本记录被接受的响应，不等于模型供应商账单。host_supplied是来源声明而非远程证明。synthetic_test不能当真实人物Agent写作实测。默认8次调用预算是工程默认，不是最优写作轮数；一次3人各发言一轮场景需要3次角色、3次裁定、1次成稿共7次调用。不在场的角色0次。
 
-本版支持一场景一候选的交接；多场景章节须由主线在调用者层面汇编，再创建完整章Run，不声称已自动解决整卷规划。交接中断可能留下未发布的孤立Run；不会自动发布任何内容。并发写受锁保护，异常断电留锁需人工核对后清理，不盲目删除锁。
+ensemble-handoff仍是一场景一候选；V0.8多场景章使用[整章契约](long-form-execution.md)的assembly流程创建一个完整章Run，不声称已自动解决整卷规划。交接中断可能留下未发布的孤立Run；不会自动发布任何内容。并发写受锁保护，异常断电留锁需人工核对后清理，不盲目删除锁。

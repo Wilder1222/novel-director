@@ -1,6 +1,6 @@
 # V0.2 角色在场、时空因果与物证台账
 
-程序入口：`python3 scripts/novel.py validate <project>`。此模块由 `scripts/timeline_engine.py` 实现，是**明确登记数据的一致性编译器**，并非对小说进行自动真相推断。
+程序入口：`python3 .agents/skills/novel-director/scripts/novel.py validate <project>`。此模块由 `scripts/timeline_engine.py` 实现，是**明确登记数据的一致性编译器**，并非对小说进行自动真相推断。
 
 ## 角色与时间
 - `characters.json.characters[]` 定义稳定的人物身份 `id`；同名不同历史版本或不同年龄仍然使用这一 `id`，不能把旅者和自然长大的自己合并成一个年龄记录。

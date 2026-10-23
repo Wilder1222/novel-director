@@ -1,0 +1,13 @@
+{
+  "name": "novel-director",
+  "version": "0.11.0",
+  "description": "中文小说创作、角色协作与证据审稿的本地技能包。",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Novel Director · 小说导演",
+    "shortDescription": "中文长篇创作与多角色协作",
+    "category": "Productivity",
+    "capabilities": ["Write"],
+    "defaultPrompt": "使用 $novel-studio 读取当前小说工作区，从我的想法继续创作。"
+  }
+}

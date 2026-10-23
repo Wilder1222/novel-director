@@ -4,7 +4,7 @@
 使用它实际提供的子代理工具完成 delegate/wait，再将返回值交回既有 V0.7 状态机。
 
 ## 一次性能力验证
-1. 在新会话检查根指令、两项 Skill、五个自定义角色可用性。客户端不同，不假定配置自动加载成功。
+1. 在新会话检查根指令、两项 Skill、当前书实际注册的自定义角色可用性。客户端不同，不假定配置自动加载成功。
 2. 主会话先 `doctor`；此命令只检查本地文件和配置，不会启动任何模型。
 3. 通过真实工具建立测试子线程。只发没有小说秘密的包，记录工具返回的真实线程 ID。
 4. 验证子线程不继承作者聊天，且不能加载全书资料。若宿主提供禁工具或受限文件环境，按其实际能力配置。
@@ -41,4 +41,21 @@ Codex 工具的 shell/文件权限批准属于执行权限，不等于作者批�
 ## 原生能力缺口
 没有实际子代理工具：报告缺口；不要把一份带多个人名的回答登记为 ensemble。
 无清洁上下文：该人物调用不能标严格隔离；需要经核验的独立线程/受限环境适配。
-原生多 Agent 无法在本 ChatGPT 会话验证，本包运行次数为0；接入要在作者实际 Codex 工作区完成。
+角色配置、脚本自检或研究子代理调用次数不能代替人物引擎的真实隔离验证；当前运行结果以工作区探针记录为准。
+
+## v0.8 探针记录与委派门槛
+
+使用`python3 scripts/studio.py probe-record --input .studio/probe-input.json`登记；
+`probe-status`读取状态。记录client、version、transport、tools（人物子调用实际可用工具列表）、
+source（observed/synthetic_test）、带时区observed_at、checks与evidence_paths（实际工作区内日志路径数组）。
+checks恰含clean_context、tools_disabled、instance_partition、phase_partition四个布尔观察。
+每项都须由实际宿主实验支持；没有权限证据就填false。不能把行为指令当tools_disabled=true。
+
+记录保存实际日志摘要、当前书与本地角色/配置指纹；有效期7天。宿主/模型工具环境改变也须主动重验，
+本地脚本无法自动读取远程权限。`packet`在缺失、合成、过期或条件不足时不返回可委派包；
+`packet ENS --inspect`只供检查，不能绕过正式委派要求。`accept --source host_supplied`也检查此门槛。
+synthetic_test可验证本地状态机，但不能被计作真实角色调用。
+
+探针依然只是host_reported_not_attested，本地管理员可改日志；它不创建沙箱、不禁用工具、不构成远程认证。
+当前Codex如果只能提供fork_turns=none但仍给子代理文件工具，应如实记录clean_context与tools_disabled的区别，
+暂停严格人物委派。独立研究/审查仍可按原授权执行，不能冒称已通过小说秘密隔离。

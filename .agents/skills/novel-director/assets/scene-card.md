@@ -18,3 +18,13 @@
 - clue_payoff_ids:
 - next_scene_cause:
 - drafting_constraints:
+
+- volume_goal_ref / peak_payoff_ref:
+- narrative_function（当前章职责）:
+- local_plot_detail_requirement_ids（本场可见义务）:
+- whole_chapter_obligations（整章核）:
+- backfill_trigger_and_effect:
+- setup_evidence / choice_cost / aftermath:
+
+- speech_context（目的/对象/情绪身体状态/关系/语体）:
+- approved_names_aliases / surname_exception_reason（仅当前可知）:

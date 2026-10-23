@@ -1,0 +1,686 @@
+{
+  "schema_version": "1",
+  "work_id": "riyue",
+  "producer": {
+    "worker_id": "/root",
+    "invocation_id": "task-f6b4414230f74b6d:correct-study:riyue",
+    "source": "host_supplied",
+    "host_thread_id": null
+  },
+  "read_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "chapter_notes": [
+    {
+      "number": 1,
+      "event": "孟捕头因救人踢狗遭扣，秦逍主动随行救援",
+      "character": "先写分利经营，再以危难出列显出秦逍重恩",
+      "emotion": "院中集体畏惧压低气氛，少年应声形成振奋",
+      "detail": "碎银交接落实人缘来源，家眷顾虑落实恐惧",
+      "setup": "侯府与都尉府的冲突，使踢狗升级为权力争夺",
+      "bridge": "以秦逍站出截断商议，直接推动下章进入侯府",
+      "body_sha256": "fbfc5727181c2df8cf7dca2c49083969794da572cb408af3060eb3120d45d3c7",
+      "evidence": [
+        "c1-a1",
+        "c1-a2"
+      ]
+    },
+    {
+      "number": 2,
+      "event": "韩雨农托付玉佩后入府，得知孟被控盗御宝",
+      "character": "韩雨农言辞冷淡却预留生路，照顾藏于行动",
+      "emotion": "托孤般交代先添凶险，孟被绑又将忧虑坐实",
+      "detail": "空旷府前大道与罕见水果，显示侯府独占资源",
+      "setup": "虎头生字玉佩与佛像异香，各留尚待使用线索",
+      "bridge": "狗案骤变御宝盗案，迫使下章转入证据争执",
+      "body_sha256": "0e9b937654f178777da2e5d6d449969ca15000d1dfa07ed6924489d6a2b67d6f",
+      "evidence": [
+        "c2-a1",
+        "c2-a2"
+      ]
+    },
+    {
+      "number": 3,
+      "event": "秦逍押上三人安危赌寻宝，径直找到郎宅门",
+      "character": "秦逍以吃饭戏言缩短期限，显出冒险中的从容",
+      "emotion": "韩雨农越急秦逍越轻松，制造认知落差张力",
+      "detail": "郎先生临门拦阻与神色变化，使嫌疑逐步聚焦",
+      "setup": "先取得全府搜查许可，再将许可用于突破阻拦",
+      "bridge": "停在带锁院门之前，把寻宝兑现延至下一章",
+      "body_sha256": "67f82dcf8a4429d3c98ecdcf496b98dd2a97172196237cb83b6f627b05f0685a",
+      "evidence": [
+        "c3-a1",
+        "c3-a2"
+      ]
+    },
+    {
+      "number": 4,
+      "event": "佛像搜出仍被追究毁画，玉佩掉落扭转局面",
+      "character": "韩雨农从观察转为出手护人，接住秦逍的突破",
+      "emotion": "破案快意旋即遭强权压回，再由玉佩制造惊疑",
+      "detail": "撕画露木板再现暗格，寻物过程具备空间层次",
+      "setup": "生字玉佩兑现震慑功能，其身份含义仍未解释",
+      "bridge": "甄煜江命令调查秦逍，使脱险同时开启新危险",
+      "body_sha256": "320d746adfd69604f12f98c556b5dbc9577a061d615bd1f94477de315c09f699",
+      "evidence": [
+        "c4-a1",
+        "c4-a2"
+      ]
+    },
+    {
+      "number": 5,
+      "event": "秦逍回家继续等待恩人，揭示饮血寻宝机制",
+      "character": "秦逍对亲近上司仍隐瞒异能，保留私密边界",
+      "emotion": "救人后的暖意转入独居失望，英雄感落回孤单",
+      "detail": "门头枯枝记录有无人来，葫中葫解释饮血掩饰",
+      "setup": "寒症与神秘救命者相连，特殊能力也依赖血液",
+      "bridge": "解释前章寻宝而不解身世，让日常生活承接悬念",
+      "body_sha256": "6b5b4dd0a6293e4544797edde0091c60a99fab1ae4184566c03c2c43349900bd",
+      "evidence": [
+        "c5-a1",
+        "c5-a2"
+      ]
+    },
+    {
+      "number": 6,
+      "event": "新囚窦霸被热情接入甲监，点完需求才得报价",
+      "character": "秦逍先称前辈再记需求，表现熟练的生意手腕",
+      "emotion": "窦霸由戒备转为惊喜，末尾报价准备反转期待",
+      "detail": "书桌油灯与空床马桶对照，服务差别可见可感",
+      "setup": "麻婆晨间无回应成为习惯，后续背影疑点有根",
+      "bridge": "把九两收费前的期待推高，留给下章冲突爆发",
+      "body_sha256": "89f1b13daae66856429186319dc2ce1f1faeb0dedc7655434180ac5056f74923",
+      "evidence": [
+        "c6-a1",
+        "c6-a2"
+      ]
+    },
+    {
+      "number": 7,
+      "event": "窦霸拒付服务费，秦逍转向送书并向赌神学艺",
+      "character": "秦逍嘴称不强卖却以转监施压，精明带有灰度",
+      "emotion": "收费争执后接赌神失手，用喜剧松弛监牢气氛",
+      "detail": "藏入被褥的艳情书与骰盅，拆出赌神虚荣嗜好",
+      "setup": "书籍服务成为换取赌技的筹码，建立互惠关系",
+      "bridge": "由学技引出赌神的出路建议，转向其狱外关系",
+      "body_sha256": "e7b867b4854bd7ec40537af595ff1907a793d3d0f8673bf8db270acee4fc0d5b",
+      "evidence": [
+        "c7-a1",
+        "c7-a2"
+      ]
+    },
+    {
+      "number": 8,
+      "event": "温不道自信将出狱，秦逍与牛志却发现重审危险",
+      "character": "秦逍为一伞之恩长期垫付，让逐利形象出现纵深",
+      "emotion": "温不道谈妻谈兄弟越亲热，读者越替其处境忧心",
+      "detail": "账目无人送钱揭开照料真相，比口头义气更可靠",
+      "setup": "乔乐山获利与温不道被调走相连，暂构利益嫌疑",
+      "bridge": "牛志提出老乞丐欠费，将牢内经营引向另一任务",
+      "body_sha256": "c06a445a3e4c80feb9c8f10569f6024b72d01160dd70083c13a4e9084e1a8a73",
+      "evidence": [
+        "c8-a1",
+        "c8-a2"
+      ]
+    },
+    {
+      "number": 9,
+      "event": "沈药师约秦逍半夜收债，秦逍另赴赌坊探听消息",
+      "character": "秦逍既被跑腿钱吸引，又不能放下温不道安危",
+      "emotion": "老乞丐的笃定勾起好奇，查案禁令又压住行动",
+      "detail": "二十两对照月俸二两，使接取夜差的动机具体",
+      "setup": "初五子时土地庙之约明确时间地点，等待兑现",
+      "bridge": "茶馆无消息后见赌坊打人，提供接近内部人机会",
+      "body_sha256": "8e3bb6950957e490bfeb2b9240a9ba5ebcdcb3461aabb6726191c8fd396041a7",
+      "evidence": [
+        "c9-a1",
+        "c9-a2"
+      ]
+    },
+    {
+      "number": 10,
+      "event": "秦逍请打手吃酒探消息，又替无钱姑娘解围",
+      "character": "秦逍顺势奉承取得口风，姑娘动手后才显出慌乱",
+      "emotion": "试探消息渐有进展，却被饭钱争执打断节奏",
+      "detail": "勾脚推肩的简短动作，兼写姑娘受训与少历世事",
+      "setup": "赌坊亲信尽被换走，增强乔乐山夺权的可信度",
+      "bridge": "姑娘坚持归还饭钱，为后续纠缠与跟踪搭桥",
+      "body_sha256": "0e020391a4b3378cf412d54aaefaccd775d8bf31513994cc5dd323637d90e297",
+      "evidence": [
+        "c10-a1",
+        "c10-a2"
+      ]
+    },
+    {
+      "number": 11,
+      "event": "秦逍甩掉姑娘后反跟斗笠人，却被对方当场截住",
+      "character": "秦逍从嫌姑娘碍事转为担忧，善意经行动呈现",
+      "emotion": "甩人后的得意被反截骤然打破，少年处境转险",
+      "detail": "店铺遮掩与街角消失，使多层跟踪具备可辨位置",
+      "setup": "斗笠人提及御天台北院，扩大城内事件的背景",
+      "bridge": "对方追问秦逍身份，留待姑娘到场揭开跟踪误会",
+      "body_sha256": "4b2bf2087bf02014937d22128b87347c57e0c3016e52027bead3bd66b986bffa",
+      "evidence": [
+        "c11-a1",
+        "c11-a2"
+      ]
+    },
+    {
+      "number": 12,
+      "event": "斗笠人实为姑娘护卫，二人离去谈起西陵旧战",
+      "character": "秦逍退还掷来的银子，守住差役身份外的尊严",
+      "emotion": "误认歹徒的尴尬转为受辱不悦，再转历史愤慨",
+      "detail": "掷银与回掷让阶层态度落在动作，无须抽象辩论",
+      "setup": "援军缺位与门阀拒供，解释朝廷何以被迫妥协",
+      "bridge": "旧战讲至雪夜擒汗之前，下章继续交代权力由来",
+      "body_sha256": "80b795e3cbb3d06c0810b890e5dbc6a2fc529fcf3f12f8bfc9161a43f1247b64",
+      "evidence": [
+        "c12-a1",
+        "c12-a2"
+      ]
+    },
+    {
+      "number": 13,
+      "event": "旧战解释三侯割据，秦逍回家察觉老狗没有吠叫",
+      "character": "倾城挂念还钱遭文叔阻止，个人好感受到身份约束",
+      "emotion": "宏大胜战落到现实掣肘，再收紧为家中异常的不安",
+      "detail": "老黑狗日常两声轻吠的缺失，成为可靠危险信号",
+      "setup": "六智通过生活异常引出，给下章避险选择提供依据",
+      "bridge": "以老狗为何无声收束，推动秦逍检查近身环境",
+      "body_sha256": "d96ff82c39cc9fb8a00cef48b4d278acce66e1e1766f95abe565f8962986eb65",
+      "evidence": [
+        "c13-a1",
+        "c13-a2"
+      ]
+    },
+    {
+      "number": 14,
+      "event": "鬼手三夜逼问佛像，秦逍诱其回头后踹窗欲逃。",
+      "character": "鬼手三被主人猜忌追杀，凶狠侍卫也成权力弃子",
+      "emotion": "静听呼吸渐积恐惧，身份揭露后仍无安全余地",
+      "detail": "因换便衣而没带佩刀，使先前外出影响当下生存",
+      "setup": "佛像失窃的解决制造次生报复，胜利带来新代价",
+      "bridge": "止于鬼手三背后斩刀，把逃生能否成功压到下章",
+      "body_sha256": "3053e543386ae609abe87b06bd0bac3a4380afae3bd1130114f38f49d6cbb6f3",
+      "evidence": [
+        "c14-a1",
+        "c14-a2"
+      ]
+    },
+    {
+      "number": 15,
+      "event": "神秘老妇杀死鬼手三，留下功法利器后命秦逍保密",
+      "character": "救命者拒绝说明身份，恩情之中掺入被安排的意味",
+      "emotion": "死里逃生的惊骇接化尸恐怖，再转获赠功法的喜悦",
+      "detail": "化尸粉刺鼻与鱼肠刺削桌角，分别展示危险和锋利",
+      "setup": "目前不该死的限定语，使保护动机保持不确定性",
+      "bridge": "秦逍隐瞒识字却能读功法，接续下章独自尝试吐纳",
+      "body_sha256": "3e209eb36ba1dec71e7aa0395955982b90820371b0d514f51471cdd44322b5a7",
+      "evidence": [
+        "c15-a1",
+        "c15-a2"
+      ]
+    },
+    {
+      "number": 16,
+      "event": "秦逍初练即觉温热，又得知官府按生辰找少年",
+      "character": "秦逍为免牵累韩孟选择保密，信任与保护发生拉扯",
+      "emotion": "练功新奇稍缓夜袭余悸，麻婆背影又添身份疑云",
+      "detail": "麻婆照旧扫地不应声，使异常联想藏在重复日常中",
+      "setup": "自报八月初五、未满十六，与目标十月生、今年满十七有差。",
+      "bridge": "牛志说寻人可飞黄腾达，下章切到官府说明宣传",
+      "body_sha256": "4293808fed98b54672abc636b82e07d967d3350d4e0a219e1f76cad3abe1fefe",
+      "evidence": [
+        "c16-a1",
+        "c16-a2"
+      ]
+    },
+    {
+      "number": 17,
+      "event": "郡守奉命宣扬寻找天钺，密谈揭示其为惊动猎物",
+      "character": "老者对下官和颜悦色，对内谈猎杀仍保持温和",
+      "emotion": "公开承诺荣华的诱惑，被私下猎杀说明翻为寒意",
+      "detail": "老者光滑手指与尖细声音，先令权势人物形象异常",
+      "setup": "嗜酒条件靠近秦逍特征，但正文尚未确认目标身份",
+      "bridge": "揭露放风意图后切回牢内，让寻人消息进入市井",
+      "body_sha256": "1f1d3d69c908943b181f17cd303e5c2ddbf103726d19132443b7d767608c9204",
+      "evidence": [
+        "c17-a1",
+        "c17-a2"
+      ]
+    },
+    {
+      "number": 18,
+      "event": "秦逍向温不道坦陈调令，受托探妻并收下特殊骰子",
+      "character": "温不道暴怒后抚平秦逍衣领，迅速恢复判断与体恤",
+      "emotion": "被兄弟背弃的痛楚没有失控，转为对妻子的牵挂",
+      "detail": "六面皆五的黑木骰子，使临危托付成为可携凭证",
+      "setup": "若遇不测去找棺材铺掌柜，预留尚未启动的后路",
+      "bridge": "探望妻子的具体委托，使下差后的调查有直接目标",
+      "body_sha256": "f3dbb90488f384a04e40c50eaf0fda7d44131d2fac84017f71779cb33b04c650",
+      "evidence": [
+        "c18-a1",
+        "c18-a2"
+      ]
+    },
+    {
+      "number": 19,
+      "event": "秦逍潜入温宅窃听，发现温妻与乔私通且谋夺藏银",
+      "character": "乔由面馆消息和甲监垫付线索怀疑秦逍，尚未肯定。",
+      "emotion": "探望受害人妻子的关切，翻为替温不道不值的愤怒",
+      "detail": "蓑衣夜雨与窗纸人影，提供潜入掩护和有限观察",
+      "setup": "二人口述藏银位置不明，谋财动机与财富真相仍待核。",
+      "bridge": "已确定私通与觊觎钱财，下一章继续追问害人计划",
+      "body_sha256": "1fea38629703b7509faeafbbf8637554cd68c017bc104b4164ce70c8a9a181db",
+      "evidence": [
+        "c19-a1",
+        "c19-a2"
+      ]
+    },
+    {
+      "number": 20,
+      "event": "窃听确认温案出自圈套，秦逍未获全盘便赴土地庙",
+      "character": "乔乐山对共谋者也防备施暴，揭开盟友间的不信任",
+      "emotion": "谋杀威胁越听越冷，离开后又由荒庙制造临场畏惧",
+      "detail": "耳光与随即温言相连，把控制关系写进声音变化",
+      "setup": "出城即危险已经确认，具体陷阱与藏银所在仍未知",
+      "bridge": "以贪恋跑腿费压过惧意入庙，接回先前收债约定",
+      "body_sha256": "31a2c88e34f43aed766f80842fbf39126e47cb4f3fc8325a9c1e4886bdcb0690",
+      "evidence": [
+        "c20-a1",
+        "c20-a2"
+      ]
+    }
+  ],
+  "cross_chapter": [
+    "孟救人踢死侯府恶犬而登门谢罪→侯府借机栽赃御宝失窃→秦逍寻出佛像破局→甄煜江误疑带路的鬼手三泄密并派人杀他→鬼手三逃脱后夜逼秦逍解释→老妇出手救人并留下功法。救援成功没有消除冲突，反而经敌方内部猜忌生成下一场危机。\n玉佩导致侯府放人，但玉佩身份、老妇真实身份与其背后委托者在二十章内未明。",
+    "牢内送书学技建立亲近→一伞旧恩解释长期照料→异常调令与乔不送钱触发调查→打手透露亲信已被换尽→温不道据此识破兄弟背离并托探妻→秦逍撞见私通者密谈→确认旧案系圈套及出城有险。信息每次只补一层，同时不断改变前层的意义。\n乔乐山的具体杀害办法、押解者是否涉案、藏银用途与去向均未兑现，不能写成已查明。",
+    "老乞丐欠酒钱→给出初五子时收债与二十两报酬→当天送酒再次核定约定→探妻任务恰与土地庙同在西城顺路→秦逍先窃听再奔荒庙→报酬与已经付出的路程推动他进门。两条人物任务借时间和地理汇入同一夜。\n第二十章仅写入庙，债主是否到场、欠债真相以及沈药师身份均未展示。"
+  ],
+  "techniques": [
+    {
+      "dimension": "world",
+      "method": "把制度分权写成具体求生障碍：侯府有平乱名义，都尉府能抓看却不能审案，人物每次调查都可能越权并牵连上司；再以旧战解释制度来源。",
+      "preconditions": "主要冲突确由权力边界生成，读者先见到受阻的具体事件。",
+      "limits": "旧战对话集中讲解较长；移用时不能让角色只为讲设定而停步问答，也不能据架空大唐推定真实唐制。",
+      "original_exercise": "设定一座有三种通行许可的浮港，让修船学徒营救被扣的师父；只通过三次申请被拒呈现各方权限，最后用百字旧事故解释成因。",
+      "id": "jurisdiction-as-pressure",
+      "evidence": [
+        "paragraph:9:50",
+        "paragraph:13:14"
+      ]
+    },
+    {
+      "dimension": "plot",
+      "method": "一次小胜不直接升级为更大敌人，而让败方错误归因、清洗自己人；被清洗者再找主角追责，使后果来自已有事件。",
+      "preconditions": "敌方具有猜忌习惯，主角胜法对敌方确实不可解释。",
+      "limits": "错误归因须有可见线索支撑；本例仅鬼手三曾独自带路，不能换成毫无依据的突然发疯。",
+      "original_exercise": "写一次货单纠错让仓库主管免赔，却令承包商误认账房泄密；账房被停职后追问学徒，完成三场连续因果。",
+      "id": "victory-creates-pursuit",
+      "evidence": [
+        "paragraph:14:57",
+        "paragraph:14:60"
+      ]
+    },
+    {
+      "dimension": "character",
+      "method": "先让主角呈现收费和施压的一面，再由无人代付的账目揭出他独自承担的照料；同一职业行为同时容纳逐利与报恩。",
+      "preconditions": "职业日常足够具体，例外行为确实让主角付出资源。",
+      "limits": "恩情不能自动洗掉所有经营灰度；拒消费便转监的压力仍存在，需保留人物复杂性。",
+      "original_exercise": "写一名总按件收费的旧衣修补师，先完整写一次讨价还价，再让学徒从赊账本发现他每月替陌生老人修同一件制服。",
+      "id": "ledger-reveals-loyalty",
+      "evidence": [
+        "paragraph:7:14",
+        "paragraph:8:29"
+      ]
+    },
+    {
+      "dimension": "emotion",
+      "method": "先让被害者自豪地说亲近者的好，再展示别人已掌握的背弃信息；揭露时以整理衣领和继续担心妻子承接，不只靠大喊痛苦。",
+      "preconditions": "亲近关系曾被具体说出，揭露有可信实物或事实。",
+      "limits": "温妻在此阶段主要承担恶意功能，不能把叙述中的性别化评判提炼成人性通则。",
+      "original_exercise": "写退休领队收到队员出售纪念旗的凭据；让他先责问送信人，再扶正对方歪掉的背包，最后只问旗有没有淋雨。",
+      "id": "betrayal-through-care",
+      "evidence": [
+        "paragraph:18:40",
+        "paragraph:18:62"
+      ]
+    },
+    {
+      "dimension": "detail",
+      "method": "先把微小声音建立为家庭习惯，再让声音缺席；人物稍后放松才想起异常，使危险判断来自已有生活经验。",
+      "preconditions": "习惯在危险发生前出现，缺席可由主角实际感知。",
+      "limits": "不能让所有生活异常都精准等于刺客；异常只能启动检查，证实还需呼吸等后续证据。",
+      "original_exercise": "先写值夜人每日经过时楼上总有磨豆声，次夜只听到空转风扇；用三个可观察细节完成戒备，不直接写预感不祥。",
+      "id": "missing-daily-signal",
+      "evidence": [
+        "paragraph:5:32",
+        "paragraph:13:51"
+      ]
+    },
+    {
+      "dimension": "setup",
+      "method": "先让道具在行动中反复出现，暂时给出普通解释；随后分别兑现其机制或威慑效果，让解释回照已读场景。",
+      "preconditions": "首次使用前确有铺陈，道具功能能够解释具体结果。",
+      "limits": "葫芦机制到第五章才明示，狗血听觉到第十九章才新增；功能不断扩展会削弱读者对规则边界的预判。",
+      "original_exercise": "让邮差多次调整一枚看似普通的铜扣，先写它帮助辨认错投信，再揭示双层结构；不得在揭示时新增此前无迹可寻的万能用途。",
+      "id": "prop-action-before-explanation",
+      "evidence": [
+        "paragraph:3:74",
+        "paragraph:5:58",
+        "paragraph:2:14",
+        "paragraph:4:55"
+      ]
+    }
+  ],
+  "nonstory_paragraphs": [
+    {
+      "chapter": 1,
+      "kind": "web_noise",
+      "reason": "正文与作话之间的纯横线分隔，不属故事事件。",
+      "paragraphs": [
+        51
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 1,
+      "kind": "author_note",
+      "reason": "新书发布、收藏推荐及捧场请求，直接面向读者。",
+      "paragraphs": [
+        52
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 3,
+      "kind": "web_noise",
+      "reason": "正文与作话之间的纯横线分隔。",
+      "paragraphs": [
+        79
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 3,
+      "kind": "author_note",
+      "reason": "感谢捧场、澄清书名读法并请求收藏。",
+      "paragraphs": [
+        80
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 7,
+      "kind": "web_noise",
+      "reason": "正文与作话之间的纯横线分隔。",
+      "paragraphs": [
+        47
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 7,
+      "kind": "author_note",
+      "reason": "感谢捧场并提醒加入书架。",
+      "paragraphs": [
+        48
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 8,
+      "kind": "web_noise",
+      "reason": "正文与作话之间的纯横线分隔。",
+      "paragraphs": [
+        54
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 8,
+      "kind": "author_note",
+      "reason": "请求书架收藏、书圈关注及月票。",
+      "paragraphs": [
+        55
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 10,
+      "kind": "web_noise",
+      "reason": "正文与作话之间的纯横线分隔。",
+      "paragraphs": [
+        60
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 10,
+      "kind": "author_note",
+      "reason": "请求读者收藏，不属人物对白。",
+      "paragraphs": [
+        61
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 13,
+      "kind": "web_noise",
+      "reason": "正文与作话之间的纯横线分隔。",
+      "paragraphs": [
+        57
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 13,
+      "kind": "author_note",
+      "reason": "请求收藏与每日留言，涉及读者支持。",
+      "paragraphs": [
+        58
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 17,
+      "kind": "web_noise",
+      "reason": "正文与作话之间的纯横线分隔。",
+      "paragraphs": [
+        55
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 17,
+      "kind": "author_note",
+      "reason": "说明架空背景、全书展开速度并请求收藏月票。",
+      "paragraphs": [
+        56
+      ],
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 20,
+      "kind": "author_note",
+      "reason": "直接请求收藏月票。",
+      "paragraphs": [
+        67
+      ],
+      "exclude_from_story_evidence": true
+    }
+  ],
+  "limitations": "本结果是模型对本地取得文本的实际细读分析，不是外部读者验收；未联网，未读取作者books，未调用全书后续情节补全。\n仅覆盖一至二十章。天钺身份、玉佩来历、神秘老妇身份、麻婆是否相关、棺材铺凭证、土地庙收债和藏银谜团均保留未决。\n源文监牢数量存在疑点：第一章称甲乙丙三监，第八章出现丁字监，第十六章明确甲乙丙丁四监；不替原文统一。\n窦霸刑期有源文不一致：第六章第二十六段称六年，第七章第二段称两年；第七章晨间语境的晚安也保留原样。\n时间口径可能疏松：二月后、晚春、三月初四初五及押解剩余天数交错；半年前首次获救、月后再次获救与等待一百九十七天亦需后续核对，未自行修正。\n第十五章第六十六段、第十六章第四十五段出现秦晓写法，第十章第五十三段手镯写作桌子等，视为源文疑点，不更改人物或物件认定。\n第十五章老妇说三五个月不会有进展，第十六章初夜即有温热感；这里只记录其形成特殊性悬念，不据后续知识解释原因。\n第十九章新增狗血增强听觉，此前明确讲解主要为嗅觉；分析认可当前明示功能，同时保留能力边界渐次补充的限制。\n正文中的诗句、道德判断、人物内心解释及场景省略号仍属叙述组成，不因其评论性而归入外部作话。\ntechniques中emotion第二项证据引文我只担心不足八字，应以第十八章第六十二段连续原文她的日子自然也不好过替换；该段为正文原句，共十一字。",
+  "reading_producer": {
+    "worker_id": "/root/study_riyue",
+    "invocation_id": "study_riyue",
+    "source": "host_supplied",
+    "host_thread_id": null
+  },
+  "revision_notice": "主会话依据实际独立审查及对应原段回读修订；完整阅读由reading_producer执行，同模型分析非外部读者验收。",
+  "source_context_sha256": "28938a2cfc42d8e1c84be3ec61b0986c00069bef73158f760b5b4cf0beacbcbd",
+  "peer_review": {
+    "reviewed_payload_sha256": "d0e485856ee5d411f20c79d88c402f8289917dee136b869bf54b588e7acd052a",
+    "checks": [
+      {
+        "target": "chapter:1",
+        "verdict": "pass",
+        "reason": "六字段对应1:P6分银、P25踢狗救人被扣、P31-40权力与家眷顾虑、P48-50集体沉默后出列；行动与收尾方向成立。"
+      },
+      {
+        "target": "chapter:2",
+        "verdict": "pass",
+        "reason": "2:P12-21玉佩托付与最坏打算、P24-29专属大道、P39-43绑人异香水果及P56-58盗御宝指控，支持六字段；未解玉佩来历。"
+      },
+      {
+        "target": "chapter:3",
+        "verdict": "pass",
+        "reason": "3:P35-61赌约期限和全府许可、P73-78直抵郎宅及锁门，支持冒险从容、双方认知落差、嫌疑细节与下章承接。"
+      },
+      {
+        "target": "chapter:4",
+        "verdict": "pass",
+        "reason": "4:P22-25木板暗格和韩出手、P53-57玉佩引停手、P67查他，六字段形成破案—再受压—惊疑—新险的完整顺序。"
+      },
+      {
+        "target": "chapter:5",
+        "verdict": "pass",
+        "reason": "5:P5-17隐瞒嗅觉与上司关切、P31-35枯枝和等人失望、P36-58寒症饮血及葫中葫，六字段有对应正文。"
+      },
+      {
+        "target": "chapter:6",
+        "verdict": "pass",
+        "reason": "6:P13-17晨间招呼无回应、P26-38接收入监、P41/P49陈设对照、P53-65攀亲记单后报价，六字段成立；称前辈是关系概述，原句实际自称后辈。"
+      },
+      {
+        "target": "chapter:7",
+        "verdict": "pass",
+        "reason": "7:P12-15拒付转监压力、P19-35送书换教技、P44-46赌神失手掩饰，支持灰度、喜剧、互惠与接8:P1-6出路建议。"
+      },
+      {
+        "target": "chapter:8",
+        "verdict": "pass",
+        "reason": "8:P4-16乐观谈兄弟妻子、P21-37异常调令及利益推测、P29-41垫付和一伞旧恩，六字段成立；setup明确仅构成嫌疑。"
+      },
+      {
+        "target": "chapter:9",
+        "verdict": "pass",
+        "reason": "9:P25-32子时约与二十两、P43-52权力禁区和报恩动机、P55-57茶馆无讯转赌坊打人，六字段和时间地点均有支持。"
+      },
+      {
+        "target": "chapter:10",
+        "verdict": "pass",
+        "reason": "10:P24-27亲信被换、P40-47姑娘熟练动作后慌乱、P56-59解围及还钱要求，六字段成立；慌乱主体为姑娘。"
+      },
+      {
+        "target": "chapter:11",
+        "verdict": "pass",
+        "reason": "11:P24-36甩跟踪后转跟斗笠人、P39店铺遮掩、P42-59消失反截和身份追问，六字段支持多层跟踪与善意冒险。"
+      },
+      {
+        "target": "chapter:12",
+        "verdict": "pass",
+        "reason": "12:P33-37掷银退银与自报名、P51-57文叔讲门阀拒供援军缺位，支持六字段；历史解释来源是文叔对白，未借真实唐史佐证。"
+      },
+      {
+        "target": "chapter:13",
+        "verdict": "pass",
+        "reason": "13:P12-16文叔解释三侯权限、P23-31身份约束下的还钱愿望、P49-56无吠与六智，六字段有支持，未把老狗死因判定为已明。"
+      },
+      {
+        "target": "chapter:14",
+        "verdict": "pass",
+        "reason": "本轮回读14:P63-69及15:P1-3，现改为诱其回头后踹窗欲逃，准确保留未破窗、未逃出的状态；其余五字段与前轮核到的呼吸、缺刀、追问及斩刀承接一致。"
+      },
+      {
+        "target": "chapter:15",
+        "verdict": "pass",
+        "reason": "15:P7-39杀人化尸与目前不该死、P47-55赠功法及保密、P62-67试刃识字，六字段成立；保护者身份仍不明。"
+      },
+      {
+        "target": "chapter:16",
+        "verdict": "pass",
+        "reason": "本轮回读16:P53-55及P65-67，现分别标自报八月初五、未满十六，与目标十月生、今年满十七，消除日期年龄混淆；其余五字段保留初练、保密、麻婆及官府寻人承接。"
+      },
+      {
+        "target": "chapter:17",
+        "verdict": "pass",
+        "reason": "17:P11-13手指声音、P24-33公开寻人口径及嗜酒条件、P43-54私谈惊扰猎杀，支持六字段；setup已正确保留未确认秦逍就是目标。"
+      },
+      {
+        "target": "chapter:18",
+        "verdict": "pass",
+        "reason": "18:P29-45押解令、衣领及垫付，P60-71担妻与六面五骰子及棺材铺委托，六字段支持，后路未被写成已启动。"
+      },
+      {
+        "target": "chapter:19",
+        "verdict": "pass",
+        "reason": "本轮回读19:P41-46、P55-68，character现写依据面馆和垫付线索怀疑而尚未肯定，setup明确二人口述及财富真相待核，匹配如果没猜错/虽不敢肯定/似乎等限定；其余四字段成立。"
+      },
+      {
+        "target": "chapter:20",
+        "verdict": "pass",
+        "reason": "20:P7-15双方承认设局与出城有险、P29-38耳光再温言、P40-55未获全盘与藏银未决、P56-66奔庙入门，支持六字段，不补庙内后事。"
+      },
+      {
+        "target": "technique:jurisdiction-as-pressure",
+        "verdict": "pass",
+        "reason": "9:P43-50明确审案/抓捕看押边界和越权代价，13:P12-16补三侯财兵权。前提要求先见受阻、局限区分架空与史实且防集中讲解，均与材料吻合。"
+      },
+      {
+        "target": "technique:victory-creates-pursuit",
+        "verdict": "pass",
+        "reason": "14:P57-62鬼手三自述因带路而被疑、遇袭后追问，16:P13又直接重述误疑追杀，支持胜利生成次生危机。前提和局限要求错误归因有可见依据，未借未来证实身份。"
+      },
+      {
+        "target": "technique:ledger-reveals-loyalty",
+        "verdict": "pass",
+        "reason": "7:P14-15以转监逼消费与8:P29-31无人送钱、主角垫付及伞恩形成对照，支持同职业里的灰度与报恩。局限保留收费压力，没有用善举抹掉它。"
+      },
+      {
+        "target": "technique:betrayal-through-care",
+        "verdict": "pass",
+        "reason": "18:P35押解令为可信实物，P38-42揪衣领后抚平、P60-64仍担心妻子，支持情绪从暴怒转关切。前提适用，局限明确反对将温妻恶意推广为性别通则。"
+      },
+      {
+        "target": "technique:missing-daily-signal",
+        "verdict": "pass",
+        "reason": "5:P32先写轻吠两声，13:P49-53标为习惯且今夜缺席，14:P3-15再以呼吸确认异常，实际时序支持方法及异常仅启动检查的局限。"
+      },
+      {
+        "target": "technique:prop-action-before-explanation",
+        "verdict": "pass",
+        "reason": "本轮逐条回读新锚：3:P74先被看作饮酒、5:P58解释葫中葫；2:P14玉佩形制、4:P55引发停手。新增锚能支持行动先行、机制/威慑后显的方法；前提与狗血新功能扩展的局限保留。"
+      },
+      {
+        "target": "scope",
+        "verdict": "pass",
+        "reason": "本轮完整重读候选20章六字段、3条跨章链及6技巧，既有救孟—鬼手三—赠功、送书/伞恩—探妻—窃听、初五之约—复核—顺路—入庙三链仍成立。踹窗/生日年龄/怀疑层级及道具锚已依原段修正，身份与土地庙后事仍留白；实际source_context_sha(work)与报告一致。"
+      }
+    ],
+    "unresolved": [],
+    "limitations": "本轮完整重读当前候选的20章六字段、3条跨章链、6技巧及前提/局限、非故事段清单和范围声明；依前轮已实际回查的全20章相关上下文复核未改内容，并重新读取本轮修订涉及的原段与全部替换技巧锚，另用实际reference_study.source_context_sha核对当前work绑定。本轮未第三次通读正文，更未二次通读200章；未联网、未读后续章或作者books、未改文件。原文异写、时间口径等仍如候选limitations保留，不替原著消歧；未发现尚须修改的分析问题，所以unresolved为空。模型复审不是外部读者验收，也不独立证明文本价值判断、现实制度或战术。",
+    "reviewer_id": "/root/peer_reading_b",
+    "source": "host_supplied",
+    "host_thread_id": null
+  }
+}

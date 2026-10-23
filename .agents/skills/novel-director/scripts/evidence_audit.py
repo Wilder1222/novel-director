@@ -28,8 +28,19 @@ def no_symlink_components(path: Path) -> None:
     """Reject symlinks anywhere on a supplied local path before reading/writing."""
     absolute = path.expanduser().absolute()
     for item in (absolute, *absolute.parents):
-        if item.is_symlink():
+        if item.is_symlink() or (item.exists() and getattr(item.stat(follow_symlinks=False), 'st_file_attributes', 0) & 0x400):
             raise ValueError(f'不接受符号链接路径：{item}')
+
+
+def author_destination(path: Path) -> None:
+    """A plugin installation is code, never an author data destination."""
+    no_symlink_components(path)
+    target = path.expanduser().resolve()
+    for parent in Path(__file__).resolve().parents:
+        if (parent/'plugin.json').is_file() and (parent/'.codex-plugin/plugin.json').is_file():
+            if target.is_relative_to(parent):
+                raise ValueError('不能向插件安装目录写作品；请指定外部作者目录')
+            break
 
 
 def read_utf8(path: Path) -> tuple[str, str]:
@@ -53,7 +64,7 @@ def project_source(project: Path, name: str) -> Path:
     p = PurePosixPath(name)
     if p.is_absolute() or not p.parts or any(x in ('.', '..') or x.startswith('.') for x in p.parts):
         raise ValueError('不允许绝对路径、隐藏目录或目录穿越')
-    allowed = name in PROJECT_SOURCES or (
+    allowed = name in PROJECT_SOURCES or name in ('writing_profile.json', 'writing_spec.json','prose_risks.json') or (
         len(p.parts) == 2 and p.parts[0] == 'manuscript' and
         re.fullmatch(r'V\d{2,3}-C\d{2,4}\.md', p.name) is not None
     )

@@ -3,11 +3,11 @@
 ## 命令
 
 ```bash
-python3 scripts/novel.py memory-index /path/to/project
-python3 scripts/novel.py memory-search /path/to/project "婚礼照片" --chapter V01-C45 --history H0 --pov xu-zhiwei
-python3 scripts/novel.py context /path/to/project V01-C07 --budget 8000
+python3 .agents/skills/novel-director/scripts/novel.py memory-index /path/to/project
+python3 .agents/skills/novel-director/scripts/novel.py memory-search /path/to/project "婚礼照片" --chapter V01-C45 --history H0 --pov xu-zhiwei
+python3 .agents/skills/novel-director/scripts/novel.py context /path/to/project V01-C07 --budget 8000
 # 只有明确以编辑/作者身份审稿，才可以显式查作者私有资料：
-python3 scripts/novel.py memory-search /path/to/project "终局" --chapter V01-C01 --history H0 --pov chen-xu --mode editor --include-author-only
+python3 .agents/skills/novel-director/scripts/novel.py memory-search /path/to/project "终局" --chapter V01-C01 --history H0 --pov chen-xu --mode editor --include-author-only
 ```
 
 ## 存储与上下文

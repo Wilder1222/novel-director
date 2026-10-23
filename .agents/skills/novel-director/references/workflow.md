@@ -7,9 +7,9 @@ V0.5新增引文、来源摘要与契约核验；旧Run需重新创建。审稿�
 ## 任务路由
 
 ```bash
-python3 scripts/novel.py route /path/to/project --task outline
-python3 scripts/novel.py route /path/to/project --task chapter
-python3 scripts/novel.py route /path/to/project --task screenplay
+python3 .agents/skills/novel-director/scripts/novel.py route /path/to/project --task outline
+python3 .agents/skills/novel-director/scripts/novel.py route /path/to/project --task chapter
+python3 .agents/skills/novel-director/scripts/novel.py route /path/to/project --task screenplay
 ```
 
 路由读取 `agents/routes.json` 和 `agents/roles.json`，返回需要的专业角色、引用资料与输出物，而不是启动真实多个模型。宿主 Agent 按路由加载少量必要资料。
@@ -17,15 +17,15 @@ python3 scripts/novel.py route /path/to/project --task screenplay
 ## 章节创作与人类批准
 
 ```bash
-python3 scripts/novel.py run-start /path/to/project V01-C01
+python3 .agents/skills/novel-director/scripts/novel.py run-start /path/to/project V01-C01
 # 打开输出的 .novel_runs/<run_id>/contract.json，按契约撰写/通过宿主模型生成候选稿
-python3 scripts/novel.py run-submit /path/to/project <run_id> /path/to/draft.md
+python3 .agents/skills/novel-director/scripts/novel.py run-submit /path/to/project <run_id> /path/to/draft.md
 # 编写带 evidence 解释及 citations 原文定位的 JSON 审稿意见，详见 evidence-review.md
-python3 scripts/novel.py run-review /path/to/project <run_id> /path/to/review.json
-python3 scripts/novel.py run-quality /path/to/project <run_id>
+python3 .agents/skills/novel-director/scripts/novel.py run-review /path/to/project <run_id> /path/to/review.json
+python3 .agents/skills/novel-director/scripts/novel.py run-quality /path/to/project <run_id>
 # 只有作者明确批准才能走下一步（CLI 的 --by 不是身份认证）
-python3 scripts/novel.py run-approve /path/to/project <run_id> --by 作者
-python3 scripts/novel.py run-publish /path/to/project <run_id>
+python3 .agents/skills/novel-director/scripts/novel.py run-approve /path/to/project <run_id> --by 作者
+python3 .agents/skills/novel-director/scripts/novel.py run-publish /path/to/project <run_id>
 ```
 
 - 不可发布未审批正文；提交新 candidate 会丢弃旧版审稿与批准。阻断问题必须修改并再次审稿。
@@ -37,7 +37,7 @@ python3 scripts/novel.py run-publish /path/to/project <run_id>
 ## 剧本结构骨架
 
 ```bash
-python3 scripts/novel.py screen-adapt /path/to/project --volume 1
+python3 .agents/skills/novel-director/scripts/novel.py screen-adapt /path/to/project --volume 1
 ```
 
 输出 `adaptations/volume-1-skeleton.fountain`，取自 scene cards，场景行使用 Fountain 语法，角色名用 `@` 强制标为对白角色。它是**结构骨架**，不是直接可拍的最终剧本。不得直接把人物复杂心理和小说旁白当作动作指示。
@@ -45,8 +45,8 @@ python3 scripts/novel.py screen-adapt /path/to/project --volume 1
 ## 写作专项训练
 
 ```bash
-python3 scripts/novel.py practice-plan /path/to/project --focus emotion --chapter V01-C04 --save
-python3 scripts/novel.py practice-record /path/to/project <exercise_id> /path/to/feedback.json
+python3 .agents/skills/novel-director/scripts/novel.py practice-plan /path/to/project --focus emotion --chapter V01-C04 --save
+python3 .agents/skills/novel-director/scripts/novel.py practice-record /path/to/project <exercise_id> /path/to/feedback.json
 ```
 
 专项包括 `worldbuilding / plot / character / emotion / mystery / dialogue / screenplay`；对一个很小、很明确的技术进行独立练习、反馈和重写，再用不同情境复练。反馈不会自动训练模型或修改 Canon。

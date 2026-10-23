@@ -1,9 +1,10 @@
 {
-  "integration_version": "0.1.0",
-  "engine_version": "0.7.0",
+  "integration_version": "0.4.1",
+  "engine_version": "0.11.0",
   "active_project": "books/new-novel",
   "seed_status": "blank_project_template",
   "runtime_status": "not_verified",
   "native_codex_calls": 0,
-  "auto_publish": false
+  "auto_publish": false,
+  "active_task": null
 }

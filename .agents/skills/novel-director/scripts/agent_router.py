@@ -13,6 +13,11 @@ def route(task:str,root:Path|None=None):
     obj=routes[task]
     for ref in obj['refs']:
         if not (root/ref).is_file():raise FileNotFoundError(f'任务引用缺失 {ref}')
+    profiles = {'research':'develop', 'worldbuilding':'plan', 'outline':'plan', 'chapter':'draft', 'revision':'revise',
+                'screenplay':'adapt', 'learning':'learn', 'audit':'review', 'impact':'review', 'compare':'explore', 'ensemble':'draft'}
+    profile = profiles[task]
+    stages = json.loads((root/'assets/stage-contracts.json').read_text(encoding='utf-8'))['profiles'][profile]
     return {'task':task,'status':'route_only_external_host_must_execute','roles':[mapping[r] for r in obj['roles']],
-            'deliverables':obj['artifacts'],'load_references':obj['refs'],
+            'deliverables':obj['artifacts'],'load_references': ['references/staged-workflow.md', *obj['refs']],
+            'stage_profile':profile, 'required_stages':stages, 'stage_policy':'required_for_new_tasks',
             'instruction':'Agent 根据本路由读取最少所需参考资料；文件脚本不会自主调用 LLM。'}

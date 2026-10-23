@@ -14,6 +14,7 @@ import os
 import re
 import sqlite3
 import tempfile
+from evidence_audit import author_destination
 
 DATABASE='.novel_memory.sqlite3'
 INPUTS=('project.json','canon.json','characters.json','chapters.json','clues.json','events.json','knowledge.json','versions.json','memory_docs.json','artifacts.json','world_rules.json','story_units.json','relationships.json','scenes.json')
@@ -181,6 +182,8 @@ def collect(project: Path):
 
 
 def build(project: Path, dbpath: Path|None=None):
+    author_destination(project)
+    if dbpath is not None: author_destination(dbpath)
     """Atomic index replace; source files are never altered."""
     project=project.resolve()
     dbpath=dbpath or project/DATABASE
@@ -239,7 +242,7 @@ def _allowed(row, chapter, history, pov, mode, include_author):
         revealed=_order(reveal_chapter)
         if visibility not in ('writer_canon',) and (revealed is None or revealed>limit): return False
         # Previous chapter summaries only, never inject current chapter outcome as external memory.
-        if source_type in ('chapter_summary','scene_card','manuscript_chunk') and revealed>=limit: return False
+        if source_type in ('chapter_summary','scene_card','manuscript_chunk','relationship') and revealed>=limit: return False
         if status in ('hypothesis','inferred'): return False
     return True
 

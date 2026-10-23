@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "novel-director",
+  "version": "0.11.0",
+  "description": "中文小说构思、角色协作、文风校准、章节组装与证据审校，作品保存在作者本地工作区。",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Novel Director · 小说导演",
+        "shortDescription": "中文长篇创作与多角色协作",
+        "category": "Productivity",
+        "capabilities": ["Write"],
+        "defaultPrompt": "使用 $novel-studio 读取当前小说工作区，从我的想法继续创作。"
+      }
+    }
+  }
+}

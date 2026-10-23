@@ -1,60 +1,33 @@
-# 公开版整理检查
+# 当前公开交付核验
 
-本次从已提供的 Codex workspace v0.1 提取 current Skill v0.7.0，未改动引擎和接入层实现。
+当前版本为Novel Director0.11.0 / Studio0.4.1。仓库只交付创作工具、空白模板、原创方法分析及必要来源元数据；作者小说、books/、.studio/、runs/、receipts/、本机dist/和完整参考正文均不进入Git提交。
 
-## 本次实际执行
+## 来源与版本
 
-- 79 个原始源码/配置文件与来源压缩包逐字节 SHA-256 一致。
-- 版本查询：Novel Director 0.7.0。
-- Skill 自检：PASS；并非官方 skills-ref 验证。
-- 全新临时目录初始化空白作品、validate、studio doctor：通过，见附录。
-- 常见 GitHub/API 私钥字符串模式扫描未发现匹配；这不是完全无敏感信息的证明。
-- 未复制 books/ 项目、.studio/ 运行状态、历史测试日志和私人研究交付。
-- 样例 Agent 和 Skill 自带的工程演示仍保留，属于源码模板，不是正式作品数据。
-- 没有重跑以前的281项引擎测试或24项完整工作区测试，不将历史数字作为本轮结果。
-- 本轮没有模型调用、站点部署或正式小说发布。
+当前来源清单为根目录`RELEASE-MANIFEST.json`，由`scripts/release.py`生成并核对。`ENGINE-PROVENANCE.json`和`PUBLIC-SOURCE-MANIFEST.json`保留最初来源档案的真实口径，不能替代当前清单。
 
-## 远端状态
+当前参考库15部、301条章析、51条跨章链、90张技巧卡，406项当前分析复核。各章有独立语义阅读和不同实际执行者复核记录，不将结构检查当作外部读者或文学质量保证。《十日终焉》采用明确标注的同站第三方前20章快照，转载授权和官方逐字一致未认证；完整正文只供私有研究，不发布。范围及版差见[当前索引](../research/REFERENCE-INDEX.md)。
 
-准备时目标仓库未能通过 GitHub 连接访问（404），连接没有创建仓库动作，未执行远端推送。此文档不是推送成功证明。
+## 字节与公开范围
 
-## 本次命令记录
+- 原研究记录和portable study的JSON以原字节SHA绑定，Git属性与发布器均保留其实际字节；普通文本统一LF。提交前核Git index/tree的实际blob与声明摘要，并从实际tree导出运行读取，避免本机通过但检出后失效。
+- 按发布清单明确暂存源码，不用无范围的`git add -A`。核对私有路径、常见密钥模式及所有301份完整参考body的精确字节排除；模式和精确匹配不构成完全敏感信息或版权认证。
+- 本机既有167项回归已实际通过；具体发布还核实际Git tree测试、三当前ZIP完整性、细读原SHA及解包运行、原生安装和新宿主发现。每项以实际执行记录为准，不能只拿旧基线代替本次运输和安装核验。
+- 2026-10-23已实际删除本工具旧0.8/0.10发布目录及ZIP、旧0.9来源备份共9项；当前软件只保留0.11.0，未创建新备份。研究证据与故事时间线不属于软件备份，遵循[保留规则](RELEASE-POLICY.md)。
 
-```json
-[
-  {
-    "command": [
-      "python3",
-      ".agents/skills/novel-director/scripts/novel.py",
-      "init",
-      "books/new-novel",
-      "--title",
-      "未命名小说"
-    ],
-    "returncode": 0,
-    "stdout": "新项目已创建：/tmp/novel-public-check-pe6auxo_/workspace/books/new-novel（未生成小说正文）\n",
-    "stderr": ""
-  },
-  {
-    "command": [
-      "python3",
-      ".agents/skills/novel-director/scripts/novel.py",
-      "validate",
-      "books/new-novel"
-    ],
-    "returncode": 0,
-    "stdout": "Novel Director 项目审校 | /tmp/novel-public-check-pe6auxo_/workspace/books/new-novel\n章节 0 | 时间旅行 0 | 伏笔 0\n结果：0 个错误，0 个警告。结构检查不等于文学质量评审。\n",
-    "stderr": ""
-  },
-  {
-    "command": [
-      "python3",
-      "scripts/studio.py",
-      "doctor"
-    ],
-    "returncode": 0,
-    "stdout": "{\n  \"local_files_ok\": true,\n  \"errors\": [],\n  \"custom_roles\": [\n    \"chen_xu\",\n    \"continuity_editor\",\n    \"narrator\",\n    \"npc_pool\",\n    \"xu_zhiwei\"\n  ],\n  \"runtime_status\": \"not_verified_by_this_command\",\n  \"native_agent_calls\": 0,\n  \"next\": \"在实际 Codex 会话验证 Skill/Agent 加载、清洁上下文、真实线程回执。\"\n}\n",
-    "stderr": ""
-  }
-]
+## 可重做的离线检查
+
+```powershell
+python -X utf8 -m unittest discover -s tests -v
+python -X utf8 .agents/skills/novel-director/scripts/novel.py reference-check
+python -X utf8 .agents/skills/novel-director/scripts/novel.py reference-read --book shiri-zhongyan --chapter 20
+python -X utf8 .agents/skills/novel-director/scripts/novel.py reference-techniques --book shiri-zhongyan
 ```
+
+章长默认在静态模板、动态生成与外部空白初始化中保持3000–6000 LN，剧情默认500–2500。源码和缓存通过结构核验不授权批准或发表作者小说；严格人物读取隔离仍需宿主实际能力证据。
+
+## Git与安装终态
+
+目标远端为`https://github.com/Wilder1222/novel-director.git`的`main`。实际推送成功须查询本地HEAD、origin/main和远端main一致；本文仅记录交付范围和核验入口，确切提交由Git记录提供。
+
+本机插件来源为`C:/Users/ww/plugins/novel-director`，当前缓存为`C:/Users/ww/.codex/plugins/cache/personal/novel-director/0.11.0`。刷新使用原生`codex plugin add novel-director@personal --json`，随后核对来源/缓存/候选包与提交来源，实际读取新参考并用新宿主发现两项Skill。安装成功、模型文学评价与作者批准分别记录。

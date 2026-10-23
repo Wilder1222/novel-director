@@ -15,6 +15,10 @@
 - 每个单元必须有具体的阶段性答案和实际后果。不能只问“神秘人是谁”，到单元末仍仅问“更神秘的人是谁”。
 - 场景之间优先用“因此/但是”而不是“然后”连接。
 
+## 开场、卷目标和高潮兑现
+
+按[结构契约](opening-volume-structure.md)及其产物模板交design.opening_promise/volume_goals、outline.opening_sequence/volume_progression/peaks_payoffs。局部任务说明所承接卷卡与当前职责；无授权全书不强编后卷。候选计划先标planned，正文和真实复核支持后才标实际状态。
+
 ## 场景卡（`scenes.json.scenes[]`）
 
 - `id, chapter_id, order, slugline, in_world_at, history_id, goal, conflict, turn, action, dialogue?`。
@@ -25,7 +29,7 @@
 
 - `id, chapter_id, pair_ids[2], from_state, to_state, trigger_action, cost, consequence, status`。
 - 情绪链强调“可观察行动”与“人物解读”。极端状态跳跃产生提醒，不机械禁止灵感和戏剧性加速。
-- 陈叙与许知微：初见防备 → 有限合作 → 风险共担 → 初步互信 → 被隐瞒的信息伤害 → 修复或决裂。关系与案件同步互相改变。
+- 按当前项目确认的关系起点和人物目标设计路径；合作、信任、误读、伤害、修复或决裂都需要行动与解读的证据，不强制爱情或固定顺序。
 
 ## 章节写作契约（`.novel_runs/<run>/contract.json`）
 

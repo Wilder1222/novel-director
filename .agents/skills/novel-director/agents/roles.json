@@ -39,7 +39,7 @@
     },
     {
       "id": "character-director",
-      "objective": "维持动机、成长缺陷、人物关系与20岁双主角能力边界",
+      "objective": "维持当前书已确认的人物年龄、动机、成长矛盾、关系与能力边界",
       "must_read": [
         "references/craft.md",
         "references/output-contracts.md"
@@ -48,7 +48,7 @@
     },
     {
       "id": "emotion-director",
-      "objective": "通过可观察行为、共同风险、误读与修复推进慢热关系",
+      "objective": "通过可观察行为、共同经历、误读与回应推进当前书已确认的关系节奏",
       "must_read": [
         "references/output-contracts.md"
       ],

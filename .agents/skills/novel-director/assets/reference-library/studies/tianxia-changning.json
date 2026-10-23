@@ -1,0 +1,705 @@
+{
+  "schema_version": "1",
+  "work_id": "tianxia-changning",
+  "producer": {
+    "worker_id": "/root",
+    "invocation_id": "task-f6b4414230f74b6d:correct-study:tianxia-changning",
+    "source": "host_supplied",
+    "host_thread_id": null
+  },
+  "read_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "chapter_notes": [
+    {
+      "number": 1,
+      "event": "长安来客雇兄弟入山，叶姜头以记名换机缘",
+      "character": "阿爷拒钱护家，叶姜头主动替大哥争前程",
+      "emotion": "轻快讨价忽露母亲临终嘱托，笑意转为沉重",
+      "detail": "战车深辙与持枪泥像并置，暗示两端皆不凡",
+      "setup": "兄长叶扶摇已报真名，弟弟姓名与泥像身份仍留空白。",
+      "bridge": "当日出发要求压缩商谈时间，把秘密带上山路",
+      "body_sha256": "a9ddf24d7be5e627137f5de7011a8e935608f2f5ec4ee498ab285969e61a771f",
+      "evidence": [
+        "c1-a1",
+        "c1-a2"
+      ]
+    },
+    {
+      "number": 2,
+      "event": "众人进山宿夜，叶姜头让出熊皮袄为少女御寒",
+      "character": "兄长冷脸与弟弟嬉笑形成反差，保护关系待解",
+      "emotion": "少女压抑的好奇渐增，又在受赠时生出亲近",
+      "detail": "巨大熊头帽使猎熊实绩落地，反转骑士嘲笑",
+      "setup": "少女体寒与救援国君目的出现，构成行动约束",
+      "bridge": "严寒先暴露新兵经验不足，为后续遇险做铺垫",
+      "body_sha256": "d8fe642830df650c6893759682870abeefaed6e1dd3b98d12028a7018ec59da1",
+      "evidence": [
+        "c2-a1",
+        "c2-a2"
+      ]
+    },
+    {
+      "number": 3,
+      "event": "兄长擒狼后决定同行，叶无坷断绳救下少女",
+      "character": "冷淡兄长被解释为承担风险者，少女主动守密",
+      "emotion": "生日告别压住兄弟惜别，断绳骤然打断离情",
+      "detail": "大行囊保有生存物资，额头相抵表达亲密",
+      "setup": "无坷真名与家族旧案出现，赠牌效用仍未说明",
+      "bridge": "兄长随队赴渤海，弟弟留山，行动线由此分离",
+      "body_sha256": "872c4777cd0c6f6668ee3442d96ba2dc0d17e7129e701c3bb39dcf1b985d8228",
+      "evidence": [
+        "c3-a1",
+        "c3-a2"
+      ]
+    },
+    {
+      "number": 4,
+      "event": "叶无坷返村问卦，阿爷揭出泥像与父亲旧事",
+      "character": "阿爷既容兄弟出山，又忧偏爱使任一孩子受屈",
+      "emotion": "卜卦玩笑渐沉为身世责任，末尾担忧少女安危",
+      "detail": "三枚龟壳的简单规则拆破秘术，保留情感效力",
+      "setup": "父亲获罪姓名被压住，少女连续下签制造牵挂",
+      "bridge": "出山许可与凶签同时成立，使追去救人具备动因",
+      "body_sha256": "7469f598db9e297bb634f48f427a1b92e5890401d0957b28a8a1cf30bd4e72f5",
+      "evidence": [
+        "c4-a1",
+        "c4-a2"
+      ]
+    },
+    {
+      "number": 5,
+      "event": "叶无坷携大奎二奎越山，在渤海村庄布置接应",
+      "character": "往年报恩细节解释村民相护，善意形成可用关系",
+      "emotion": "独自涉险的执拗被长辈关怀包围，温暖中出发",
+      "detail": "碎银猎刀枣窝头分别提供资源、防身与旅途照料",
+      "setup": "渤海村民为何敬畏少年暂不揭晓，留下筹谋悬念",
+      "bridge": "寻找脚印转为驻村经营，把追踪线改造成接应线",
+      "body_sha256": "6fa7264c56bc2660b3ecc3251dda08a7508af673a4ec81928f68f19337056a82",
+      "evidence": [
+        "c5-a1",
+        "c5-a2"
+      ]
+    },
+    {
+      "number": 6,
+      "event": "叶扶摇杀国君太子，带走二皇子并揭其装傻",
+      "character": "兄长拒绝受辱与背叛隐患，直接替队伍重做选择",
+      "emotion": "国君父子的自利谈话蓄怒，骤杀令救援者震惊",
+      "detail": "布偶藏刃对应装傻自保，连弩初学即用显天赋",
+      "setup": "二皇子真实心性露出，国君之死迫使众人掩饰",
+      "bridge": "三人可选变成仅存一人，兵分两路同时遭追骑",
+      "body_sha256": "26db1b28b4d072750dde26ba5b11495dec79c7c27a5dc55432ca72e4627d47bc",
+      "evidence": [
+        "c6-a1",
+        "c6-a2"
+      ]
+    },
+    {
+      "number": 7,
+      "event": "陆吾率新兵断后血战，叶无坷以假援军逼退敌骑",
+      "character": "先前傲慢的新兵愿担必死之责，获得重新评价",
+      "emotion": "表白与报家名交织，把少年逞强推至赴死悲壮",
+      "detail": "交替换弩显示训练有效，红布雪浪制造兵力幻觉",
+      "setup": "敌将谨慎暂退而未确认虚实，假援军存在时限",
+      "bridge": "陆吾线暂获解围，少年转向少女所在的另一战场",
+      "body_sha256": "80c3086bac0db5777d9e7fe47b14a832a87528e4aa134c531448a9132d1f9310",
+      "evidence": [
+        "c7-a1",
+        "c7-a2"
+      ]
+    },
+    {
+      "number": 8,
+      "event": "少年三人追杀退骑救回少女，众人赶赴山崖脱身",
+      "character": "叶无坷敢追又知速撤，对酬劳和主动相助分得清",
+      "emotion": "极险救援后转入调侃，少女亲近中添一丝在意",
+      "detail": "拉断骑弓暴露生手，掷箭杀敌补足非常力量",
+      "setup": "村民受骗源于国君名义与赏银，虚势随时会穿帮",
+      "bridge": "解释计策同时赶路，攀崖背负把逃命转入近身相处",
+      "body_sha256": "1ddd11a70064356fa61a92727124658fe0b3867d2de35f42af567afcf23b87eb",
+      "evidence": [
+        "c8-a1",
+        "c8-a2"
+      ]
+    },
+    {
+      "number": 9,
+      "event": "归村告别又留客吃饺子，凶签解释显露救援心意",
+      "character": "少年把好运归于别人，把危险责任归于自己",
+      "emotion": "少女先动容再被冻肉笑话打断，最终确认珍惜",
+      "detail": "叠好皮袄与雪堆刨肉，让互相在意有具体动作",
+      "setup": "少女改口欢迎去长安，赠牌被明确赋予保命用途",
+      "bridge": "离别被一顿饭延长，为夜谈与未来相约留出空间",
+      "body_sha256": "1e90affb1a80e082395a4202917066be161240004c10fc1a7aaa5c725a7be14c",
+      "evidence": [
+        "c9-a1",
+        "c9-a2"
+      ]
+    },
+    {
+      "number": 10,
+      "event": "夜谈家人与严师后，叶无坷决定凭自己进入武库",
+      "character": "照料阿爷与拒走门路共同显出自立和体谅他人",
+      "emotion": "玩闹中的思念过渡为志向，亲近感没有消除分寸",
+      "detail": "每日固定洗脚与替老人铺被，把孝顺落进习惯",
+      "setup": "东疆武库开春招生出现，形成下一阶段成长目标",
+      "bridge": "想去长安被拆成可执行路径，告别有了后续方向",
+      "body_sha256": "a52e4c229cd41109928188f4497d7b8250f387ffbe67b39c8ec963f29cbf0fbc",
+      "evidence": [
+        "c10-a1",
+        "c10-a2"
+      ]
+    },
+    {
+      "number": 11,
+      "event": "少女带饺子离村，少年随陆吾出行发现医者家被焚",
+      "character": "陆吾想为三人谋机会，少年仍记得往年医者恩情",
+      "emotion": "告别的甜意与兄弟笑闹，突然被焦黑废墟截断",
+      "detail": "药铺完好而相邻住宅焚毁，使火灾显得不同寻常",
+      "setup": "此前定期探望医者的习惯被兑现，私仇线获得基础",
+      "bridge": "澄潭关拜访途中顺访医者，使既定行程被事件改道",
+      "body_sha256": "f5def83486932d510226c70493923ef0abc932006ec5c9d46dec21dc9ceccc51",
+      "evidence": [
+        "c11-a1",
+        "c11-a2"
+      ]
+    },
+    {
+      "number": 12,
+      "event": "查明医者全家遇害，众人与老兵决定入山剿匪",
+      "character": "苗新秀二十年执守被唤醒，新兵愿以性命践承诺",
+      "emotion": "悲愤经老兵迟疑积压，在整齐军礼中转为共同担当",
+      "detail": "手绘地图是一百六十次入山积累，使执念有物证",
+      "setup": "身份介绍同时交代遗言，预先抬高进山的死亡风险",
+      "bridge": "私人报恩与军人职责汇流，组成同一支剿匪队伍",
+      "body_sha256": "b4b5cdbcddb82695d28ef6d810a6a3c6efc52b5157e66c89e2cd7305a3eb83f5",
+      "evidence": [
+        "c12-a1",
+        "c12-a2"
+      ]
+    },
+    {
+      "number": 13,
+      "event": "众人深入险谷找到衰老匪徒，少年接弩要求关门",
+      "character": "苗新秀遭仇人衰朽动摇，少年先已料到心理难处",
+      "emotion": "惨烈决战的预期落空，复仇冲动变为复杂迟疑",
+      "detail": "花白头发灰黄残牙与锈刀，具体摧毁悍匪想象",
+      "setup": "途中提及匪徒年老被误解，抵达后才显示预见",
+      "bridge": "不抵抗的罪人制造新难题，动作悬在关门之后",
+      "body_sha256": "fbf02a66eaf3ad7cffa6ca855946838385ab3dd2e41536f864e3f3fa7b7a613a",
+      "evidence": [
+        "c13-a1",
+        "c13-a2"
+      ]
+    },
+    {
+      "number": 14,
+      "event": "复仇完成后少年拜苗新秀为师，替老兵续接信念",
+      "character": "善良少年承担残酷执行，也察觉失去执念者的空洞",
+      "emotion": "报仇不使死者归来，悲凉经拜师获得有限承接",
+      "detail": "烟气与等待烧尽交代惩处，后补医术造成寒意",
+      "setup": "少年受教医术被转作维持凶手清醒的反向用途",
+      "bridge": "师徒新关系接续旧仇终点，使老兵能够离开镇子",
+      "body_sha256": "0ab5f396a45b2e73cf08ba5cc16a808879dc7521a6621fc7964b080f4841442e",
+      "evidence": [
+        "c14-a1",
+        "c14-a2"
+      ]
+    },
+    {
+      "number": 15,
+      "event": "苗新秀离镇获百姓送别，众人续赴澄潭关帮忙救灾",
+      "character": "老兵不再拒收乡亲食物，承认自己也是被牵挂的人",
+      "emotion": "离别伤感被童言笑料托住，互相磕头处集中释放",
+      "detail": "衣服塞满鸡蛋窝头腊肉，让二十年民情变得可见",
+      "setup": "老兵承诺回家，少年想搬全村入长安显出牵挂",
+      "bridge": "原本探亲改为前往灾村，人物自然进入边关危局",
+      "body_sha256": "af6a3883ff8d5168e37ccc5e66cf75df90fbb671df228a385bc4843eed3f381a",
+      "evidence": [
+        "c15-a1",
+        "c15-a2"
+      ]
+    },
+    {
+      "number": 16,
+      "event": "路上谈官民职责，众人与亲自除雪的武栋相见",
+      "character": "陆吾敬爱武栋又嘴上打趣，将军以在场安定民心",
+      "emotion": "理想叙述激发向往，偷吃包子及时卸去庄严压力",
+      "detail": "将军抓雪解渴与陆吾擦汗，把地位关系写成亲情",
+      "setup": "陆吾避看额头伤疤，留下尚未说出口的愧疚",
+      "bridge": "国家理念随后由将军劳动验证，接入边境现场",
+      "body_sha256": "884ac44acf9d225cbfc1fd6d6cb44bb868b93a45157dd848c3deba63c92e56df",
+      "evidence": [
+        "c16-a1",
+        "c16-a2"
+      ]
+    },
+    {
+      "number": 17,
+      "event": "武栋欲留人才，边关忽遭没有妇孺的难民潮逼近",
+      "character": "陆吾顾及朋友意愿，武栋临警迅速结阵转移百姓",
+      "emotion": "长辈欣慰与轻松闲谈，被密集号令逐步压为警惕",
+      "detail": "唯一战马用于回城传令，暴露边军行动资源短板",
+      "setup": "对岸内应未传警报原因未明，难民无妇孺又添异常。",
+      "bridge": "左右斥候未归而三面人潮出现，将撤民变为合围",
+      "body_sha256": "3b4bfbc2a0f4f1aff1f4385ed469e1ab14ac09e04fe8a5683c6192db8e8a92ed",
+      "evidence": [
+        "c17-a1",
+        "c17-a2"
+      ]
+    },
+    {
+      "number": 18,
+      "event": "叶无坷推断敌意在袭将，六人阻截敌军保住退路。",
+      "character": "少年从救人转为判断政治后果，行动先于自保",
+      "emotion": "敌众压迫与边军纪律对照，六人奋战点燃豪情",
+      "detail": "标箭红线明确交战边界，砖石短刀适应手边条件",
+      "setup": "无事村少年高效杀法再显异常，平民身份更可疑",
+      "bridge": "合围被六人暂时截断，让两营边军能够退回村口",
+      "body_sha256": "b1d3ad44ef71d47b0ee61cac28e7cdeefe837d1e9fe446802067db7c5b81c6dc",
+      "evidence": [
+        "c18-a1",
+        "c18-a2"
+      ]
+    },
+    {
+      "number": 19,
+      "event": "尹穗杀黑武来使备嫁祸，再以骑兵屠民逼边军分阵",
+      "character": "敌将承认宁军善战，却把救民原则当成可用弱点",
+      "emotion": "援退成功后的欣慰很短，百姓遇袭再次拉紧危机",
+      "detail": "偷菜镰刀寓言先讲嫁祸逻辑，再由杀使动作兑现",
+      "setup": "尹穗欲用黑武来使尸体嫁祸，实际外交后效尚未展示。",
+      "bridge": "敌人正面失利便改攻百姓，把战场推到村落之间",
+      "body_sha256": "c224116dcb128486bc79ffb01bca3bf9b34052cf54e5fb0cb4e536f4c10be798",
+      "evidence": [
+        "c19-a1",
+        "c19-a2"
+      ]
+    },
+    {
+      "number": 20,
+      "event": "六人引开骑兵，陆吾三人为护妇孺改道陷入重围",
+      "character": "陆吾为救妇孺兑现职责，自认将死时仍记挂亲人与武叔。",
+      "emotion": "挑衅笑闹经战胜喜悦陡转遗憾，尽忠口号承担悲壮",
+      "detail": "先前避看的额疤获歉意解释，家常遗憾压过宏大宣言",
+      "setup": "同章先调两千步卒后遭遇援兵，黑夜加剧突然受围的压力。",
+      "bridge": "三人中箭后并刀冲锋，只给出赴战动作而未判生死",
+      "body_sha256": "5eb6eea913e69c8201f691f72237b50cf1c9cc2923b0ef167f2fa5c5e669c2e0",
+      "evidence": [
+        "c20-a1",
+        "c20-a2"
+      ]
+    }
+  ],
+  "cross_chapter": [
+    "第1章叶姜头要求来客记住兄长名字，先建立替兄求前程的动机；第2章赠熊袄与第3章少女守密使双方互欠情意；第4章凶签触发担忧，第5章少年带银赴渤海经营村民；第7章红布疑兵与第8章追击解围兑现准备；第9章补说凶签逻辑，把军事救援重释为少年主动承担关系责任。",
+    "第5章先交代少年多年探望施药郎中，使第11章顺路拜访成立；住宅被焚引出第12章查凶与老兵二十年执守；第13章衰老罪犯使预想的战斗变为道德迟疑；第14章少年代为执行后发现复仇不能填补失落，以拜师重建老兵未来；第15章全镇送别具体证明老兵的人生并不只剩仇恨。",
+    "第16章亲自救灾建立武栋救民原则；第17章边军暴露关外且缺马，第18章六人阻截保住退路；第19章尹穗转攻百姓以撕裂阵形。第20章六人引骑令边军反攻，敌方同章第60段才调两千步卒，陆吾三人为救妇孺改道，第103段遭遇这支援兵。袭将动机仍是叶无坷的推断，尸体嫁祸的外交后效未展示。"
+  ],
+  "techniques": [
+    {
+      "dimension": "world",
+      "method": "把国情拆成现场可支配资源：先让借三匹马的普通请求落空，再使缺马影响接应速度，最后补叙外部封锁与骑兵衰减。世界设定因此直接限制人物能做什么。",
+      "preconditions": "先有明确行动需求，并让资源短缺实际改变一次选择或战果。",
+      "limits": "前二十章的政治价值主要由正面人物讲述与理想化军政行为支撑，不能据此认定制度全貌，更不能当真实战争能力证明。",
+      "original_exercise": "写一座海港仅有一艘可用拖轮：先出现两个同时到达的求援请求，让调度者做选择；事后只补足解释这次选择所需的维修与潮汐背景。",
+      "id": "resources-make-world-operational",
+      "evidence": [
+        "paragraph:17:58",
+        "paragraph:17:76",
+        "paragraph:20:52",
+        "paragraph:20:58"
+      ]
+    },
+    {
+      "dimension": "plot",
+      "method": "让读者先见准备的动作与他人的疑惑，延迟说明计策；危急时让准备产生战果，再在撤离途中解释银钱、身份与情报如何串接，解释本身不暂停行动。",
+      "preconditions": "准备必须预先可见，计策所需资源要有来处，敌方错误判断要符合当时信息。",
+      "limits": "假援军依赖风雪遮挡和敌将不愿冒险，不能抽象成任何劣势兵力都可随意复制的通用胜法。",
+      "original_exercise": "写水库巡查员提前借来三种哨子却不解释；溃坝撤离时分别用于集结、分流和定位，最后在奔跑的对话中补清约定。",
+      "id": "preparation-then-pressured-reveal",
+      "evidence": [
+        "paragraph:7:101",
+        "paragraph:8:65"
+      ]
+    },
+    {
+      "dimension": "character",
+      "method": "先给保护行为一个容易被误读的表象，如让弟弟背重包、接过热水；随后用危机中的责任分工重新解释，让冷脸者的关心呈现为风险承担。",
+      "preconditions": "后解释须与先前动作吻合，保护者必须付出相应警戒或战斗代价。",
+      "limits": "若每次冒犯都靠旁人解释为深情，会削弱人物自主表达，并可能替不合理伤害开脱；本段已有较多说明性旁白。",
+      "original_exercise": "写维修师傅要求徒弟始终背着沉重急救箱，徒弟以为被欺负；事故后师傅留在危险井道，让徒弟带完整物资撤离并救人。",
+      "id": "care-reinterprets-cold-behavior",
+      "evidence": [
+        "paragraph:2:38",
+        "paragraph:3:48",
+        "paragraph:3:53"
+      ]
+    },
+    {
+      "dimension": "emotion",
+      "method": "完成复仇后不立即给予情绪奖赏，保留沉默、空虚与死者不可挽回；再以拜师这种面向未来的关系动作承接失落，使情绪转折建立在新责任上。",
+      "preconditions": "失去的人事须在前文具体存在，完成目标后仍应保留无法恢复的代价。",
+      "limits": "作品对酷刑的叙述与善良评价存在张力；可研究其情绪组织，不能据此把残酷惩罚普遍等同于善良或正义。",
+      "original_exercise": "写学徒追回被盗的亡母陶作，却发现裂痕无法修复；他不庆功，转而邀请同样失去事业的老匠人共同开一堂修复课。",
+      "id": "aftermath-needs-new-attachment",
+      "evidence": [
+        "paragraph:14:47",
+        "paragraph:14:104"
+      ]
+    },
+    {
+      "dimension": "detail",
+      "method": "让一件物品依次承担生存证明、御寒工具、赠礼、回赠契机与离别纪念；人物对物的整理和触碰替关系变化留下可看见的痕迹。",
+      "preconditions": "物品要有可信的使用价值，并在不同情境中改变持有者或使用方式。",
+      "limits": "重复出现必须增加含义；若只反复赞美物件或提醒读者感动，会使细节退化成符号提示。",
+      "original_exercise": "写一副修过的工地手套，先用于危险作业，再借给陌生志愿者；归还时针脚被补齐，数周后主人从补线认出救援者。",
+      "id": "object-accumulates-relationship",
+      "evidence": [
+        "paragraph:2:97",
+        "paragraph:3:93",
+        "paragraph:9:6",
+        "paragraph:9:36"
+      ]
+    },
+    {
+      "dimension": "setup",
+      "method": "在团聚场景中埋一次没有解释的视线躲闪，让读者暂时只知道关系里有欠账；极端危险来临时再揭晓具体遗憾，使宏大牺牲同时保有私人生活的未完成。",
+      "preconditions": "前次异常应足够轻而可辨，揭晓内容须解释原动作并与两人的既有亲密一致。",
+      "limits": "第20章仅写三人准备冲锋，尚不能把这项回收扩写成死亡结论或后续全书人物命运。",
+      "original_exercise": "先写消防员探望舅父时避开一只修过的旧钟，不解释原因；临近执行危险任务，他录下一句话，承认童年毁钟后一直嫁祸别人。",
+      "id": "small-shame-returns-at-extreme",
+      "evidence": [
+        "paragraph:16:88",
+        "paragraph:20:108"
+      ]
+    }
+  ],
+  "nonstory_paragraphs": [
+    {
+      "chapter": 3,
+      "paragraphs": [
+        129
+      ],
+      "kind": "author_note",
+      "reason": "向读者求加入书架和评论，位于故事叙述之外。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 4,
+      "paragraphs": [
+        109,
+        110
+      ],
+      "kind": "author_note",
+      "reason": "独立省略号分隔后直接邀请读者加入书架。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 5,
+      "paragraphs": [
+        99
+      ],
+      "kind": "author_note",
+      "reason": "求书架并说明下一章更新时间。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 6,
+      "paragraphs": [
+        101,
+        102
+      ],
+      "kind": "author_note",
+      "reason": "独立省略号和面向读者的互动口号。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 7,
+      "paragraphs": [
+        104
+      ],
+      "kind": "author_note",
+      "reason": "征求票评并说明盟主私信及邮寄礼品。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 8,
+      "paragraphs": [
+        115
+      ],
+      "kind": "author_note",
+      "reason": "说明写作速度、更新安排与求票需求。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 9,
+      "paragraphs": [
+        105
+      ],
+      "kind": "author_note",
+      "reason": "作者回应催更并以自嘲评价更新速度。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 10,
+      "paragraphs": [
+        118
+      ],
+      "kind": "author_note",
+      "reason": "说明打赏加更偿还与求书架票数。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 11,
+      "paragraphs": [
+        101
+      ],
+      "kind": "author_note",
+      "reason": "借角色名面向读者求票，不是人物现场台词。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 12,
+      "paragraphs": [
+        117
+      ],
+      "kind": "author_note",
+      "reason": "独立标注求书评。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 13,
+      "paragraphs": [
+        103,
+        104
+      ],
+      "kind": "author_note",
+      "reason": "独立省略号后向读者请求月票。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 14,
+      "paragraphs": [
+        123,
+        124
+      ],
+      "kind": "author_note",
+      "reason": "独立省略号后以作者口吻求月票。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 15,
+      "paragraphs": [
+        120,
+        121
+      ],
+      "kind": "author_note",
+      "reason": "独立省略号后说明盟主加更归属。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 17,
+      "paragraphs": [
+        105
+      ],
+      "kind": "author_note",
+      "reason": "作者谈新书节奏、群聊和书评反馈。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 19,
+      "paragraphs": [
+        104,
+        105
+      ],
+      "kind": "author_note",
+      "reason": "独立省略号后说明当日有加更。",
+      "exclude_from_story_evidence": true
+    },
+    {
+      "chapter": 20,
+      "paragraphs": [
+        118,
+        119
+      ],
+      "kind": "author_note",
+      "reason": "独立省略号后说明加更写作过程并感谢打赏。",
+      "exclude_from_story_evidence": true
+    }
+  ],
+  "limitations": "只读指定目录实际第1至20章，按两章一批逐段读至全部END；未联网、未读取作者books、未修改文件、未委派其他代理。\n读取脚本核验每章body哈希；另核对全部20章paragraphs连接内容与body忽略空白后一致，确认分段显示覆盖正文。\n本结果是实际模型细读及可定位引文分析，不是外部读者验收，也不是作品事实或价值判断的独立验证。\n第6章P34、P45等写国君权在相，P43写权宰相；疑似源文异写，未决且未修正。\n第11章P44、P54及第17章P7使用辽律，前后叙述多用东韩；两名称关系在已读范围未获解释，保持未决。\n第12章P71陆吾被认作校尉，P112自报四品云麾将军；已读范围未交代官阶与现场服制称呼关系，未自行统一。\n第17章P3至P4把卫将军断成两段，属于正文断段而非外部噪音；寓言、政论、情绪解释与作者式叙述旁白均保留为正文。\n第20章以三人中箭后冲锋结束，不能据此断定死亡、获救或任何后续结局；父亲旧案、牌子后续作用等也不得借全书记忆补全。\n英雄力量、以少胜多与敌我能力差异具有明显类型化夸张，研究的是文本组织效果，不把战斗描写视为现实战术论证。\n少量粗俗及性暗示笑料参与节奏调节，但并不构成面向任何读者、题材都适用的写法建议。",
+  "reading_producer": {
+    "worker_id": "/root/study_changning",
+    "invocation_id": "study_changning",
+    "source": "host_supplied",
+    "host_thread_id": null
+  },
+  "revision_notice": "主会话依据实际独立审查及对应原段回读修订；完整阅读由reading_producer执行，同模型分析非外部读者验收。",
+  "source_context_sha256": "e8bd16aca463df1546f51cc3d68d4339270ba24c42a5d2211c489abb973afac1",
+  "peer_review": {
+    "reviewed_payload_sha256": "b18515ce2dea2b149559b5db3d3963009c5adcb5007246dfa24ce966900a6714",
+    "checks": [
+      {
+        "target": "chapter:1",
+        "verdict": "pass",
+        "reason": "本轮回读1:P93-103，现明确兄长叶扶摇已报真名，只留弟弟姓名与泥像身份，与P96及P101-102一致；雇向导、为兄争前程、母亲嘱托、深辙泥像和当日出发其余五字段成立。"
+      },
+      {
+        "target": "chapter:2",
+        "verdict": "pass",
+        "reason": "2:P25-35救国君的行动目的、P38-45重包与兄长冷脸、P67-98夜寒赠袄熊头和少女好奇，支持六字段，体寒是明示约束。"
+      },
+      {
+        "target": "chapter:3",
+        "verdict": "pass",
+        "reason": "3:P25-53擒狼及保护分工解释、P68守密、P98-120赠牌真名生日和兄长同行、P126-128断绳救人，六字段有支持，未说明牌子后续功用。"
+      },
+      {
+        "target": "chapter:4",
+        "verdict": "pass",
+        "reason": "4:P80-95泥塑父亲、未展示姓名与祖辈顾虑、P108连续下签，支持身世责任及追去动因；卦的规则与情绪作用未被当作客观预言。"
+      },
+      {
+        "target": "chapter:5",
+        "verdict": "pass",
+        "reason": "5:P5-15旧恩及银刀、P20-40长辈保护和枣窝头、P65-96越山辨迹与渤海村庄接洽，支持六字段；渤海人敬畏原因在本章未揭开。"
+      },
+      {
+        "target": "chapter:6",
+        "verdict": "pass",
+        "reason": "6:P80-85连弩天赋及杀国君太子、P96-100二皇子停止装傻取藏刃，支持六字段。兵分两路追骑作为承接到7:P18-40成立。"
+      },
+      {
+        "target": "chapter:7",
+        "verdict": "pass",
+        "reason": "7:P18-33分兵保护与表白，P75-97血战报姓名与红旗、P98-103敌将疑而暂退后转另一方向，支持六字段；假援军未被写成永久有效。"
+      },
+      {
+        "target": "chapter:8",
+        "verdict": "pass",
+        "reason": "8:P65-86胆量和疑兵来源、P91-97报销/自愿出手与崖下撤离、P113-114背负，支持六字段及边走边解释；没有把夸张战斗当现实证明。"
+      },
+      {
+        "target": "chapter:9",
+        "verdict": "pass",
+        "reason": "9:P6-36皮袄收赠触碰、P23-26欢迎长安并说牌子危险时可用、P45-65留饭刨肉、P89-104凶签逻辑与调侃，六字段成立；牌子用途仍是少女承诺。"
+      },
+      {
+        "target": "chapter:10",
+        "verdict": "pass",
+        "reason": "10:P89-95拒走人情与擦脚、P104-110自己去长安/铺被/武库招生，支持六字段；决定参加考核是可执行方向，并非已经考入。"
+      },
+      {
+        "target": "chapter:11",
+        "verdict": "pass",
+        "reason": "11:P14-24带饺子离别、P47-50陆吾带路请求和私心、P75-100拜访习惯及宅毁药铺完好，支持六字段，行程改道有因。"
+      },
+      {
+        "target": "chapter:12",
+        "verdict": "pass",
+        "reason": "12:P7-32遇害与旧匪经过、P59-89同袍执守和军礼、P100-116手绘地图/160次/留遗言，支持六字段，不将凶险预期当已发生死亡。"
+      },
+      {
+        "target": "chapter:13",
+        "verdict": "pass",
+        "reason": "13:P37-43途中误解与险山，P70-96衰老残牙锈刀求捕及苗震动，P97-102关门动作，支持六字段；道德迟疑与决战预期落空是文本可见组织。"
+      },
+      {
+        "target": "chapter:14",
+        "verdict": "pass",
+        "reason": "14:P23-54执行复仇、烧尽和无快意，P82-107空洞—拜师新信念，P114-122惩处医术反用，六字段成立。善良是文本旁白及人物评价，技巧局限已明确与酷刑张力。"
+      },
+      {
+        "target": "chapter:15",
+        "verdict": "pass",
+        "reason": "15:P38-79乡亲汇聚送食磕头和童言，P89-93想全村赴长安，P116-119到边关改往灾村，支持六字段，老兵承认牵挂为行为解读。"
+      },
+      {
+        "target": "chapter:16",
+        "verdict": "pass",
+        "reason": "16:P15-33理念转述、P52-57吃包子卸庄严、P72-88将军劳动抓雪和擦汗避疤，六字段对应；政理念来自陆吾转述及正面场景，非制度全貌验证。"
+      },
+      {
+        "target": "chapter:17",
+        "verdict": "pass",
+        "reason": "本轮回读17:P58-65，setup现写内应未传警报、原因未明，未再推定失信；无妇孺异常、唯一马传令、留人顾意愿及三面合围的其余字段与前轮已核原文一致。"
+      },
+      {
+        "target": "chapter:18",
+        "verdict": "pass",
+        "reason": "本轮回读18:P22-32，event现明确叶无坷推断敌意袭将，符合正常推测、许多可能、若被他猜中；六人阻截保退路及标箭、杀法异常等其余五字段成立。"
+      },
+      {
+        "target": "chapter:19",
+        "verdict": "pass",
+        "reason": "本轮回读19:P36-44，setup现限定尹穗欲用尸体嫁祸、实际外交后效未展示，符合杀使并下令抛尸而未展示外交结果；其余寓言、攻民与撕阵等五字段成立。"
+      },
+      {
+        "target": "chapter:20",
+        "verdict": "pass",
+        "reason": "本轮回读20:P50-60、P97-108并对照已核P109-117，setup现正确为同章调两千步卒后遭遇援兵，未称前章伏兵；character改自认将死，bridge仍不判生死。改道救妇孺、箭伤和伤疤回收的六字段成立。"
+      },
+      {
+        "target": "technique:resources-make-world-operational",
+        "verdict": "pass",
+        "reason": "本轮回读17:P58-60、P76及20:P52-58，新锚分别对应借马需求/短缺、唯一马传令、贸易封锁和追不上接应，已匹配资源制约行动的方法。前提与不等同制度全貌/现实战力的局限适当。"
+      },
+      {
+        "target": "technique:preparation-then-pressured-reveal",
+        "verdict": "pass",
+        "reason": "5:P74-96先见入村布置而未解释，7:P97-103红旗风雪疑兵兑现，8:P65-86逃跑中解释大胆追击、国君名义与赏银。前提资源预铺和局限风雪/敌将不赌均有实据。"
+      },
+      {
+        "target": "technique:care-reinterprets-cold-behavior",
+        "verdict": "pass",
+        "reason": "本轮回读新锚2:P38、3:P48/P53并结合此前已读3:P49-52，背大包的表象与兄长承担警戒/更需热水的解释连贯；方法、付出代价的前提与防替不合理伤害开脱的局限均成立。"
+      },
+      {
+        "target": "technique:aftermath-needs-new-attachment",
+        "verdict": "pass",
+        "reason": "14:P47等待烧尽、P52-54复仇无快意、P82-96空洞转拜师、P104-107新责任承接，支持方法。前提真实失去、局限不以酷刑等同善良均匹配文本张力。"
+      },
+      {
+        "target": "technique:object-accumulates-relationship",
+        "verdict": "pass",
+        "reason": "本轮回读2:P97、3:P93、9:P6/P36，新锚实际呈现熊头、试还袄、叠袄与轻拍；结合前轮已读3:P98-99赠牌及9:P9-17正式赠礼，支持功能递增的物件链。前提与重复须增义的局限适当。"
+      },
+      {
+        "target": "technique:small-shame-returns-at-extreme",
+        "verdict": "pass",
+        "reason": "本轮回读新前置锚16:P88确为看伤疤后视线逃离，20:P108确为伤疤歉意；两端现精确匹配视线留账—极端处境回收。前提适用，局限继续不判三人生死。"
+      },
+      {
+        "target": "scope",
+        "verdict": "pass",
+        "reason": "本轮完整重读候选20章六字段、3条跨章链和6技巧，跨章链1/2仍对应旧恩—救援、医者—复仇—拜师—送别。链3已改为20:P60同章调兵、P103遭遇，明确袭将为推断和嫁祸后效未展示。作话未作故事证据、末章未补结局；实际source_context_sha(work)与报告一致。"
+      }
+    ],
+    "unresolved": [],
+    "limitations": "本轮完整重读当前候选的20章六字段、3条跨章链、6技巧及前提/局限、非故事段清单和范围声明；依前轮已实际回查的全20章相关上下文复核未改内容，并重新读取本轮修订涉及的原段与全部替换技巧锚，另用实际reference_study.source_context_sha核对当前work绑定。本轮未第三次通读正文，更未二次通读200章；未联网、未读后续章或作者books、未改文件。原文异写、时间口径等仍如候选limitations保留，不替原著消歧；未发现尚须修改的分析问题，所以unresolved为空。模型复审不是外部读者验收，也不独立证明文本价值判断、现实制度或战术。",
+    "reviewer_id": "/root/peer_reading_b",
+    "source": "host_supplied",
+    "host_thread_id": null
+  }
+}

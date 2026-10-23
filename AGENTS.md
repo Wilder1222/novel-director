@@ -1,5 +1,7 @@
 # Public source workspace
 
+作者指定的软件交付保留策略：历史版本不备份，只保留最新版本。发布/安装不创建旧版回滚副本，新版本验证成功后清理本工具旧发布包及旧安装副本；先核对目标绝对路径，不触及其他插件或作者小说。详见 docs/RELEASE-POLICY.md。
+
 本仓库只发布创作工具，不发布作者小说。首次使用前按 README 初始化被 Git 忽略的 books/ 与 .studio/；保留已有私有工作区，不覆盖。
 
 # Novel Director / Codex 创作工作区

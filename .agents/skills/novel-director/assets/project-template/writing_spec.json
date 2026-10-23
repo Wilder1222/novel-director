@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "counter": "letters_numbers_v1",
+  "origin": "tool_default",
+  "defaults": {
+    "chapter_range": {
+      "min": 3000,
+      "max": 6000
+    },
+    "plot_range": {
+      "min": 500,
+      "max": 2500
+    }
+  },
+  "chapters": []
+}

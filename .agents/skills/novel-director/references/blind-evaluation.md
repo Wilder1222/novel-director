@@ -7,7 +7,7 @@
 准备同一任务、相同已确认设定、相近篇幅与写作资源下的两份候选稿。固定评价维度和用户意图，记录真实生成模型、版本和设置。若要做无Skill/仅记忆/完整Skill消融实验，需要分别生成候选，再两两比较；本版不自动生成这些实验稿。
 
 ```bash
-python3 scripts/novel.py eval-create A.md B.md ./comparison --brief "两位20岁主角第一次合作，保持有限信任；不要提前揭开时间谜底。"
+python3 .agents/skills/novel-director/scripts/novel.py eval-create A.md B.md ./comparison --brief "两位20岁主角第一次合作，保持有限信任；不要提前揭开时间谜底。"
 ```
 
 输出两轮独立材料，A/B位置交换。只给评审 `evaluator_packets/`，不要给 `private_manifest.json`；后者记录来源身份映射。每轮使用不同会话，避免第二轮看见前一轮答案。人为选择样本或文风差异仍会影响匿名性，不能把匿名标签当完全盲化。
@@ -38,7 +38,7 @@ python3 scripts/novel.py eval-create A.md B.md ./comparison --brief "两位20岁
 reviewer_type 为 human / model / synthetic_test。模型判断必须填写 model_id。winner 为 A/B/tie/abstain。除弃权外，必须引用两个样本；弃权仍须理由。同一评审者每轮只能一条记录。身份字符串是本地登记，不是认证。
 
 ```bash
-python3 scripts/novel.py eval-report ./comparison results.json
+python3 .agents/skills/novel-director/scripts/novel.py eval-report ./comparison results.json
 ```
 
 ## 解释输出

@@ -1,0 +1,102 @@
+{
+  "id": "zuie-diaocha",
+  "work_key": "zuie-diaocha",
+  "title": "罪恶调查局",
+  "author": "骁骑校",
+  "genre": "mystery",
+  "status": "blocked",
+  "expected_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "reading_focus": [
+    "人物目标与选择",
+    "事件过程与因果",
+    "情感触发与余波",
+    "描写与视角",
+    "伏笔埋设与回收"
+  ],
+  "counter": "unicode_letters_numbers_codepoints",
+  "unicode_version": "15.1.0",
+  "chapters": [],
+  "claim_scope": {
+    "semantic_numbers": [],
+    "limits": "仅采集与确定性计数，未逐章语义阅读；reading_focus仅为后续阅读方向，不能推导人物/伏笔质量。"
+  },
+  "stop_reason": "未定位精确官方读页，正文请求0；不是已证明全网下架",
+  "selection_evidence": [
+    {
+      "url": "https://www.chinawriter.com.cn/n1/2018/1025/c403994-30363215.html",
+      "type": "official_award_announcement",
+      "date": "2018-10-25",
+      "finding": "首届泛华文网络文学金键盘奖悬疑科幻类获奖作品；不是当前热榜"
+    },
+    {
+      "url": "https://www.chinawriter.com.cn/n1/2018/0517/c403993-29997234.html",
+      "type": "official_historical_ranking_comments",
+      "date": "2018-05-17",
+      "finding": "2017年中国网络小说排行榜下半年榜未完结作品评语第10项；首发网易文学；不是2026排行"
+    }
+  ],
+  "source_identity": {
+    "title": "罪恶调查局",
+    "author": "骁骑校",
+    "book_id": null,
+    "edition": null,
+    "unicode_version": null
+  },
+  "library_scope": "additional_collection_metadata_not_current_study",
+  "source_record_receipt": {
+    "file": "2026-10-22-zuie-diaocha-source.json",
+    "sha256": "19ebc58bcea2776764e79015de6e9a1783b6f660ae792ffb5d9abbba188001ab",
+    "location": "full workspace/plugin: research/samples; portable skill carries metadata only"
+  }
+}

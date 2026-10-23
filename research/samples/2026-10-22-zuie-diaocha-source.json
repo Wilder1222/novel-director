@@ -1,0 +1,134 @@
+{
+  "schema_version": "1",
+  "work": {
+    "title": "罪恶调查局",
+    "author": "骁骑校",
+    "requested_platform": "17K",
+    "official_work_url": null
+  },
+  "observed_at": "2026-10-22T09:27:52.178003+00:00",
+  "selection_basis": [
+    {
+      "url": "https://www.chinawriter.com.cn/n1/2018/1025/c403994-30363215.html",
+      "type": "official_award_announcement",
+      "date": "2018-10-25",
+      "finding": "首届泛华文网络文学金键盘奖悬疑科幻类获奖作品；不是当前热榜"
+    },
+    {
+      "url": "https://www.chinawriter.com.cn/n1/2018/0517/c403993-29997234.html",
+      "type": "official_historical_ranking_comments",
+      "date": "2018-05-17",
+      "finding": "2017年中国网络小说排行榜下半年榜未完结作品评语第10项；首发网易文学；不是2026排行"
+    }
+  ],
+  "probes": [
+    {
+      "url": "https://search.17k.com/search.xhtml?c.q=%E7%BD%AA%E6%81%B6%E8%B0%83%E6%9F%A5%E5%B1%80",
+      "method": "ordinary_public_https_get",
+      "http_status": 200,
+      "result": "search page accessible; no exact title-author work link located; similarly named books explicitly not substituted",
+      "raw_sha256": null,
+      "hash_note": "search response not persisted or hashed at request time"
+    },
+    {
+      "url": "https://yuedu.163.com/search.do?key=%E7%BD%AA%E6%81%B6%E8%B0%83%E6%9F%A5%E5%B1%80",
+      "method": "ordinary_public_https_get",
+      "http_status": 200,
+      "result": "search page title matched query; no exact source/work link located; no chapter body requested",
+      "raw_sha256": null
+    }
+  ],
+  "acquisition": {
+    "status": "blocked",
+    "reason": "official_work_not_located",
+    "required_chapters": 50,
+    "directory_entries": 0,
+    "complete_readable_chapters": 0,
+    "chapter_body_urls_requested": 0,
+    "missing_ordinals": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "claim_limit": "No assertion that the book is unavailable on every official service; an exact official work URL remains needed."
+  },
+  "body_counts": {
+    "LN": null,
+    "raw_sha256": null,
+    "clean_sha256": null,
+    "anchors": null
+  },
+  "semantic_review": "not_read",
+  "copyright_body_saved": false,
+  "substitution": false,
+  "zongheng_optional_entries_not_acquired": [
+    {
+      "title": "神探之王",
+      "author": "异青人",
+      "url": "https://www.zongheng.com/detail/1237578",
+      "category": "侦探推理",
+      "observed_metric": {
+        "total_clicks": 1904
+      },
+      "qualification": "official entry verified only; no supported claim of popular status; no chapter acquisition"
+    },
+    {
+      "title": "重生98，我在基层当民警",
+      "author": "夜李",
+      "url": "https://www.zongheng.com/detail/1620048",
+      "category": "侦探推理",
+      "observed_metric": {
+        "total_clicks": 814,
+        "category_page_popularity": 2194
+      },
+      "qualification": "different page metrics differ in definition; not comparable; not asserted to be a popular representative; no acquisition"
+    }
+  ]
+}

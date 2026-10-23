@@ -28,17 +28,17 @@
 ## CLI步骤
 
 ```bash
-python3 novel-director/scripts/novel.py run-start PROJECT V01-C01
-python3 novel-director/scripts/novel.py run-submit PROJECT RUN before.md
-python3 novel-director/scripts/novel.py run-review PROJECT RUN initial-review.json
-python3 novel-director/scripts/novel.py revision-plan PROJECT RUN revision-spec.json
-python3 novel-director/scripts/novel.py revision-apply PROJECT RUN REV patch.json
-python3 novel-director/scripts/novel.py revision-check PROJECT RUN
-python3 novel-director/scripts/novel.py revision-check PROJECT RUN --assessment assessment.json
-python3 novel-director/scripts/novel.py run-review PROJECT RUN new-full-review.json
+python3 .agents/skills/novel-director/scripts/novel.py run-start PROJECT V01-C01
+python3 .agents/skills/novel-director/scripts/novel.py run-submit PROJECT RUN before.md
+python3 .agents/skills/novel-director/scripts/novel.py run-review PROJECT RUN initial-review.json
+python3 .agents/skills/novel-director/scripts/novel.py revision-plan PROJECT RUN revision-spec.json
+python3 .agents/skills/novel-director/scripts/novel.py revision-apply PROJECT RUN REV patch.json
+python3 .agents/skills/novel-director/scripts/novel.py revision-check PROJECT RUN
+python3 .agents/skills/novel-director/scripts/novel.py revision-check PROJECT RUN --assessment assessment.json
+python3 .agents/skills/novel-director/scripts/novel.py run-review PROJECT RUN new-full-review.json
 # 只有真实用户明确批准这份正文时才执行后两步
-python3 novel-director/scripts/novel.py run-approve PROJECT RUN --by AUTHOR
-python3 novel-director/scripts/novel.py run-publish PROJECT RUN
+python3 .agents/skills/novel-director/scripts/novel.py run-approve PROJECT RUN --by AUTHOR
+python3 .agents/skills/novel-director/scripts/novel.py run-publish PROJECT RUN
 ```
 
 `revision-check`只读检查无报告时正常返回JSON（退出0），但revision_gate_ready=false；脚本调用者必须读取这个字段，不能把退出0当作质量通过。输入错误/过期/越界返回退出2。--assessment会在Run内保存验收版本，但不是批准。

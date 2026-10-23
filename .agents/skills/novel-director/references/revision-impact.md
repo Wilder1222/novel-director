@@ -1,6 +1,6 @@
 # V0.5 · 剧情改动影响分析
 
-执行：`python3 scripts/novel.py impact PROJECT --changed events:E-OLD-FIRE`。
+执行：`python3 .agents/skills/novel-director/scripts/novel.py impact PROJECT --changed events:E-OLD-FIRE`。
 
 节点使用 `文件类别:记录ID`，例如 `characters:chen-xu`、`world_rules:WR-01`、`chapters:V01-C04`。先检查真实ID，不自行猜测。可重复 `--changed` 指定多个变化来源。
 

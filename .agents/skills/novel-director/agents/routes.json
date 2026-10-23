@@ -10,7 +10,8 @@
       "iteration_plan"
     ],
     "refs": [
-      "references/development-research-protocol.md"
+      "references/development-research-protocol.md",
+      "references/reference-library.md"
     ]
   },
   "worldbuilding": {
@@ -65,7 +66,9 @@
     "refs": [
       "references/ensemble-writing.md",
       "references/story-memory.md",
-      "references/workflow.md"
+      "references/workflow.md",
+      "references/writing-spec.md",
+      "references/prose-risks.md"
     ]
   },
   "revision": {
@@ -86,7 +89,9 @@
       "references/directed-revision.md",
       "references/evidence-review.md",
       "references/revision-learning.md",
-      "references/workflow.md"
+      "references/workflow.md",
+      "references/writing-spec.md",
+      "references/prose-risks.md"
     ]
   },
   "screenplay": {

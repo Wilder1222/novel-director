@@ -1,0 +1,3466 @@
+{
+  "work": "天下长宁",
+  "author": "知白",
+  "book_id": "1317295",
+  "source_platform": "纵横中文网官方移动站",
+  "catalogue_url": "https://m.zongheng.com/chapter/list/1317295",
+  "catalogue_http_status": 200,
+  "collection_date": "2026-10-22",
+  "collected_at": "2026-10-22T17:07:03.439687+08:00",
+  "copyright_full_text_in_output": false,
+  "selection": "正文编号第一章至第五十章；不计作品相关楔子与请假通知",
+  "semantic_status": "not_semantically_reviewed",
+  "algorithm": {
+    "selector": "服务端HTML第一个 div.content 的直接p标签（正则定位容器后抽取p）；不读取脚本内重复正文",
+    "normalization": "每段HTML标签剥离、html.unescape、strip首尾空白；非空段落按原顺序以单个LF连接；不简繁转换、不NFC转换",
+    "LN": "逐Unicode码点，unicodedata.category(c)[0] in (L,N)者各计1；其余不计。本地研究口径，非平台计费字数。",
+    "nonspace": "清洗后文本按Unicode字符逐个排除isspace()，其余标点和字母数字每字符各1",
+    "exclusion": "标题在div.content外，不纳入。仅对完整独立段落开头PS/P.S./作者的话/作者附言/作者有话说/求月票/求推荐票/求收藏/求订阅标记自动排除；含在情节中的词不排除。边界不明只标记，不删正文。导航/广告/评论通过容器外排除",
+    "sha256": "UTF-8规范化提取文本，段落间LF；raw_sha256为容器内所有非空p，clean_sha256为排除附言后p；均不含末尾LF",
+    "completeness": "官方目录免费标记 + HTTP200 + 当前章ID匹配 + 正文容器/段落存在 + 下一章链接与目录相邻ID匹配（第50章仍对照51）；这只支持技术完整性，非逐字校勘或语义完读",
+    "unicode_data_version": "15.1.0",
+    "Han_plus_nonHan_tokens": "旧近似指标Han字符各1 + 非Han Unicode L/N连续token各1；保留作辅助，绝不命名LN。",
+    "navigation_normalization": "官方下一章移动链接带 _1 后缀，视为第一阅读页路由后缀；核对章ID时仅剥离末尾 _数字；不更改采集URL。",
+    "LN_correction_provenance": "初次进程未保留正文，故以正常免费页面重新顺序获取精算；间隔1秒，不并发；保留重取时刻及双SHA一致性。",
+    "paragraph_count": "raw_paragraph_count指正文容器内非空p段落数（HTML标签剥离并strip后）；clean_paragraph_count为排除独立明确附言后的非空p数。",
+    "boundary_warning": "content选择器排除了容器外标题、广告、导航、评论；未证明所有内嵌附言均可自动识别。疑似未排除标记已逐章记录possible_unexcluded_note_prefixes，不据此自动删除。"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_label": "第一章",
+      "title": "山里有座泥菩萨",
+      "catalogue_title": "第一卷向阳花木易为春 第一章山里有座泥菩萨",
+      "url": "https://m.zongheng.com/chapter/1317295/76382321",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76382321",
+      "collected_at": "2026-10-22T17:07:03.906165+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 118,
+      "clean_paragraph_count": 118,
+      "raw_counts": {
+        "codepoints": 4016,
+        "nonspace": 3899,
+        "Han": 3386,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3386,
+        "LN": 3386
+      },
+      "clean_counts": {
+        "codepoints": 4016,
+        "nonspace": 3899,
+        "Han": 3386,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3386,
+        "LN": 3386
+      },
+      "raw_sha256": "08595c652c0839f3cff4c4b9133221a8ea4ed93b66adab29e7dfe3bc72147d52",
+      "clean_sha256": "08595c652c0839f3cff4c4b9133221a8ea4ed93b66adab29e7dfe3bc72147d52",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "总有些地方偏僻到连战争都",
+      "closing_anchor": "蒜头啊，你得护着姜头。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76390309_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 68,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 100
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 1,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:08.674630+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 2,
+      "chapter_label": "第二章",
+      "title": "一山不容二虎",
+      "catalogue_title": "第一卷向阳花木易为春 第二章一山不容二虎",
+      "url": "https://m.zongheng.com/chapter/1317295/76390309",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76390309",
+      "collected_at": "2026-10-22T17:07:04.421853+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 99,
+      "clean_paragraph_count": 99,
+      "raw_counts": {
+        "codepoints": 3849,
+        "nonspace": 3751,
+        "Han": 3351,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3351,
+        "LN": 3351
+      },
+      "clean_counts": {
+        "codepoints": 3849,
+        "nonspace": 3751,
+        "Han": 3351,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3351,
+        "LN": 3351
+      },
+      "raw_sha256": "6cb2f4d3aab745c08ab8d13711ccb7296f07c76ae210be4f83aff3a43b5f0216",
+      "clean_sha256": "6cb2f4d3aab745c08ab8d13711ccb7296f07c76ae210be4f83aff3a43b5f0216",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "泥菩萨也就是在这个苦寒的",
+      "closing_anchor": "一样的眼神。\n嫌弃的很。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76390312_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 41,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 120
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 2,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:10.069424+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 3,
+      "chapter_label": "第三章",
+      "title": "最是年少不矫情",
+      "catalogue_title": "第一卷向阳花木易为春 第三章最是年少不矫情",
+      "url": "https://m.zongheng.com/chapter/1317295/76390312",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76390312",
+      "collected_at": "2026-10-22T17:07:05.130940+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 129,
+      "clean_paragraph_count": 128,
+      "raw_counts": {
+        "codepoints": 3982,
+        "nonspace": 3853,
+        "Han": 3425,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3426,
+        "LN": 3427
+      },
+      "clean_counts": {
+        "codepoints": 3945,
+        "nonspace": 3818,
+        "Han": 3397,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3397,
+        "LN": 3397
+      },
+      "raw_sha256": "ce5b81ab8f9ca4bb6d077c34294661abc4b675892c201dd8299660f43841ce6d",
+      "clean_sha256": "767997ce38c186fcf7e2f126dd7652a8490088c98a1cfc4d569f60cc81ccf1ea",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 129,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "2d509bee97b8de170b2b9ea0f49a1150204e7f8a402e426b881b922d3596ef54",
+          "length": 36,
+          "prefix_anchor": "PS： 【萌新小知白给诸"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "或许是因为陆吾觉得叶姜头",
+      "closing_anchor": "是心念如刀刻下那个名字。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76399222_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 45,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 87
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 3,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:11.461395+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 4,
+      "chapter_label": "第四章",
+      "title": "上上签下下签",
+      "catalogue_title": "第一卷向阳花木易为春 第四章上上签下下签",
+      "url": "https://m.zongheng.com/chapter/1317295/76399222",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76399222",
+      "collected_at": "2026-10-22T17:07:05.844850+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 110,
+      "clean_paragraph_count": 110,
+      "raw_counts": {
+        "codepoints": 3829,
+        "nonspace": 3720,
+        "Han": 3158,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3158,
+        "LN": 3158
+      },
+      "clean_counts": {
+        "codepoints": 3829,
+        "nonspace": 3720,
+        "Han": 3158,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3158,
+        "LN": 3158
+      },
+      "raw_sha256": "d8918f420a959d3e0b8bae02b8acd8e12af11f388d05bd13347b95d14c9a1289",
+      "clean_sha256": "d8918f420a959d3e0b8bae02b8acd8e12af11f388d05bd13347b95d14c9a1289",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "少年心思单纯到连见色起意",
+      "closing_anchor": "架还是说爱我，怎么选？】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76399328_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 67,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 114
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 4,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:13.163566+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 5,
+      "chapter_label": "第五章",
+      "title": "人见人爱",
+      "catalogue_title": "第一卷向阳花木易为春 第五章人见人爱",
+      "url": "https://m.zongheng.com/chapter/1317295/76399328",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76399328",
+      "collected_at": "2026-10-22T17:07:06.783038+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 99,
+      "clean_paragraph_count": 98,
+      "raw_counts": {
+        "codepoints": 3731,
+        "nonspace": 3631,
+        "Han": 3165,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3166,
+        "LN": 3167
+      },
+      "clean_counts": {
+        "codepoints": 3692,
+        "nonspace": 3595,
+        "Han": 3144,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3144,
+        "LN": 3144
+      },
+      "raw_sha256": "700eccf404714e4a438c941fe764e570c2c06e73381e094c2c47df28e5f649db",
+      "clean_sha256": "4c117179c297501ba43e88024adca66520df01dfa32c7a7d2a2520de2ca00277",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 99,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "d6233c1f8fdbc45709bd5a5168632d5aa34b713488addca1dda950f60b006094",
+          "length": 38,
+          "prefix_anchor": "PS： 。。。。。。\n【"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "老猎户看到孙子蹲在门口看",
+      "closing_anchor": "果有，那得把妹夫看紧点！",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76404092_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 54,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 128
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 5,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:14.570018+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 6,
+      "chapter_label": "第六章",
+      "title": "三选一",
+      "catalogue_title": "第一卷向阳花木易为春 第六章三选一",
+      "url": "https://m.zongheng.com/chapter/1317295/76404092",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76404092",
+      "collected_at": "2026-10-22T17:07:07.414515+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 102,
+      "clean_paragraph_count": 102,
+      "raw_counts": {
+        "codepoints": 3919,
+        "nonspace": 3818,
+        "Han": 3407,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3407,
+        "LN": 3407
+      },
+      "clean_counts": {
+        "codepoints": 3919,
+        "nonspace": 3818,
+        "Han": 3407,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3407,
+        "LN": 3407
+      },
+      "raw_sha256": "c1c20fb47d969ff316036354d75f6ee85d2fa4a68676b6e774b3029365c18e62",
+      "clean_sha256": "c1c20fb47d969ff316036354d75f6ee85d2fa4a68676b6e774b3029365c18e62",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "这要是换做其他人跟着叶无",
+      "closing_anchor": "我还是说爱我，怎么选？】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76410224_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 34,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 99
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 6,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:15.930579+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 7,
+      "chapter_label": "第七章",
+      "title": "少年血性",
+      "catalogue_title": "第一卷向阳花木易为春 第七章少年血性",
+      "url": "https://m.zongheng.com/chapter/1317295/76410224",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76410224",
+      "collected_at": "2026-10-22T17:07:08.060180+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 104,
+      "clean_paragraph_count": 103,
+      "raw_counts": {
+        "codepoints": 3811,
+        "nonspace": 3706,
+        "Han": 3310,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3311,
+        "LN": 3312
+      },
+      "clean_counts": {
+        "codepoints": 3692,
+        "nonspace": 3590,
+        "Han": 3211,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3211,
+        "LN": 3211
+      },
+      "raw_sha256": "d56163512c8ad874bfa0a774f6508cb7fe727da729323b2d63f7346d31294154",
+      "clean_sha256": "c5bc6945f55730e888f14148db32e2f59bfed900a544d66ce873b42402fede5a",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 104,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "780fd8e37c91f067473286099f35ccb20386a3ce71c4f9c70545a3f11f97b1de",
+          "length": 118,
+          "prefix_anchor": "PS： 【新书才刚刚开始"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "太阳升起的那一刻，大奎和",
+      "closing_anchor": "奎看到他动了也跟了上去。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76410225_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 39,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 82
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 7,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:17.391073+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 8,
+      "chapter_label": "第八章",
+      "title": "腿盘好",
+      "catalogue_title": "第一卷向阳花木易为春 第八章腿盘好",
+      "url": "https://m.zongheng.com/chapter/1317295/76410225",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76410225",
+      "collected_at": "2026-10-22T17:07:08.744196+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 115,
+      "clean_paragraph_count": 114,
+      "raw_counts": {
+        "codepoints": 3719,
+        "nonspace": 3603,
+        "Han": 3203,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3204,
+        "LN": 3205
+      },
+      "clean_counts": {
+        "codepoints": 3615,
+        "nonspace": 3502,
+        "Han": 3120,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3120,
+        "LN": 3120
+      },
+      "raw_sha256": "a7be2155da17a2ed0620ba0f60d01760c13d4076c43401e06472b6c5cef9d303",
+      "clean_sha256": "f23be52774fb93132de09ed692124198fdd24b24eeaf37474dcdff179fa617a7",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 115,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "03258eee1c4411f67f85a53ecfc00621c991f5456e0e7dccc658fd0ed884e351",
+          "length": 103,
+          "prefix_anchor": "PS： 【这本书写的极慢"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "在这空旷之地三百骑兵追两",
+      "closing_anchor": "里来。\n“腿盘我腰上！”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76422560_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 40,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 87
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 8,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:18.791239+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 9,
+      "chapter_label": "第九章",
+      "title": "相逢已是上上签",
+      "catalogue_title": "第一卷向阳花木易为春 第九章相逢已是上上签",
+      "url": "https://m.zongheng.com/chapter/1317295/76422560",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76422560",
+      "collected_at": "2026-10-22T17:07:09.373931+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 105,
+      "clean_paragraph_count": 104,
+      "raw_counts": {
+        "codepoints": 3593,
+        "nonspace": 3488,
+        "Han": 3032,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3033,
+        "LN": 3034
+      },
+      "clean_counts": {
+        "codepoints": 3525,
+        "nonspace": 3422,
+        "Han": 2974,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2974,
+        "LN": 2974
+      },
+      "raw_sha256": "4f8751dc7ea800a5e8731fb04afc83782dfb7b03af2e3da7b1becc13ba3af652",
+      "clean_sha256": "de956687d282521e750e2c1cd223ee6d3bb52bdb73e6ab44eae37f49c6bbc0e0",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 105,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "144e7dcafe901966f7ff687bcaaa027cf1e8915b57bc2c98c9e02099f4f1e00c",
+          "length": 67,
+          "prefix_anchor": "PS： 新书期每天两更确"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "从大慈悲山下来之前他们费",
+      "closing_anchor": "卜白菜这仇就不共戴天！”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76422705_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 54,
+        "paragraph_length_min": 3,
+        "paragraph_length_max": 99
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 9,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:20.433583+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 10,
+      "chapter_label": "第十章",
+      "title": "该去的地方",
+      "catalogue_title": "第一卷向阳花木易为春 第十章该去的地方",
+      "url": "https://m.zongheng.com/chapter/1317295/76422705",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76422705",
+      "collected_at": "2026-10-22T17:07:09.989716+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 118,
+      "clean_paragraph_count": 117,
+      "raw_counts": {
+        "codepoints": 3828,
+        "nonspace": 3710,
+        "Han": 3168,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3169,
+        "LN": 3170
+      },
+      "clean_counts": {
+        "codepoints": 3764,
+        "nonspace": 3648,
+        "Han": 3115,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3115,
+        "LN": 3115
+      },
+      "raw_sha256": "413b30ec9770072cd3186b65daf474c0ea7efebbda3cd6a44fc249124ff88dd5",
+      "clean_sha256": "66180738b05bec80f54519dd7ecad4e56af305184502ca836fdec304bd142f57",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 118,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "200f2015cb1adfb818c1579899a3183c42a0c32ae1f7d792e3a86a53bfd25776",
+          "length": 63,
+          "prefix_anchor": "PS： 我在努力码字了，"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "星空好像从来都一样，尤其",
+      "closing_anchor": "年，单纯在每一个志向里。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76432934_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 70,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 99
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 10,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:21.770913+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 11,
+      "chapter_label": "第十一章",
+      "title": "咱爹不借",
+      "catalogue_title": "第一卷向阳花木易为春 第十一章咱爹不借",
+      "url": "https://m.zongheng.com/chapter/1317295/76432934",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76432934",
+      "collected_at": "2026-10-22T17:07:10.743799+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 101,
+      "clean_paragraph_count": 100,
+      "raw_counts": {
+        "codepoints": 3522,
+        "nonspace": 3421,
+        "Han": 3007,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3008,
+        "LN": 3009
+      },
+      "clean_counts": {
+        "codepoints": 3501,
+        "nonspace": 3402,
+        "Han": 2994,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2994,
+        "LN": 2994
+      },
+      "raw_sha256": "78306a1d869fcb07f58a4a03b05aafb5224d33bd0e2ba5e50f2ee9a539e18d84",
+      "clean_sha256": "a16d02af7efe01c85486ab6fe5221a18edfbf8793019c1d719e04813b61fc12e",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 101,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "201802797c086fe923477cc427d3f6ad1d98031c6e991babcba66a65a85e0457",
+          "length": 20,
+          "prefix_anchor": "PS： 你一票，我一票，"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "清晨的太阳像是轻轻拨开珠",
+      "closing_anchor": "丈宽的临街药铺完好无损。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76433082_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 44,
+        "paragraph_length_min": 3,
+        "paragraph_length_max": 73
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 11,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:23.144694+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 12,
+      "chapter_label": "第十二章",
+      "title": "正式介绍一下",
+      "catalogue_title": "第一卷向阳花木易为春 第十二章正式介绍一下",
+      "url": "https://m.zongheng.com/chapter/1317295/76433082",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76433082",
+      "collected_at": "2026-10-22T17:07:11.471687+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 117,
+      "clean_paragraph_count": 116,
+      "raw_counts": {
+        "codepoints": 3864,
+        "nonspace": 3747,
+        "Han": 3226,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3227,
+        "LN": 3228
+      },
+      "clean_counts": {
+        "codepoints": 3856,
+        "nonspace": 3741,
+        "Han": 3223,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3223,
+        "LN": 3223
+      },
+      "raw_sha256": "bd896c461bd7540a040ee446b4e80dc27a0f7b3611e46cc64b1e9f8ccbe1be9f",
+      "clean_sha256": "01a48cf417dbc18d51fbc81dff113af097b0a30e9a4da3e7b1e81c485f8a1881",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 117,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "2e127910ff37029b8cdf26be494e720a7496bcf697ea7b03709d973732a57ccf",
+          "length": 7,
+          "prefix_anchor": "PS： 求书评"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "在转过巷子口的时候先生两",
+      "closing_anchor": "着的，给家里带个信儿。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76444463_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 55,
+        "paragraph_length_min": 2,
+        "paragraph_length_max": 99
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 12,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:24.792902+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 13,
+      "chapter_label": "第十三章",
+      "title": "错的就是错的",
+      "catalogue_title": "第一卷向阳花木易为春 第十三章错的就是错的",
+      "url": "https://m.zongheng.com/chapter/1317295/76444463",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76444463",
+      "collected_at": "2026-10-22T17:07:12.057063+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 104,
+      "clean_paragraph_count": 104,
+      "raw_counts": {
+        "codepoints": 3805,
+        "nonspace": 3702,
+        "Han": 3250,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3250,
+        "LN": 3250
+      },
+      "clean_counts": {
+        "codepoints": 3805,
+        "nonspace": 3702,
+        "Han": 3250,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3250,
+        "LN": 3250
+      },
+      "raw_sha256": "f00339f5049b892f2169ef5848f209cf6200f7d98037b937ee6fa4a1ec934759",
+      "clean_sha256": "f00339f5049b892f2169ef5848f209cf6200f7d98037b937ee6fa4a1ec934759",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "叶无坷的眼神里有不可压制",
+      "closing_anchor": "给我二月的第一张月票？】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76444497_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 50,
+        "paragraph_length_min": 6,
+        "paragraph_length_max": 108
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 13,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:26.192081+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 14,
+      "chapter_label": "第十四章",
+      "title": "他撑到了那时候",
+      "catalogue_title": "第一卷向阳花木易为春 第十四章他撑到了那时候",
+      "url": "https://m.zongheng.com/chapter/1317295/76444497",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76444497",
+      "collected_at": "2026-10-22T17:07:12.702776+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 124,
+      "clean_paragraph_count": 124,
+      "raw_counts": {
+        "codepoints": 3759,
+        "nonspace": 3636,
+        "Han": 3161,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3161,
+        "LN": 3161
+      },
+      "clean_counts": {
+        "codepoints": 3759,
+        "nonspace": 3636,
+        "Han": 3161,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3161,
+        "LN": 3161
+      },
+      "raw_sha256": "1a24687698dbf96ad3e4b63864b12039ccb5dd786a675ed2ef6623a6401e48b6",
+      "clean_sha256": "1a24687698dbf96ad3e4b63864b12039ccb5dd786a675ed2ef6623a6401e48b6",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "陆吾看着苗新秀手发颤的把",
+      "closing_anchor": "呼要月票，我就是呼呼。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76448835_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 50,
+        "paragraph_length_min": 3,
+        "paragraph_length_max": 79
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 14,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:27.608833+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 15,
+      "chapter_label": "第十五章",
+      "title": "先割才能舍",
+      "catalogue_title": "第一卷向阳花木易为春 第十五章先割才能舍",
+      "url": "https://m.zongheng.com/chapter/1317295/76448835",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76448835",
+      "collected_at": "2026-10-22T17:07:13.362946+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 121,
+      "clean_paragraph_count": 121,
+      "raw_counts": {
+        "codepoints": 3884,
+        "nonspace": 3764,
+        "Han": 3186,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3186,
+        "LN": 3186
+      },
+      "clean_counts": {
+        "codepoints": 3884,
+        "nonspace": 3764,
+        "Han": 3186,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3186,
+        "LN": 3186
+      },
+      "raw_sha256": "b544659d9df3cc23d20d88ad46e096c2b4cdf12b0fa890dc878fc820cb580557",
+      "clean_sha256": "b544659d9df3cc23d20d88ad46e096c2b4cdf12b0fa890dc878fc820cb580557",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "天还没亮叶无坷他们就已经",
+      "closing_anchor": "陆续把盟主加更都补上。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76452890_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 71,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 84
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 15,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:29.034563+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 16,
+      "chapter_label": "第十六章",
+      "title": "好秀气的牛......",
+      "catalogue_title": "第一卷向阳花木易为春 第十六章好秀气的牛......",
+      "url": "https://m.zongheng.com/chapter/1317295/76452890",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76452890",
+      "collected_at": "2026-10-22T17:07:14.210414+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 90,
+      "clean_paragraph_count": 90,
+      "raw_counts": {
+        "codepoints": 3733,
+        "nonspace": 3644,
+        "Han": 3131,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3131,
+        "LN": 3131
+      },
+      "clean_counts": {
+        "codepoints": 3733,
+        "nonspace": 3644,
+        "Han": 3131,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3131,
+        "LN": 3131
+      },
+      "raw_sha256": "45efce245bcd0a38d609adaad862d218ca0b77e0db6dd470128d47abc28acad3",
+      "clean_sha256": "45efce245bcd0a38d609adaad862d218ca0b77e0db6dd470128d47abc28acad3",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "大奎和二奎在出城之前买了",
+      "closing_anchor": "道：“好秀气的牛逼啊。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76452960_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 69,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 147
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 16,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:30.438426+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 17,
+      "chapter_label": "第十七章",
+      "title": "难民潮",
+      "catalogue_title": "第一卷向阳花木易为春 第十七章难民潮",
+      "url": "https://m.zongheng.com/chapter/1317295/76452960",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76452960",
+      "collected_at": "2026-10-22T17:07:14.898886+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 105,
+      "clean_paragraph_count": 104,
+      "raw_counts": {
+        "codepoints": 4093,
+        "nonspace": 3988,
+        "Han": 3450,
+        "nonHan_letter_number_tokens": 2,
+        "Han_plus_nonHan_tokens": 3452,
+        "LN": 3454
+      },
+      "clean_counts": {
+        "codepoints": 3944,
+        "nonspace": 3841,
+        "Han": 3324,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3324,
+        "LN": 3324
+      },
+      "raw_sha256": "254ea2f6014f9d0b5d088c71c3d4f03f8312a1b7088d4a36c35311794406c2b3",
+      "clean_sha256": "e80ab3f6777c0f384fd88aee7b4d605b9944562c357b9a1dd5a509c00e3996dc",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 105,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "39fc43aa46cdcf57a934e7d777726dbcb0291ac6eee8f01f17a44942bfbb6aba",
+          "length": 148,
+          "prefix_anchor": "PS： 【前两天在群里聊"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "澄潭关将军武栋听陆吾把叶",
+      "closing_anchor": "着这边涨潮一样卷了过来。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76460964_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 62,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 93
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 17,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:32.467025+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 18,
+      "chapter_label": "第十八章",
+      "title": "三个平平无奇的老百姓",
+      "catalogue_title": "第一卷向阳花木易为春 第十八章三个平平无奇的老百姓",
+      "url": "https://m.zongheng.com/chapter/1317295/76460964",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76460964",
+      "collected_at": "2026-10-22T17:07:15.603555+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 115,
+      "clean_paragraph_count": 115,
+      "raw_counts": {
+        "codepoints": 3816,
+        "nonspace": 3702,
+        "Han": 3311,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3311,
+        "LN": 3311
+      },
+      "clean_counts": {
+        "codepoints": 3816,
+        "nonspace": 3702,
+        "Han": 3311,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3311,
+        "LN": 3311
+      },
+      "raw_sha256": "1980f30cf7a6b05b17e36b0946aac271f8dc0bda6a1cbcf4888ee3c35d1f98a2",
+      "clean_sha256": "1980f30cf7a6b05b17e36b0946aac271f8dc0bda6a1cbcf4888ee3c35d1f98a2",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "白茫茫的河面上好像被无穷",
+      "closing_anchor": "被六个人挡住竟不能过？”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76460982_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 28,
+        "paragraph_length_min": 2,
+        "paragraph_length_max": 81
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 18,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:33.987494+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 19,
+      "chapter_label": "第十九章",
+      "title": "破绽",
+      "catalogue_title": "第一卷向阳花木易为春 第十九章破绽",
+      "url": "https://m.zongheng.com/chapter/1317295/76460982",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76460982",
+      "collected_at": "2026-10-22T17:07:16.162248+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 105,
+      "clean_paragraph_count": 105,
+      "raw_counts": {
+        "codepoints": 3646,
+        "nonspace": 3542,
+        "Han": 3102,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3102,
+        "LN": 3102
+      },
+      "clean_counts": {
+        "codepoints": 3646,
+        "nonspace": 3542,
+        "Han": 3102,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3102,
+        "LN": 3102
+      },
+      "raw_sha256": "3d509571c2b7e1acaa413167d012487c2172fad4734ddb0e0150e435f9f35230",
+      "clean_sha256": "3d509571c2b7e1acaa413167d012487c2172fad4734ddb0e0150e435f9f35230",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "这个世界上总是会有些看似",
+      "closing_anchor": "。。。\n【今天有加更。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76460993_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 44,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 93
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 19,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:35.613397+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 20,
+      "chapter_label": "第二十章",
+      "title": "谁都有遗憾吧",
+      "catalogue_title": "第一卷向阳花木易为春 第二十章谁都有遗憾吧",
+      "url": "https://m.zongheng.com/chapter/1317295/76460993",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76460993",
+      "collected_at": "2026-10-22T17:07:16.768475+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 119,
+      "clean_paragraph_count": 119,
+      "raw_counts": {
+        "codepoints": 3836,
+        "nonspace": 3718,
+        "Han": 3276,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3277,
+        "LN": 3284
+      },
+      "clean_counts": {
+        "codepoints": 3836,
+        "nonspace": 3718,
+        "Han": 3276,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3277,
+        "LN": 3284
+      },
+      "raw_sha256": "69e5978e5a4e5daa7d588b3809cce09c9463e1d6094c9c8b25c53249d1591ed3",
+      "clean_sha256": "69e5978e5a4e5daa7d588b3809cce09c9463e1d6094c9c8b25c53249d1591ed3",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "又被叶无坷救了一次的陆吾",
+      "closing_anchor": "一位温柔漂亮的小姐姐。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76469179_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 35,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 69
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 20,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:37.054940+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 21,
+      "chapter_label": "第二十一章",
+      "title": "能做的不多",
+      "catalogue_title": "第一卷向阳花木易为春 第二十一章能做的不多",
+      "url": "https://m.zongheng.com/chapter/1317295/76469179",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76469179",
+      "collected_at": "2026-10-22T17:07:17.672098+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 115,
+      "clean_paragraph_count": 115,
+      "raw_counts": {
+        "codepoints": 3883,
+        "nonspace": 3769,
+        "Han": 3230,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3230,
+        "LN": 3230
+      },
+      "clean_counts": {
+        "codepoints": 3883,
+        "nonspace": 3769,
+        "Han": 3230,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3230,
+        "LN": 3230
+      },
+      "raw_sha256": "10447467673a772c431ef14a9df12658317707da6bc6168d44e60ecd79c5b588",
+      "clean_sha256": "10447467673a772c431ef14a9df12658317707da6bc6168d44e60ecd79c5b588",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "“正式介绍一下，我叫陆吾",
+      "closing_anchor": "了下边，别因为钱受瘪。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76469214_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 58,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 91
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 21,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:38.419515+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 22,
+      "chapter_label": "第二十二章",
+      "title": "打劫个人",
+      "catalogue_title": "第一卷向阳花木易为春 第二十二章打劫个人",
+      "url": "https://m.zongheng.com/chapter/1317295/76469214",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76469214",
+      "collected_at": "2026-10-22T17:07:18.277176+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 112,
+      "clean_paragraph_count": 112,
+      "raw_counts": {
+        "codepoints": 3765,
+        "nonspace": 3654,
+        "Han": 3193,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3193,
+        "LN": 3193
+      },
+      "clean_counts": {
+        "codepoints": 3765,
+        "nonspace": 3654,
+        "Han": 3193,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3193,
+        "LN": 3193
+      },
+      "raw_sha256": "79a236783cf16d7ba2399c56df3dc2c9f3731a164c74dc6233d9d2659e92240d",
+      "clean_sha256": "79a236783cf16d7ba2399c56df3dc2c9f3731a164c74dc6233d9d2659e92240d",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "还没进腊月，天亮的就早了",
+      "closing_anchor": "注卫信工众号：作者知白】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76477903_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 46,
+        "paragraph_length_min": 6,
+        "paragraph_length_max": 90
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 22,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:39.865977+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 23,
+      "chapter_label": "第二十三章",
+      "title": "逼供以及盯梢",
+      "catalogue_title": "第一卷向阳花木易为春 第二十三章逼供以及盯梢",
+      "url": "https://m.zongheng.com/chapter/1317295/76477903",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76477903",
+      "collected_at": "2026-10-22T17:07:18.850671+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 93,
+      "clean_paragraph_count": 93,
+      "raw_counts": {
+        "codepoints": 3550,
+        "nonspace": 3458,
+        "Han": 3032,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3032,
+        "LN": 3032
+      },
+      "clean_counts": {
+        "codepoints": 3550,
+        "nonspace": 3458,
+        "Han": 3032,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3032,
+        "LN": 3032
+      },
+      "raw_sha256": "23b68745d4a20f5490fbe11cae3ef0d6947258baaa7704a80dd354bd1e305937",
+      "clean_sha256": "23b68745d4a20f5490fbe11cae3ef0d6947258baaa7704a80dd354bd1e305937",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "阳光穿透云层刺在地面上的",
+      "closing_anchor": "之际，若穿梭于幽冥人间。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76477936_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 41,
+        "paragraph_length_min": 8,
+        "paragraph_length_max": 84
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 23,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:41.230519+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 24,
+      "chapter_label": "第二十四章",
+      "title": "陷阱",
+      "catalogue_title": "第一卷向阳花木易为春 第二十四章陷阱",
+      "url": "https://m.zongheng.com/chapter/1317295/76477936",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76477936",
+      "collected_at": "2026-10-22T17:07:19.544008+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 107,
+      "clean_paragraph_count": 107,
+      "raw_counts": {
+        "codepoints": 3694,
+        "nonspace": 3588,
+        "Han": 3016,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3016,
+        "LN": 3016
+      },
+      "clean_counts": {
+        "codepoints": 3694,
+        "nonspace": 3588,
+        "Han": 3016,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3016,
+        "LN": 3016
+      },
+      "raw_sha256": "e4e27c763675e900abbfe46f9227bb1b3d49d04bed18b3332509937efe654018",
+      "clean_sha256": "e4e27c763675e900abbfe46f9227bb1b3d49d04bed18b3332509937efe654018",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "每一个山水相逢的地方都值",
+      "closing_anchor": "...我亲眼看着他死。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76486251_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 72,
+        "paragraph_length_min": 8,
+        "paragraph_length_max": 91
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 24,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:42.903540+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 25,
+      "chapter_label": "第二十五章",
+      "title": "手刃",
+      "catalogue_title": "第一卷向阳花木易为春 第二十五章手刃",
+      "url": "https://m.zongheng.com/chapter/1317295/76486251",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76486251",
+      "collected_at": "2026-10-22T17:07:20.230937+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 101,
+      "clean_paragraph_count": 101,
+      "raw_counts": {
+        "codepoints": 3715,
+        "nonspace": 3615,
+        "Han": 3240,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3240,
+        "LN": 3240
+      },
+      "clean_counts": {
+        "codepoints": 3715,
+        "nonspace": 3615,
+        "Han": 3240,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3240,
+        "LN": 3240
+      },
+      "raw_sha256": "42bf6f17c44955413610421b0d1681376745c988c77b665f1f95548de3c7bd9d",
+      "clean_sha256": "42bf6f17c44955413610421b0d1681376745c988c77b665f1f95548de3c7bd9d",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "叶无坷走到这个小村的村口",
+      "closing_anchor": "尹穗头发一提，人头在手。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76486292_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 36,
+        "paragraph_length_min": 6,
+        "paragraph_length_max": 85
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 25,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:44.408827+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 26,
+      "chapter_label": "第二十六章",
+      "title": "孩子",
+      "catalogue_title": "第一卷向阳花木易为春 第二十六章孩子",
+      "url": "https://m.zongheng.com/chapter/1317295/76486292",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76486292",
+      "collected_at": "2026-10-22T17:07:20.964043+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 107,
+      "clean_paragraph_count": 107,
+      "raw_counts": {
+        "codepoints": 3880,
+        "nonspace": 3774,
+        "Han": 3253,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3253,
+        "LN": 3253
+      },
+      "clean_counts": {
+        "codepoints": 3880,
+        "nonspace": 3774,
+        "Han": 3253,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3253,
+        "LN": 3253
+      },
+      "raw_sha256": "3ac6d7cdaf46afa32ec05c220a35dd612d7bef8b8dbc0e9a7e89fdf90ed075ee",
+      "clean_sha256": "3ac6d7cdaf46afa32ec05c220a35dd612d7bef8b8dbc0e9a7e89fdf90ed075ee",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "跪下去的无头尸体还在仰天",
+      "closing_anchor": "了，继续求票，求收藏。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76489918_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 64,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 108
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 26,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:45.867483+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 27,
+      "chapter_label": "第二十七章",
+      "title": "春风见",
+      "catalogue_title": "第一卷向阳花木易为春 第二十七章春风见",
+      "url": "https://m.zongheng.com/chapter/1317295/76489918",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76489918",
+      "collected_at": "2026-10-22T17:07:21.595991+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 108,
+      "clean_paragraph_count": 108,
+      "raw_counts": {
+        "codepoints": 3796,
+        "nonspace": 3689,
+        "Han": 3158,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3158,
+        "LN": 3158
+      },
+      "clean_counts": {
+        "codepoints": 3796,
+        "nonspace": 3689,
+        "Han": 3158,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3158,
+        "LN": 3158
+      },
+      "raw_sha256": "8d90159edca5ad89146da74ba7345a1d21fb8065d1ebebbc252847e89fa46355",
+      "clean_sha256": "8d90159edca5ad89146da74ba7345a1d21fb8065d1ebebbc252847e89fa46355",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "小桥护着流水，篱笆娇惯青",
+      "closing_anchor": "为盟主少侠请喝酒加更。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76494388_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 67,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 100
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 27,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:47.606569+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 28,
+      "chapter_label": "第二十八章",
+      "title": "私事",
+      "catalogue_title": "第一卷向阳花木易为春 第二十八章私事",
+      "url": "https://m.zongheng.com/chapter/1317295/76494388",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76494388",
+      "collected_at": "2026-10-22T17:07:22.168673+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 104,
+      "clean_paragraph_count": 104,
+      "raw_counts": {
+        "codepoints": 3687,
+        "nonspace": 3584,
+        "Han": 3032,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3032,
+        "LN": 3032
+      },
+      "clean_counts": {
+        "codepoints": 3687,
+        "nonspace": 3584,
+        "Han": 3032,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3032,
+        "LN": 3032
+      },
+      "raw_sha256": "c52ddb15433e96c30b1891a4a6f882eee241cef70a34b165b87267322bc153ab",
+      "clean_sha256": "c52ddb15433e96c30b1891a4a6f882eee241cef70a34b165b87267322bc153ab",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "风从青山来，她在青山。\n",
+      "closing_anchor": "着手走进木屋：“访友。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76494418_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 74,
+        "paragraph_length_min": 6,
+        "paragraph_length_max": 103
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 28,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:49.070955+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 29,
+      "chapter_label": "第二十九章",
+      "title": "我教的有用没？",
+      "catalogue_title": "第一卷向阳花木易为春 第二十九章我教的有用没？",
+      "url": "https://m.zongheng.com/chapter/1317295/76494418",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76494418",
+      "collected_at": "2026-10-22T17:07:22.797194+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 119,
+      "clean_paragraph_count": 119,
+      "raw_counts": {
+        "codepoints": 3708,
+        "nonspace": 3590,
+        "Han": 2954,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2954,
+        "LN": 2954
+      },
+      "clean_counts": {
+        "codepoints": 3708,
+        "nonspace": 3590,
+        "Han": 2954,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2954,
+        "LN": 2954
+      },
+      "raw_sha256": "da56eade5b4115ccb63097ffda7b451dd9bea4c9dc9d2a5537ecd14385f3c796",
+      "clean_sha256": "da56eade5b4115ccb63097ffda7b451dd9bea4c9dc9d2a5537ecd14385f3c796",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "赵康犹豫了片刻后便俯身行",
+      "closing_anchor": "....”\n。。。。。。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76502515_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 94,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 83
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 29,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:50.587160+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 30,
+      "chapter_label": "第三十章",
+      "title": "处处好",
+      "catalogue_title": "第一卷向阳花木易为春 第三十章处处好",
+      "url": "https://m.zongheng.com/chapter/1317295/76502515",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76502515",
+      "collected_at": "2026-10-22T17:07:23.406539+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 105,
+      "clean_paragraph_count": 105,
+      "raw_counts": {
+        "codepoints": 3533,
+        "nonspace": 3429,
+        "Han": 2975,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2975,
+        "LN": 2975
+      },
+      "clean_counts": {
+        "codepoints": 3533,
+        "nonspace": 3429,
+        "Han": 2975,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2975,
+        "LN": 2975
+      },
+      "raw_sha256": "21a58cb9fbab2e1dcc5642bf4a13dbaf060ef2de35df3b5a03e46ee8943bbd01",
+      "clean_sha256": "21a58cb9fbab2e1dcc5642bf4a13dbaf060ef2de35df3b5a03e46ee8943bbd01",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "“今天日子真好。”\n站在",
+      "closing_anchor": "\n说完撇嘴。\n“错的。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76502540_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 37,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 95
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 30,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:52.064508+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 31,
+      "chapter_label": "第三十一章",
+      "title": "何以为家",
+      "catalogue_title": "第一卷向阳花木易为春 第三十一章何以为家",
+      "url": "https://m.zongheng.com/chapter/1317295/76502540",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76502540",
+      "collected_at": "2026-10-22T17:07:24.029672+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 105,
+      "clean_paragraph_count": 105,
+      "raw_counts": {
+        "codepoints": 3629,
+        "nonspace": 3525,
+        "Han": 3068,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3068,
+        "LN": 3068
+      },
+      "clean_counts": {
+        "codepoints": 3629,
+        "nonspace": 3525,
+        "Han": 3068,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3068,
+        "LN": 3068
+      },
+      "raw_sha256": "3cb13a38a5e36f320d9e1912945681982130a85ab9560d2aa1a400b991c85e1c",
+      "clean_sha256": "3cb13a38a5e36f320d9e1912945681982130a85ab9560d2aa1a400b991c85e1c",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "入关才两日，风土人情大为",
+      "closing_anchor": "，片刻后则眼神疑惑起来。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76502567_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 48,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 87
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 31,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:53.500072+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 32,
+      "chapter_label": "第三十二章",
+      "title": "颠倒黑白",
+      "catalogue_title": "第一卷向阳花木易为春 第三十二章颠倒黑白",
+      "url": "https://m.zongheng.com/chapter/1317295/76502567",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76502567",
+      "collected_at": "2026-10-22T17:07:25.256216+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 115,
+      "clean_paragraph_count": 115,
+      "raw_counts": {
+        "codepoints": 3978,
+        "nonspace": 3864,
+        "Han": 3259,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3259,
+        "LN": 3259
+      },
+      "clean_counts": {
+        "codepoints": 3978,
+        "nonspace": 3864,
+        "Han": 3259,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3259,
+        "LN": 3259
+      },
+      "raw_sha256": "1e3c1cad9f7a84c0ffdeb59d313878bd091789a79690dd1e14abd3ac8c6b2d1a",
+      "clean_sha256": "1e3c1cad9f7a84c0ffdeb59d313878bd091789a79690dd1e14abd3ac8c6b2d1a",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "人间有灯辉映星河，杯中有",
+      "closing_anchor": "求票，求收藏，求评论。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76510045_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 67,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 81
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 32,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:55.276982+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 33,
+      "chapter_label": "第三十三章",
+      "title": "再颠倒回来",
+      "catalogue_title": "第一卷向阳花木易为春 第三十三章再颠倒回来",
+      "url": "https://m.zongheng.com/chapter/1317295/76510045",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76510045",
+      "collected_at": "2026-10-22T17:07:25.868405+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 106,
+      "clean_paragraph_count": 106,
+      "raw_counts": {
+        "codepoints": 3768,
+        "nonspace": 3663,
+        "Han": 3133,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3133,
+        "LN": 3133
+      },
+      "clean_counts": {
+        "codepoints": 3768,
+        "nonspace": 3663,
+        "Han": 3133,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3133,
+        "LN": 3133
+      },
+      "raw_sha256": "cb5b2fa6f9c53e8b31adde90ee5f9bb358ed00ea25ce31d83325ad388479fae3",
+      "clean_sha256": "cb5b2fa6f9c53e8b31adde90ee5f9bb358ed00ea25ce31d83325ad388479fae3",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "清晨的阳光伸个懒腰就把自",
+      "closing_anchor": "他妈什么呢！还不去拿！”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76510066_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 70,
+        "paragraph_length_min": 3,
+        "paragraph_length_max": 106
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 33,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:56.653738+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 34,
+      "chapter_label": "第三十四章",
+      "title": "你村不小吧",
+      "catalogue_title": "第一卷向阳花木易为春 第三十四章你村不小吧",
+      "url": "https://m.zongheng.com/chapter/1317295/76510066",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76510066",
+      "collected_at": "2026-10-22T17:07:26.563102+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 107,
+      "clean_paragraph_count": 107,
+      "raw_counts": {
+        "codepoints": 3827,
+        "nonspace": 3721,
+        "Han": 3100,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3100,
+        "LN": 3100
+      },
+      "clean_counts": {
+        "codepoints": 3827,
+        "nonspace": 3721,
+        "Han": 3100,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3100,
+        "LN": 3100
+      },
+      "raw_sha256": "c76d182bbeaca0c1346cd6baf1e889966d937c5093a1b8a14f7f93d81660b329",
+      "clean_sha256": "c76d182bbeaca0c1346cd6baf1e889966d937c5093a1b8a14f7f93d81660b329",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "那少年眼见着颠倒黑白，也",
+      "closing_anchor": "了：“你看不起谁你？！”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76510092_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 74,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 92
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 34,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:58.141152+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 35,
+      "chapter_label": "第三十五章",
+      "title": "你根本不懂",
+      "catalogue_title": "第一卷向阳花木易为春 第三十五章你根本不懂",
+      "url": "https://m.zongheng.com/chapter/1317295/76510092",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76510092",
+      "collected_at": "2026-10-22T17:07:27.236812+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 100,
+      "clean_paragraph_count": 100,
+      "raw_counts": {
+        "codepoints": 3509,
+        "nonspace": 3410,
+        "Han": 2873,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2873,
+        "LN": 2873
+      },
+      "clean_counts": {
+        "codepoints": 3509,
+        "nonspace": 3410,
+        "Han": 2873,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2873,
+        "LN": 2873
+      },
+      "raw_sha256": "7ed3035d1fac43ddf0a3195b7fa35c6132c52876f39280f91188c9f1424a8fcc",
+      "clean_sha256": "7ed3035d1fac43ddf0a3195b7fa35c6132c52876f39280f91188c9f1424a8fcc",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "叶无坷与严淞，宋公亭三人",
+      "closing_anchor": "。。\n【祝大家吉祥如意】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76511764_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 70,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 83
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 35,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:09:59.791982+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 36,
+      "chapter_label": "第三十六章",
+      "title": "都在人心",
+      "catalogue_title": "第一卷向阳花木易为春 第三十六章都在人心",
+      "url": "https://m.zongheng.com/chapter/1317295/76511764",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76511764",
+      "collected_at": "2026-10-22T17:07:27.809574+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 113,
+      "clean_paragraph_count": 113,
+      "raw_counts": {
+        "codepoints": 3908,
+        "nonspace": 3796,
+        "Han": 3187,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3187,
+        "LN": 3187
+      },
+      "clean_counts": {
+        "codepoints": 3908,
+        "nonspace": 3796,
+        "Han": 3187,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3187,
+        "LN": 3187
+      },
+      "raw_sha256": "f04436ab7db96092c4b146a5d301ed7ad318af7ceb1c13623c9c945e363cfbe2",
+      "clean_sha256": "f04436ab7db96092c4b146a5d301ed7ad318af7ceb1c13623c9c945e363cfbe2",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "还是一样的夜里，还是一样",
+      "closing_anchor": "都一直支持，感激不尽。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76517423_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 78,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 99
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 36,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:01.183911+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 37,
+      "chapter_label": "第三十七章",
+      "title": "私藏禁品",
+      "catalogue_title": "第一卷向阳花木易为春 第三十七章私藏禁品",
+      "url": "https://m.zongheng.com/chapter/1317295/76517423",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76517423",
+      "collected_at": "2026-10-22T17:07:28.723289+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 100,
+      "clean_paragraph_count": 100,
+      "raw_counts": {
+        "codepoints": 3644,
+        "nonspace": 3545,
+        "Han": 3006,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3006,
+        "LN": 3006
+      },
+      "clean_counts": {
+        "codepoints": 3644,
+        "nonspace": 3545,
+        "Han": 3006,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3006,
+        "LN": 3006
+      },
+      "raw_sha256": "3e9f78c442a1ff5082140b132206e0ed8bf5c0a159ac4606ffd32fe850a68846",
+      "clean_sha256": "3e9f78c442a1ff5082140b132206e0ed8bf5c0a159ac4606ffd32fe850a68846",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "津唐历来都是战略要地，从",
+      "closing_anchor": "着一具被石灰埋住的尸体。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76517448_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 69,
+        "paragraph_length_min": 8,
+        "paragraph_length_max": 105
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 37,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:02.675253+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 38,
+      "chapter_label": "第三十八章",
+      "title": "风云际会",
+      "catalogue_title": "第一卷向阳花木易为春 第三十八章风云际会",
+      "url": "https://m.zongheng.com/chapter/1317295/76517448",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76517448",
+      "collected_at": "2026-10-22T17:07:29.307452+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 119,
+      "clean_paragraph_count": 119,
+      "raw_counts": {
+        "codepoints": 3733,
+        "nonspace": 3615,
+        "Han": 3010,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3010,
+        "LN": 3010
+      },
+      "clean_counts": {
+        "codepoints": 3733,
+        "nonspace": 3615,
+        "Han": 3010,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3010,
+        "LN": 3010
+      },
+      "raw_sha256": "d349b7bbbba19d1756f789f4cdac90776be305860a19fcf755b55bbe52619959",
+      "clean_sha256": "d349b7bbbba19d1756f789f4cdac90776be305860a19fcf755b55bbe52619959",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "“阿爷说过，大慈悲山里的",
+      "closing_anchor": "：“你们把人家车拆了。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76517485_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 86,
+        "paragraph_length_min": 3,
+        "paragraph_length_max": 93
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 38,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:04.006408+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 39,
+      "chapter_label": "第三十九章",
+      "title": "好大的道理",
+      "catalogue_title": "第一卷向阳花木易为春 第三十九章好大的道理",
+      "url": "https://m.zongheng.com/chapter/1317295/76517485",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76517485",
+      "collected_at": "2026-10-22T17:07:29.902266+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 123,
+      "clean_paragraph_count": 123,
+      "raw_counts": {
+        "codepoints": 3927,
+        "nonspace": 3805,
+        "Han": 3223,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3223,
+        "LN": 3223
+      },
+      "clean_counts": {
+        "codepoints": 3927,
+        "nonspace": 3805,
+        "Han": 3223,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3223,
+        "LN": 3223
+      },
+      "raw_sha256": "6419d441105b9780060a3069886b36afd8f7a2ff4153c7d9e4dd8232eb992221",
+      "clean_sha256": "6419d441105b9780060a3069886b36afd8f7a2ff4153c7d9e4dd8232eb992221",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "夜里的地牢仿佛变得大了不",
+      "closing_anchor": "荐票，月票，感激不尽啦】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76519050_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 70,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 83
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 39,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:05.455421+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 40,
+      "chapter_label": "第四十章",
+      "title": "诸位都是弟弟",
+      "catalogue_title": "第一卷向阳花木易为春 第四十章诸位都是弟弟",
+      "url": "https://m.zongheng.com/chapter/1317295/76519050",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76519050",
+      "collected_at": "2026-10-22T17:07:30.609410+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 111,
+      "clean_paragraph_count": 111,
+      "raw_counts": {
+        "codepoints": 3955,
+        "nonspace": 3845,
+        "Han": 3270,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3270,
+        "LN": 3270
+      },
+      "clean_counts": {
+        "codepoints": 3955,
+        "nonspace": 3845,
+        "Han": 3270,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3270,
+        "LN": 3270
+      },
+      "raw_sha256": "367c667e2c2a924e28cf19e7533967437cad88df2d9d99f5aef9787d6204ce4d",
+      "clean_sha256": "367c667e2c2a924e28cf19e7533967437cad88df2d9d99f5aef9787d6204ce4d",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "叶无坷第一次听到雁塔书院",
+      "closing_anchor": "好运，大家都越来越好。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76524339_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 71,
+        "paragraph_length_min": 6,
+        "paragraph_length_max": 113
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 40,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:07.161219+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 41,
+      "chapter_label": "第四十一章",
+      "title": "孺子可教",
+      "catalogue_title": "第一卷向阳花木易为春 第四十一章孺子可教",
+      "url": "https://m.zongheng.com/chapter/1317295/76524339",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76524339",
+      "collected_at": "2026-10-22T17:07:31.209708+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 106,
+      "clean_paragraph_count": 106,
+      "raw_counts": {
+        "codepoints": 3459,
+        "nonspace": 3354,
+        "Han": 2852,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2852,
+        "LN": 2852
+      },
+      "clean_counts": {
+        "codepoints": 3459,
+        "nonspace": 3354,
+        "Han": 2852,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2852,
+        "LN": 2852
+      },
+      "raw_sha256": "087c7e764cb04897f51b105a62b408c7904a4a2da22b0f2ab228863ab0986092",
+      "clean_sha256": "087c7e764cb04897f51b105a62b408c7904a4a2da22b0f2ab228863ab0986092",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "不知道是谁脚欠踢了踢地上",
+      "closing_anchor": "一定会喜欢。\n喜欢个屁。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76524363_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 72,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 98
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 41,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:08.615490+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 42,
+      "chapter_label": "第四十二章",
+      "title": "一见如故",
+      "catalogue_title": "第一卷向阳花木易为春 第四十二章一见如故",
+      "url": "https://m.zongheng.com/chapter/1317295/76524363",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76524363",
+      "collected_at": "2026-10-22T17:07:31.839284+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 104,
+      "clean_paragraph_count": 104,
+      "raw_counts": {
+        "codepoints": 3726,
+        "nonspace": 3623,
+        "Han": 3127,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3127,
+        "LN": 3127
+      },
+      "clean_counts": {
+        "codepoints": 3726,
+        "nonspace": 3623,
+        "Han": 3127,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3127,
+        "LN": 3127
+      },
+      "raw_sha256": "2263e765754b746261e1512a35c488cd56c39a8ca41ffebfedea76c2a60af2ee",
+      "clean_sha256": "2263e765754b746261e1512a35c488cd56c39a8ca41ffebfedea76c2a60af2ee",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "一辆欢快且拥挤的马车在官",
+      "closing_anchor": "哎呀，先生又不小心啦。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76531548_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 58,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 83
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 42,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:10.060060+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 43,
+      "chapter_label": "第四十三章",
+      "title": "赌注换来的",
+      "catalogue_title": "第一卷向阳花木易为春 第四十三章赌注换来的",
+      "url": "https://m.zongheng.com/chapter/1317295/76531548",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76531548",
+      "collected_at": "2026-10-22T17:07:32.397725+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 116,
+      "clean_paragraph_count": 116,
+      "raw_counts": {
+        "codepoints": 3610,
+        "nonspace": 3495,
+        "Han": 2894,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2894,
+        "LN": 2894
+      },
+      "clean_counts": {
+        "codepoints": 3610,
+        "nonspace": 3495,
+        "Han": 2894,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2894,
+        "LN": 2894
+      },
+      "raw_sha256": "fb2e076143605d3bc836449f520cbb759aecbdb2ea18c73e611d906e1bc65777",
+      "clean_sha256": "fb2e076143605d3bc836449f520cbb759aecbdb2ea18c73e611d906e1bc65777",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "沐山色看了看地上的那块银",
+      "closing_anchor": "票票，记得给个评价哈。】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76531567_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 85,
+        "paragraph_length_min": 3,
+        "paragraph_length_max": 98
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 43,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:11.684731+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 44,
+      "chapter_label": "第四十四章",
+      "title": "旋涡来了",
+      "catalogue_title": "第一卷向阳花木易为春 第四十四章旋涡来了",
+      "url": "https://m.zongheng.com/chapter/1317295/76531567",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76531567",
+      "collected_at": "2026-10-22T17:07:32.974135+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 104,
+      "clean_paragraph_count": 104,
+      "raw_counts": {
+        "codepoints": 3562,
+        "nonspace": 3459,
+        "Han": 3020,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3020,
+        "LN": 3020
+      },
+      "clean_counts": {
+        "codepoints": 3562,
+        "nonspace": 3459,
+        "Han": 3020,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3020,
+        "LN": 3020
+      },
+      "raw_sha256": "4c03f13eb7a989eb430776d86759c02901fd457f761f052a4878c08f786714e6",
+      "clean_sha256": "4c03f13eb7a989eb430776d86759c02901fd457f761f052a4878c08f786714e6",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "晓色云开，春随人意。\n发",
+      "closing_anchor": "今日不是快，是真的急。”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76539491_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 34,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 115
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 44,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:13.293162+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 45,
+      "chapter_label": "第四十五章",
+      "title": "凭什么？",
+      "catalogue_title": "第一卷向阳花木易为春 第四十五章凭什么？",
+      "url": "https://m.zongheng.com/chapter/1317295/76539491",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76539491",
+      "collected_at": "2026-10-22T17:07:33.600763+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 107,
+      "clean_paragraph_count": 107,
+      "raw_counts": {
+        "codepoints": 3767,
+        "nonspace": 3661,
+        "Han": 3130,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3130,
+        "LN": 3130
+      },
+      "clean_counts": {
+        "codepoints": 3767,
+        "nonspace": 3661,
+        "Han": 3130,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3130,
+        "LN": 3130
+      },
+      "raw_sha256": "861874aa9e3e131512b573c3a6cf23d63e68d713f60db7736907d10dda77ca57",
+      "clean_sha256": "861874aa9e3e131512b573c3a6cf23d63e68d713f60db7736907d10dda77ca57",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "忽而传来怒骂，忽而传来叫",
+      "closing_anchor": "么不是在史册！在人心！”",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76539518_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 61,
+        "paragraph_length_min": 6,
+        "paragraph_length_max": 87
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 45,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:14.750009+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 46,
+      "chapter_label": "第四十六章",
+      "title": "口供",
+      "catalogue_title": "第一卷向阳花木易为春 第四十六章口供",
+      "url": "https://m.zongheng.com/chapter/1317295/76539518",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76539518",
+      "collected_at": "2026-10-22T17:07:34.193316+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 110,
+      "clean_paragraph_count": 110,
+      "raw_counts": {
+        "codepoints": 3684,
+        "nonspace": 3575,
+        "Han": 2987,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2987,
+        "LN": 2987
+      },
+      "clean_counts": {
+        "codepoints": 3684,
+        "nonspace": 3575,
+        "Han": 2987,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 2987,
+        "LN": 2987
+      },
+      "raw_sha256": "8e57e1dc4699ba13bba026a68139b4bc09b95755f948382beda45ef2acab41e4",
+      "clean_sha256": "8e57e1dc4699ba13bba026a68139b4bc09b95755f948382beda45ef2acab41e4",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "一句凭什么不能在人心，让",
+      "closing_anchor": ".....\n王八蛋名单：",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76546610_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 82,
+        "paragraph_length_min": 6,
+        "paragraph_length_max": 70
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 46,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:16.153023+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 47,
+      "chapter_label": "第四十七章",
+      "title": "今日拿你",
+      "catalogue_title": "第一卷向阳花木易为春 第四十七章今日拿你",
+      "url": "https://m.zongheng.com/chapter/1317295/76546610",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76546610",
+      "collected_at": "2026-10-22T17:07:34.856875+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 106,
+      "clean_paragraph_count": 106,
+      "raw_counts": {
+        "codepoints": 3562,
+        "nonspace": 3457,
+        "Han": 3025,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3025,
+        "LN": 3025
+      },
+      "clean_counts": {
+        "codepoints": 3562,
+        "nonspace": 3457,
+        "Han": 3025,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3025,
+        "LN": 3025
+      },
+      "raw_sha256": "30ae1fa18487c30d5d2072e58136c318edf1f509b01dd1c343e5e68033559dea",
+      "clean_sha256": "30ae1fa18487c30d5d2072e58136c318edf1f509b01dd1c343e5e68033559dea",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "邓放看到这五个字后被气的",
+      "closing_anchor": "典从年身后，有一袭白衣。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76546627_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 33,
+        "paragraph_length_min": 4,
+        "paragraph_length_max": 65
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 47,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:17.543859+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 48,
+      "chapter_label": "第四十八章",
+      "title": "跟我说谢谢",
+      "catalogue_title": "第一卷向阳花木易为春 第四十八章跟我说谢谢",
+      "url": "https://m.zongheng.com/chapter/1317295/76546627",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76546627",
+      "collected_at": "2026-10-22T17:07:35.500772+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 124,
+      "clean_paragraph_count": 124,
+      "raw_counts": {
+        "codepoints": 3802,
+        "nonspace": 3679,
+        "Han": 3208,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3208,
+        "LN": 3208
+      },
+      "clean_counts": {
+        "codepoints": 3802,
+        "nonspace": 3679,
+        "Han": 3208,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3208,
+        "LN": 3208
+      },
+      "raw_sha256": "5b4cce9bd0682eaacbafc9a42fc34922349deaa929571db10c2dbbc296a54c36",
+      "clean_sha256": "5b4cce9bd0682eaacbafc9a42fc34922349deaa929571db10c2dbbc296a54c36",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "典从年慢慢转身，浑身上下",
+      "closing_anchor": "的血已经浸透了半边长衫。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76554030_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 49,
+        "paragraph_length_min": 3,
+        "paragraph_length_max": 72
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 48,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:19.254873+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 49,
+      "chapter_label": "第四十九章",
+      "title": "搅局者",
+      "catalogue_title": "第一卷向阳花木易为春 第四十九章搅局者",
+      "url": "https://m.zongheng.com/chapter/1317295/76554030",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76554030",
+      "collected_at": "2026-10-22T17:07:36.413684+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 101,
+      "clean_paragraph_count": 100,
+      "raw_counts": {
+        "codepoints": 3661,
+        "nonspace": 3560,
+        "Han": 3037,
+        "nonHan_letter_number_tokens": 1,
+        "Han_plus_nonHan_tokens": 3038,
+        "LN": 3039
+      },
+      "clean_counts": {
+        "codepoints": 3648,
+        "nonspace": 3549,
+        "Han": 3029,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3029,
+        "LN": 3029
+      },
+      "raw_sha256": "82e8b66c61483bbf8c89ce545d988ee2aedeadad73a293644fb92971a07816ae",
+      "clean_sha256": "dc49bfb5d5304f7cf6eb9fec10cbdf8097a4184f5dfff81f57e5f031c6fb2b82",
+      "excluded_paragraphs": [
+        {
+          "paragraph_index": 101,
+          "reason": "standalone explicit author-note/solicitation prefix",
+          "sha256": "264e82cd646676fd8e4275768193f7ec528ed07da3c207702626ebbdd80267a6",
+          "length": 12,
+          "prefix_anchor": "PS： 求票求收藏求评论"
+        }
+      ],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "官驿。\n大奎二奎一个在屋",
+      "closing_anchor": "初六日子很好，因为六啊】",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76554048_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 65,
+        "paragraph_length_min": 3,
+        "paragraph_length_max": 116
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 49,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:20.686093+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": []
+    },
+    {
+      "chapter_number": 50,
+      "chapter_label": "第五十章",
+      "title": "西行劫",
+      "catalogue_title": "第一卷向阳花木易为春 第五十章西行劫",
+      "url": "https://m.zongheng.com/chapter/1317295/76554048",
+      "catalogue_free_label": "免费",
+      "catalogue_vip_class": false,
+      "http_status": 200,
+      "resolved_url": "https://m.zongheng.com/chapter/1317295/76554048",
+      "collected_at": "2026-10-22T17:07:37.064384+08:00",
+      "vip_flag": null,
+      "vip_flag_basis": "移动正文无明确isVip字段；目录明确免费，未登录直接返回完整p段落",
+      "content_attributes": {
+        "data-prescription": "0"
+      },
+      "selector": "div.content > p",
+      "current_chapter_id_matches": true,
+      "raw_paragraph_count": 113,
+      "clean_paragraph_count": 113,
+      "raw_counts": {
+        "codepoints": 3751,
+        "nonspace": 3639,
+        "Han": 3161,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3161,
+        "LN": 3161
+      },
+      "clean_counts": {
+        "codepoints": 3751,
+        "nonspace": 3639,
+        "Han": 3161,
+        "nonHan_letter_number_tokens": 0,
+        "Han_plus_nonHan_tokens": 3161,
+        "LN": 3161
+      },
+      "raw_sha256": "cd2fd7c75bfeed762998fcd64a6d60bd8b01815c017b4e9b9e60758c4c096d18",
+      "clean_sha256": "cd2fd7c75bfeed762998fcd64a6d60bd8b01815c017b4e9b9e60758c4c096d18",
+      "excluded_paragraphs": [],
+      "platform_count": null,
+      "platform_count_basis": "移动目录/正文页未显示平台字数，不从本地计数推断",
+      "opening_anchor": "器叔受伤。\n伤在一块瓦片",
+      "closing_anchor": "能为你挡住将来更大的劫。",
+      "next_chapter_links": [
+        "//m.zongheng.com/chapter/1317295/76560999_1"
+      ],
+      "semantic_status": "not_semantically_reviewed",
+      "automatic_observations": {
+        "dialogue_marked_paragraphs": 44,
+        "paragraph_length_min": 5,
+        "paragraph_length_max": 81
+      },
+      "warnings": [
+        "技术采集完成不等于模型逐字细读；语义、伏笔、人物审查尚未执行"
+      ],
+      "declared_chapter_number": 50,
+      "next_matches_catalogue": true,
+      "recount": {
+        "collected_at": "2026-10-22T17:10:22.267118+08:00",
+        "raw_sha_matches": true,
+        "clean_sha_matches": true,
+        "unicode_data_version": "15.1.0"
+      },
+      "possible_unexcluded_note_prefixes": [],
+      "next_completeness_note": "已与同次官方目录第51章ID核对"
+    }
+  ],
+  "failures": [],
+  "verification": {
+    "expected": 50,
+    "collected": 50,
+    "unique_urls": 50,
+    "unique_raw_sha256": 50,
+    "unique_clean_sha256": 50,
+    "missing_numbers": [],
+    "all_number_labels_match": true,
+    "next_navigation_mismatches": [],
+    "all_catalogue_marked_free": true,
+    "semantic_reviewed_chapters": [],
+    "semantic_review_count": 0,
+    "exact_LN_count": 50,
+    "raw_clean_source_unchanged_on_recount": 50,
+    "unidata_version": "15.1.0",
+    "ambiguous_note_candidates": [],
+    "complete_records_without_full_text": true
+  },
+  "recount_failures": [],
+  "count_summary": {
+    "LN": {
+      "n": 50,
+      "min": 2852,
+      "max": 3407,
+      "median": 3138.5,
+      "mean": 3137.48,
+      "sum": 156874
+    },
+    "nonspace": {
+      "n": 50,
+      "min": 3354,
+      "max": 3899,
+      "median": 3641.5,
+      "mean": 3637.7,
+      "sum": 181885
+    },
+    "excluded_paragraphs_total": 10,
+    "chapters_with_exclusions": [
+      3,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      17,
+      49
+    ],
+    "raw_paragraphs_total": 5461,
+    "clean_paragraphs_total": 5451
+  },
+  "structural_observations": {
+    "evidence_scope": "50章仅自动统计结构；未逐章语义审阅。",
+    "paragraphs": {
+      "min": 90,
+      "max": 128
+    },
+    "dialogue_marker_rule": "段落包含中文弯引号计1；不等于实际对话比例，亦未区分引文/内心话",
+    "sample_numbers": [
+      1,
+      25,
+      50
+    ],
+    "samples": [
+      {
+        "chapter_number": 1,
+        "title": "山里有座泥菩萨",
+        "paragraph_count": 118,
+        "LN": 3386,
+        "nonspace": 3899,
+        "automatic_observations": {
+          "dialogue_marked_paragraphs": 68,
+          "paragraph_length_min": 5,
+          "paragraph_length_max": 100
+        }
+      },
+      {
+        "chapter_number": 25,
+        "title": "手刃",
+        "paragraph_count": 101,
+        "LN": 3240,
+        "nonspace": 3615,
+        "automatic_observations": {
+          "dialogue_marked_paragraphs": 36,
+          "paragraph_length_min": 6,
+          "paragraph_length_max": 85
+        }
+      },
+      {
+        "chapter_number": 50,
+        "title": "西行劫",
+        "paragraph_count": 113,
+        "LN": 3161,
+        "nonspace": 3639,
+        "automatic_observations": {
+          "dialogue_marked_paragraphs": 44,
+          "paragraph_length_min": 5,
+          "paragraph_length_max": 81
+        }
+      }
+    ],
+    "inference_boundary": "不可由字数/段落/引号分布推断人物动机、伏笔质量、场景因果或文学质量；不得把50章采集称作50章读完。"
+  }
+}
