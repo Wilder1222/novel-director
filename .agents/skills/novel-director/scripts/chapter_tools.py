@@ -45,6 +45,8 @@ def _load(project, aid):
         _, original = ensemble._load(project, item['ensemble_id'])
         if original['stage'] != 'complete' or flow.digest(original['candidate'].encode('utf-8')) != item['candidate_sha256']:
             raise ValueError('场景候选版本已改变')
+        if 'accepted_events' in item and item['accepted_events'] != ensemble.visible_events(original):
+            raise ValueError('场景已裁定可见事件已改变，须重建汇编')
     return folder, state
 
 
@@ -72,9 +74,11 @@ def assembly_plan(project, chapter_id, spec):
             raise ValueError('场景视角与章卡不符')
         if scenes and ensemble._time(sc['at']) < ensemble._time(scenes[-1]['at']):
             raise ValueError('场景时点逆序；闪回须另行明确设计，不能静默倒排')
-        speech = [event['speech'] for event in state['events'] if event['reader_visible'] and sc['pov_instance'] in event['observers'] and event.get('speech')]
+        events = ensemble.visible_events(state)
+        speech = [event['speech'] for event in events if event.get('speech')]
         scenes.append({'ensemble_id': sid, 'scene_id': sc['id'], 'at': sc['at'], 'location': sc['location'],
                        'pov_instance': sc['pov_instance'], 'text': state['candidate'], 'accepted_speech': speech,
+                       'accepted_events': events,
                        'candidate_sha256': flow.digest(state['candidate'].encode('utf-8'))})
         if 'content_map' in state: scenes[-1]['content_map'] = deepcopy(state['content_map'])
     names = [item['scene_id'] for item in scenes]
@@ -105,13 +109,16 @@ def assembly_packet(project, aid):
     _, state = _load(project, aid)
     if state['stage'] != 'awaiting_narrator':
         raise ValueError('组装已交接，不重放')
+    if any('accepted_events' not in item for item in state['scenes']):
+        raise ValueError('旧待汇编缺少已裁定可见事件，须显式重建assembly-plan；原场景依赖过期时先重建排练/Run及审查')
     packet = {'role': 'chapter_compose', 'worker_id': 'narrator', 'session_key': aid + ':narrator:chapter_compose',
               'allowed_tools': [], 'context_policy': 'replace_with_scoped_packet',
-              'system': '你是唯一narrator的独立整章汇编实例。只据当前包组织有序场景和转场，不读取其他phase。保留每场已采纳对白；不引入关键新事实、不替角色作出新选择。返回sections和场间transitions。结果仅为候选，完整性与语义仍需整章审稿。',
+              'system': '你是唯一narrator的独立整章汇编实例。只据当前包组织有序场景和转场，不读取其他phase。保留每场已采纳对白的连续原串、顺序与重复；按accepted_events中speech/result的实际先后组织语气、表情/目光和动作，使其与场景压力、人物性格/情绪/关系构成同一次反应。不把意图当事实，不编他人私心，不每句机械配动作或语气词，允许沉默和正式短答；需改词或拆对白回人物重提/显式修订。不引入关键新事实、不替角色作出新选择。返回sections和场间transitions。结果仅为候选，完整性与语义仍需整章审稿。',
               'input': {'chapter_id': state['chapter_id'], 'history_id': state['history_id'], 'pov': state['pov'],
                         'scenes': deepcopy(state['scenes']), 'writing_profile': deepcopy(state['writing_profile'])},
               'response_contract': {'required': ['request_id', 'sections', 'transitions'],
                                     'section_fields': ['ensemble_id', 'text'], 'transitions_count': len(state['scenes']) - 1}}
+    packet['system'] += ensemble.SPEECH_RHYTHM_PRESERVATION + ensemble.NOVEL_DIALOGUE_PACING + ensemble.INTERIORITY_PROGRESSION
     packet['request_id'] = ensemble._hash({'state': state, 'packet': packet})
     import writing_spec
     spec = writing_spec.projection(project, state['chapter_id'])

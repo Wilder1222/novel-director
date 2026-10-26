@@ -36,7 +36,7 @@ class CharacterDialogue(unittest.TestCase):
         configured(self.p);text='甲乙丙丁戊己';targets=writing.targets(self.p,'V01-C01')
         result={'spec_sha256':writing.load(self.p)['sha256'],'candidate_sha256':flow.digest(text.encode()),'checks':[{'id':r['id'],'verdict':'satisfied','rationale':'合成协议检验，不证明语义','citations':[{'quote':'丁戊己' if r['scope']=='P2' else '甲乙丙'}]} for r in targets]}
         writing.verify_review(self.p,'V01-C01',text,mapped(self.p),result)
-        for identifier in ('character_naming','dialogue_context'):
+        for identifier in ('character_naming','dialogue_context','dialogue_embodiment'):
             self.assertIn(identifier,{r['id'] for r in targets});bad=copy.deepcopy(result);bad['checks']=[r for r in bad['checks'] if r['id']!=identifier]
             with self.subTest(identifier=identifier),self.assertRaises(ValueError):writing.verify_review(self.p,'V01-C01',text,mapped(self.p),bad)
 

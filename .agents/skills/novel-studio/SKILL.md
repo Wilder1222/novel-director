@@ -2,7 +2,7 @@
 name: novel-studio
 description: Codex 中文小说协作入口。用户提出小说想法、继续创作、改剧情、写章、调整人物、要求不同 Agent 扮演人物时使用。接收自然语言，读取已有小说项目，调用 novel-director 并协调主线、核心角色、普通人物池；不自动批准或发布。
 metadata:
-  version: "0.4.1"
+  version: "0.4.3"
 ---
 
 # 创作主会话入口
@@ -31,13 +31,15 @@ stage-status 未通过不得推进；有未知/未决/漏项/过期就停在当�
 ## 3. 按任务分工
 - 探讨/大纲：主会话 + 主线按需工作，不强制所有演员在线。
 - 场景/章节：读取 ../novel-director/references/ensemble-writing.md 与 ensemble-host.md。
-  同时加载opening-volume-structure.md、writing-spec.md与prose-risks.md：开场/分卷卡表先核，当前章职责落到独占plot，跨场/整章要求整章核；主会话先按本书章卡设章/剧情/parts硬范围、细节/铺垫要求；不把通用章长跨题材硬套。角色返回原始parts由工具计数。审稿要求规格证据与八类语境判断，零命中也审；需改/不确定不放行，合理例外保留，不编新事实。
-  主会话准备 config/scene 与候选章卡，使用 engine ensemble-start；从返回值取实际 ENS。
+  同时加载opening-volume-structure.md、writing-spec.md、dialogue-embodiment.md、dialogue-density.md、interiority-progression.md与prose-risks.md：开场/分卷卡表先核，当前章职责落到独占plot，跨场/整章要求整章核；主会话先按本书章卡设章/剧情/parts硬范围、细节/铺垫要求；不把通用章长跨题材硬套。角色返回原始parts由工具计数。审稿要求规格证据与八类语境判断，零命中也审；需改/不确定不放行，合理例外保留，不编新事实。
+  相关成长章节先按interiority-progression.md把自述、功法练习/晋升关键过程及后续铺垫落到章卡、detail_requirements/setups与实际prior：明确法门/能力基线、尝试/反馈/调整、门槛与有限结果；不发未来回收表，缺过程回场景/人物，不要求每章修炼或升级。需内心描写时明确当前POV与可展示范围，并在scene显式设置allow_pov_interior=true，不统一开启或更改禁公开知识；许可内心走现有pov_interior过滤，整章沿用已完成正文，不加原始内心字段。
+  主会话从当前可知人物/关系资料整理 config/scene 与候选章卡；人物自己的当前任务、单向关系看法及instances[].speech_style（性格、常态语气、语言习惯和带when/avoid_when的口头禅）共同供给演员，缺资料不补造、不让作者填JSON，不跨年龄/历史回退习惯；先按小说交流作用规划直接对白/未锁定概述及关键叙述落点，不将轮次数当目标；密度按交流段/场景/整章复审，不设比例或句数配额，也不逐句插动作稀释。已采纳台词需降密度时回上游/显式修订；然后使用 engine ensemble-start；从返回值取实际 ENS。
   `python3 scripts/studio.py packet ENS` 输出定向数据包与 custom_agent_name。
   核心人物先用 `role-register CHARACTER_ID local_NAME` 登记本书专属定义；新定义须由实际宿主重新发现并探针验证。
   `packet` 默认在宿主条件不足时阻止正式委派；`--inspect` 只供检查。探针格式见 `docs/CODEX-HOST.md`。
   用当前 Codex 实际提供的子代理工具调用对应角色；不发全局设定、完整审稿或主会话原始聊天。
   必须确认干净输入/实例分区；不假设“同一线程下一条消息”就是替换上下文。
+  人物speech与action_intent共同承载当场意图、语气词/停顿、表情及动作；resolve只将认可的可观察反应与先后写入result，compose与整章沿用可见裁定事件，保留speech连续原串，不逐句凑表演。speech可依语境选省略号、骤断、结巴、重复和改口，不设配额；成稿不统一删改这些字符或重复。审稿逐位发言者核dialogue_context/dialogue_embodiment并附当前可知材料和过滤后的事件，不传私密总账。
   actor → resolve → actor 串行，compose 最后运行。角色只返回数据，由主会话保存、核验。
 - 修订：按 V0.6 revision 流程，不自由覆盖好句和伏笔。
 - 研究/审稿：可以独立委派，但同宿主模型结果标相应来源，不冒充外部盲评。

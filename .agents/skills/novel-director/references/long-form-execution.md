@@ -1,5 +1,7 @@
 # 文风、整章和跨章执行契约（v0.8）
 
+按[自述、练习与晋升铺垫](interiority-progression.md)规划有关章节：在章卡明确关键自省、具体尝试/反馈/调整、晋升前证/门槛与前后差异，用已有detail_requirements和setups登记过程/铺垫；重复稳定过程可概述，不强制每章修炼或突破，未知设定保持候选。人物/成稿只拿当前可知或可展示的材料，未来回收答案不下发。
+
 源码示例以仓库根为 cwd。独立安装时用实际 Skill 绝对目录下的 scripts/novel.py 替换脚本前缀，书目录仍是作者项目。
 
 ## 文风校准与题材
@@ -47,7 +49,8 @@ python3 scripts/studio.py assembly-accept ASM --response .studio/narrator-respon
 正式宿主使用Studio的assembly-packet/assembly-accept，复用人物委派的能力门槛与真实回执；
 引擎novel.py的assembly-packet/assembly-submit保留给手工/合成/自备宿主适配器，不因source字符串就证明真实委派。
 独立Director包不含Studio时，自备宿主也须实际核对相同的清洁输入/禁工具/分区和来源。
-packet只含已完成候选、公开对白、时点/地点与安全文风；不含director_goal、其他角色私心或排练self_notes。
+packet含已完成候选、公开对白、时点/地点、安全文风及accepted_events（仅id/actor_id/speech/result，reader_visible且POV在observers中）；不含director_goal、其他角色私心或排练self_notes。
+唯一narrator按[对白与行为一体化](dialogue-embodiment.md)对照可见result保留语气/动作与发言先后，不把原始意图当事实，不逐句配动作。speech连续原串不插叙拆句。旧待汇编缺accepted_events须新assembly-plan；若原生产场景依赖已过期，先重建排练/Run及审查，不改旧哈希。
 唯一narrator用独立chapter_compose上下文，返回：
 
 ```json

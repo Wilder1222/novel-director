@@ -33,21 +33,86 @@ ACTOR_INSTRUCTION += '''
 对白依据自身voice、年龄经历、当时目标、现场观察、情绪和身体状态、对方及relationship_view来选择措辞、
 句长、停顿、直说/回避与接话方式。只依据本包可知情境，不推断他人私密心理或披露未许可信息。
 写自然口语，有作用的省略、打断、沉默、潜台词可以保留；不把人设标签念成台词、替作者轮流讲解背景，
-不机械加语气词/方言/现代梗或每句舞台动作。正式场合可简洁庄重，强情绪也可克制，不把所有人写同一腔。'''
+不机械加语气词/方言/现代梗或每句舞台动作。正式场合可简洁庄重，强情绪也可克制，不把所有人写同一腔。
+把说话当作当前场景中的行动：依据剧情压力、自己的目的/性格、情绪身体状态和与听者的关系，
+共同设计同一次反应的speech与action_intent。speech选措辞、适当语气词和停顿；action_intent提出
+可听语气、表情/目光、动作及其与发言的先后。它们可配合，也可有依据地掩饰/反衬；不是独立拼接的标签。
+动作仍是自己的提案，不能宣告成功或控制对方；不编他人内心、未知关系或无来源道具。
+关键变化处写足，普通接话写轻；纯短答、正式表达、克制和沉默均可，不要求每句凑齐这些要素。'''
+ACTOR_INSTRUCTION += '''
+speech可用省略号“……”呈现迟疑/话尾未尽，用破折号“——”呈现骤断/改口，按当场声线选择结巴、
+短词/短句重复或自我修正，如“我……我没答应”“不，不是明天，是今天”。这些形式要响应当场目的、
+压力及对方反应；不设配额，不人人结巴，不堆叠标点。紧张也可说得完整，稳定口吃不等于怯懦，
+不从单个符号推断心理；正式短答和克制可以不带这些形式。不要为解释断句新增伤势或关系。'''
+ACTOR_INSTRUCTION += '''
+综合当前实例speech_style（若有）的性格、常态语气、语言习惯与profile.voice/values/limits，
+连同自己的goal、relationship_view及最近已观察回应来写对白。先辨认对谁说、想争取或回避什么，
+再选择称呼、礼貌与亲疏分寸、词汇/句长、直说/协商/回避及当场语气；不把依据清单念成台词。
+关系看法是单向认知，不代表对方同样亲近；换对象或任务可换语体，不等于人格重置，
+不把某一性格标签绝对化，也不为了主线任务强扭人格。常态语气不同于当场情绪，
+按当前已知压力和对方反应调整，未知就保留未知，不从别的年龄/历史补说话习惯。
+口头禅依catchphrases的when与avoid_when选择，可使用、变体或收住；不考勤，不固定每句/每轮出现，
+未出现不等于人物失真，不给所有人同一口癖，不擅造方言、亲昵称呼或共同经历。
+缺speech_style时仍依据已有voice/goal/关系与观察，不自行补一套口头禅。'''
+ACTOR_INSTRUCTION += '''
+对白按当前交流作用选择，不凑轮次，不轮流解释背景或重复确认已知信息；闲聊、仪式、趣味或长独白有作用时可保留。
+没有新的说话意图可按原契约选择有依据的沉默/行动，不能新增skip字段或擅自改他人选择；场景轮次由主会话规划。
+关键选择、冲突和潜台词要有充分表达，普通事务不必全部逐句演出；不为降低对白密度虚构动作或心理。'''
+ACTOR_INSTRUCTION += '''
+相关成长场景中，提出自己有依据的功法练习尝试、受阻后的方法调整或主动停止，不自行宣布晋升或能力成功。
+可选pov_interior只表达自己基于可公开所知的感知、回想、自我判断、疑惑与取舍，不把private_intent当正文；
+是否进入成稿仍由场景许可与POV/可见过滤决定。允许主观误判，体感不等于客观机制，不能补未知口诀、境界或未来答案。
+自述不必说出口，不默认改为第一人称；没有相关练习任务时不硬塞修炼或顿悟。'''
+SPEECH_RHYTHM_PRESERVATION = '''
+保留已采纳speech中的省略号、破折号、结巴、重复及改口的原始字符和次数，不能以去冗余或统一标点为由抹平语气。
+需改符号、增删重复或改变停顿，回人物重提/显式修订，不在compose或整章偷偷润色。'''
+SPEECH_RHYTHM_PRESERVATION += '\n不按性格标签、关系推断或口癖表给人物新增台词、口头禅/亲昵称呼；未说出口的私密习惯不是成稿素材。'
+NOVEL_DIALOGUE_PACING = '''
+按小说叙述组织交流段、场景与整章的节奏：直接对白用于关键选择/冲突、潜台词、人物声音或有作用的闲聊；
+日常手续、重复已知信息可在未锁定且事实已许可的材料阶段概述，不把正文写成逐轮聊天记录。
+重要信息、关系或处境变化处，用已裁定可见行动、POV感知及明确许可的内心承接；缺反应退回人物/场景，不凭空补。
+保留人物时空位置与身体约束，整章回查节奏变化；快速对答、对白主导场景或有作用的长独白可以成立。
+不设对白比例或连续句数硬阈值，不每几句插动作/心理/景物稀释，不靠加长无关旁白达到表面平衡。
+已采纳speech不能为降密度删改、概述或拆串插叙；应暂停交主会话重设计/新排练或显式修订，不代写人物选择。
+规则用于创作判断，不将密度诊断、比例说明或修订指令写进小说正文。'''
+INTERIORITY_PROGRESSION = '''
+有关章节按章卡展开自述、功法练习与晋升的具体过程，作为人物和能力变化的铺垫，不只用一句努力或升级结论略过。
+自述沿当前叙事视角呈现感知、回想、自我判断、疑惑与取舍；不默认第一人称，不把他人私心或private_intent转成正文。
+只使用本包已裁定可见事件和明确许可的POV内心；整章可沿用已完成场景正文的许可内心，accepted_events不含原始内心字段。
+练习重点写既有基线与目标、具体尝试、身体/感官及结果反馈、理解或方法调整、局部结果；依本书法门、资源、时间和身体限制组织。
+晋升前让已有积累、瓶颈与门槛可回溯，过程中保留实际选择和可见现象，之后交代有限验证、稳定程度、代价与仍不能做到之处。
+人物体感或自信不等于客观晋升，不把尝试意图当成功，不增加本包没有的动作、机制、内心、能力或新选择；缺材料退回人物/场景。
+铺垫用已出现的难点、方法、限制或小结果，后续实际应用/重释须有前证，不补写不存在的前章努力，不泄露未来回收答案。
+关键变化按任务写足，已稳定重复练习可概述；允许停滞、平静、误判、失败或主动停止，不要求每章修炼/突破或每次受伤/异象。
+不设固定修炼篇幅/比例/频率，不用口诀术语、情绪复述或同一过程反复凑字数；保留已采纳speech原串，不输出创作检查清单。'''
 NARRATOR_INSTRUCTION = '''你是唯一主线叙述Agent。本阶段只裁定当前行动意图是否被采纳及可观察后果。
 speech由人物Agent负责，不改写其意思；不得强行宣布另一个角色的思想或感情。遵守场景规则，
 不要添加新能力或新正式设定。只向实际观察者分发结果。拒绝时给修改理由而不广播未发生的行动。
 所有结果只属于排练候选。必要时提前结束；不要为了推进而让人物失去独立动机。'''
 NARRATOR_INSTRUCTION += '''
 称呼无依据或对白违背人物当前目标、情境和关系时，给具体拒绝理由，不代写speech。
-拒绝仍推进当前轮次；需由人物在后续允许轮次或新排练修正，不能假称已自动原地重试。'''
+拒绝仍推进当前轮次；需由人物在后续允许轮次或新排练修正，不能假称已自动原地重试。
+把实际认可的可听语气、停顿、表情/目光和动作及其与speech的先后写入result，让其与当场目的、
+场景限制及对白共同构成一次反应。action_intent不自动成为事实；不可行则拒绝，不擅改为另一个选择。
+未被看见/听见的反应不冒称公开，不能用表情直接断定私心；不要为补表演添加无依据动作。'''
+NARRATOR_INSTRUCTION += '\n依当前已裁定状态确认场景任务已完成且无关键未决时，可用end_scene提前结束，避免凑轮次；不以降对白密度为由跳过未完成选择或改动speech。'
+NARRATOR_INSTRUCTION += '''
+功法练习或晋升只依本场已许可规则、既有能力/资源/时间及可观察条件裁定局部结果，区分尝试、体感与客观达成门槛。
+角色自信、发热或一次成功不自动证明晋升/稳定掌握；未知机制不补造，不为铺垫强制受伤或成功，尚属候选不写Canon。'''
 COMPOSE_INSTRUCTION = '''你是主线叙述Agent的成稿阶段。只使用此包，不沿用裁定阶段的私有上下文。
 生成统一文风的中文小说场景，不输出Agent聊天记录或JSON日志。保持限定POV，不能知道其他角色私心。
 保留包中已采纳的直接对白原句，组织动作、场景、节奏与过渡；不要发明新关键事实或替人物作出新选择。
 人物的沉默与拒绝可以保留。未提供的内心不要断言。结果是待审候选，不是正式正文。'''
 COMPOSE_INSTRUCTION += '''
 叙述称呼用获准全名/已设绰号昵称，特殊单姓须有语境；不补未知真名或编新昵称。
-已采纳speech若存在称呼或口语问题，交回人物重新排练/相应修订，不以统一文风为由擅改对白。'''
+已采纳speech若存在称呼或口语问题，交回人物重新排练/相应修订，不以统一文风为由擅改对白。
+将当前场景压力、人物表达与events中已裁定的可见result组织为同一次反应：语气/停顿、表情/目光、
+动作和对白互相承接或有依据地反衬，保留动作与发言先后，不将原始行动意图当发生事实。
+speech须作为连续原串保留，动作置于原串前后，不在串内插叙拆句；要改词/加语气词/拆句须回人物重提。
+不把每句变成台词加表情加动作的剧本格式；关键变化处写足，普通接话可轻，允许沉默和无动作短答。'''
+COMPOSE_INSTRUCTION += SPEECH_RHYTHM_PRESERVATION
+COMPOSE_INSTRUCTION += NOVEL_DIALOGUE_PACING
+COMPOSE_INSTRUCTION += INTERIORITY_PROGRESSION
 
 
 def _json(obj: Any) -> str:
@@ -111,6 +176,22 @@ def memory_key(config: dict, instance_id: str) -> str:
     return f"{a['character_id']}:{a['id']}:{a['history_id']}"
 
 
+def _validate_speech_style(value: Any) -> None:
+    # Habits belong to one age/history instance, never the shared profile.
+    _only(value,set(),{'personality','baseline_tone','verbal_habits','catchphrases'})
+    for key in ('personality','baseline_tone','verbal_habits'):
+        if key in value:_text(value[key],'speech_style.'+key)
+    phrases=_list(value.get('catchphrases',[]),'speech_style.catchphrases')
+    if len(phrases)>8:raise ValueError('当前实例口头禅最多8项，不作出勤要求')
+    seen=set()
+    for row in phrases:
+        _only(row,{'phrase','when','avoid_when'})
+        for key in ('phrase','when','avoid_when'):_text(row[key],'catchphrases.'+key)
+        phrase=row['phrase'].strip()
+        if phrase in seen:raise ValueError('当前实例口头禅phrase重复')
+        seen.add(phrase)
+
+
 def validate_config(project: Path, config: dict, scene: dict) -> None:
     _only(config,{'schema_version','core_ids','profiles','instances'}, {'max_packet_chars'})
     if config['schema_version']!='0.7': raise ValueError('ensemble schema_version 必须为0.7')
@@ -131,7 +212,7 @@ def validate_config(project: Path, config: dict, scene: dict) -> None:
     presences={x['id']:x for x in flow.getjson(presence_path).get('presences',[])} if presence_path.exists() else {}
     seen=set()
     for a in _list(config['instances'],'instances'):
-        _only(a,{'id','character_id','history_id','from_at','to_at','age','goal','private_fear','relationship_view','knowledge'},{'presence_id'})
+        _only(a,{'id','character_id','history_id','from_at','to_at','age','goal','private_fear','relationship_view','knowledge'},{'presence_id','speech_style'})
         aid=_id(a['id'])
         if aid in seen: raise ValueError('人物实例重复')
         seen.add(aid)
@@ -146,6 +227,7 @@ def validate_config(project: Path, config: dict, scene: dict) -> None:
             if presence['age_at_start']!=a['age'] or not (_time(presence['from_at'])<=_time(a['from_at'])<=_time(a['to_at'])<=_time(presence['to_at'])):
                 raise ValueError('人物年龄或在场窗口偏离已登记presence')
         for k in ('goal','private_fear','relationship_view'):_text(a[k],k,empty=True)
+        if 'speech_style' in a:_validate_speech_style(a['speech_style'])
         facts=set()
         for f in _list(a['knowledge'],'knowledge'):
             _only(f,{'id','text','kind','source','known_from_step','can_disclose'})
@@ -278,6 +360,18 @@ def start(project: Path, config: dict, scene: dict, memories: list | None = None
     return {'ensemble_id':sid,'stage':'actor','directory':str(folder),'status':'ready_for_external_host','workers':sorted({worker(config,a) for a in scene['cast']}|{'narrator'})}
 
 
+def visible_events(state: dict, include_pov_interior: bool = False) -> list:
+    """Same reader/POV projection for scene prose and chapter assembly."""
+    sc=state['scene'];events=[]
+    for event in state['events']:
+        if not event['reader_visible'] or sc['pov_instance'] not in event['observers']:continue
+        item=deepcopy({k:event[k] for k in ('id','actor_id','speech','result')})
+        if include_pov_interior and sc.get('allow_pov_interior',False) and event['actor_id']==sc['pov_instance']:
+            item['pov_interior']=event.get('pov_interior','')
+        events.append(item)
+    return events
+
+
 def _build_packet(state: dict) -> dict:
     c=state['config'];sc=state['scene'];stage=state['stage'];sid=state['ensemble_id']
     if stage=='complete':raise ValueError('排练已完成，没有待执行调用')
@@ -293,6 +387,7 @@ def _build_packet(state: dict) -> dict:
              'prior_self_notes':[x['private_intent'] for x in state['private'] if x['actor_id']==aid and x['accepted']],
              'own_feedback':[x['resolution_reason'] for x in state['private'] if x['actor_id']==aid],
              'at':sc['at'],'location':sc['location'],'public_brief':sc['public_brief'],'cast':cast_names}
+        if 'speech_style' in a:inp['speech_style']=deepcopy(a['speech_style'])
         wid=worker(c,aid);session=f'{sid}:{wid}:{memory_key(c,aid)}';instruction=ACTOR_INSTRUCTION
         schema={'required':['request_id','actor_id','speech','action_intent','private_intent','used_fact_ids','disclosed_fact_ids'],'optional':['pov_interior']}
     elif stage=='resolve':
@@ -303,13 +398,7 @@ def _build_packet(state: dict) -> dict:
         wid='narrator';session=f'{sid}:narrator:resolve';instruction=NARRATOR_INSTRUCTION
         schema={'required':['request_id','accept','reason','result','observers','reader_visible','end_scene']}
     else:
-        events=[]
-        for event in state['events']:
-            if not event['reader_visible'] or sc['pov_instance'] not in event['observers']:continue
-            item={k:event[k] for k in ('id','actor_id','speech','result')}
-            if sc.get('allow_pov_interior',False) and event['actor_id']==sc['pov_instance']:
-                item['pov_interior']=event.get('pov_interior','')
-            events.append(item)
+        events=visible_events(state,include_pov_interior=True)
         inp={'chapter_id':sc['chapter_id'],'at':sc['at'],'location':sc['location'],'pov_instance':sc['pov_instance'],
              'reader_brief':sc['reader_brief'],'cast':cast_names,'events':events}
         if 'writing_profile' in state:

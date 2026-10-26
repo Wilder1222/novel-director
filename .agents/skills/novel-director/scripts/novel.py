@@ -618,7 +618,7 @@ def cmd_reference(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--version", action="version", version="Novel Director 0.11.0")
+    parser.add_argument("--version", action="version", version="Novel Director 0.13.0")
     sub = parser.add_subparsers(dest="command", required=True)
     sp = sub.add_parser("init", help="复制空白项目模板，拒绝覆盖")
     sp.add_argument("project")

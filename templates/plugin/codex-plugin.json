@@ -1,6 +1,6 @@
 {
   "name": "novel-director",
-  "version": "0.11.0",
+  "version": "0.13.0",
   "description": "中文小说创作、角色协作与证据审稿的本地技能包。",
   "skills": "./skills/",
   "interface": {

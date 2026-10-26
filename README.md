@@ -1,12 +1,12 @@
 # Novel Director
 
-中文长篇小说创作工具：Director **0.11.0**，Studio **0.4.1**。作者以自然语言构思、规划、写候选、审稿和修改；主会话维护文件，唯一 narrator 与人物执行者通过有限信息包协作。
+中文长篇小说创作工具：Director **0.13.0**，Studio **0.4.3**。作者以自然语言构思、规划、写候选、审稿和修改；主会话维护文件，唯一 narrator 与人物执行者通过有限信息包协作。
 
-所有新任务采用[阶段作品与核验](.agents/skills/novel-director/references/staged-workflow.md)：按意图逐阶段交付真实作品、逐项证据和版本绑定核验，未通过或过期不能推进；作者批准独立保留。升级依据见[研究](research/2026-10-22-v0.9.md)与[方案](research/2026-10-22-v0.9-plan.md)。
+所有新任务采用[阶段作品与核验](.agents/skills/novel-director/references/staged-workflow.md)：按意图逐阶段交付真实作品、逐项证据和版本绑定核验，未通过或过期不能推进；作者批准独立保留。当前升级依据见[研究](research/2026-10-24-dialogue-embodiment.md)与[方案](research/2026-10-24-dialogue-embodiment-plan.md)。
 
-[本版变化](docs/V0.11-CHANGELOG.md) · [实际验证与边界](docs/V0.11-VALIDATION.md)。离线阶段演示：`python scripts/stage_demo.py <不存在的新目录>`，结果明确标记为合成协议夹具。
+[本版变化](docs/CURRENT-RELEASE.md) · [实际验证与边界](docs/CURRENT-VALIDATION.md)。离线阶段演示：`python scripts/stage_demo.py <不存在的新目录>`，结果明确标记为合成协议夹具。
 
-[章/剧情硬范围与细节铺垫](.agents/skills/novel-director/references/writing-spec.md) · [36条原创反AI味案例与检查](.agents/skills/novel-director/references/prose-risks.md) · [当前作品细读与技巧索引](.agents/skills/novel-director/references/reference-library.md)。当前已达标作品及实际数量见索引；每部20–50章、至少20章完整模型细读并实际复核。新增五部的已完成与缺口见[指定参考进度](research/REQUESTED-REFERENCES.md)。模型复核不是外部读者验收。
+[章/剧情硬范围与细节铺垫](.agents/skills/novel-director/references/writing-spec.md) · [56条原创反AI味案例与检查](.agents/skills/novel-director/references/prose-risks.md) · [当前作品细读与技巧索引](.agents/skills/novel-director/references/reference-library.md)。当前已达标作品及实际数量见索引；每部20–50章、至少20章完整模型细读并实际复核。新增五部的已完成与缺口见[指定参考进度](research/REQUESTED-REFERENCES.md)。模型复核不是外部读者验收。
 
 当前每章硬范围按作者要求为 **3000–6000 LN**（标点空白不计），剧情默认500–2500；新章先规划具体章卡，再计数核验。
 
@@ -74,3 +74,7 @@ package输出Director Skill和完整workspace ZIP；plugin输出含portable与Co
 角色引擎当前支持第一人称/第三人称限知，不把全知叙述伪称已支持。多场景组装检查场序与对白，情绪、行动与转场仍需整章审稿。
 宿主探针只是有来源的本地记录，不创建权限沙箱；缺乏真正禁工具条件时暂停严格人物委派。
 本版不包含网站服务、后台自动连载执行器，也未对作者原小说进行真实作品验收。
+
+对白按[场景中的联合反应](.agents/skills/novel-director/references/dialogue-embodiment.md)创作：台词、语气词/停顿、表情和动作共同响应剧情压力、人设、情绪与关系。可见裁定结果随场景进入整章，逐位发言者必审；允许沉默、正式短答，不每句凑表演。语境语料56例，检查不是AI作者鉴定或文学效果保证。
+
+本版写作规则：按情境使用省略号、骤断、结巴、重复与改口；当前实例speech_style综合关系、任务、性格、语气与条件口头禅。按[小说对白密度](.agents/skills/novel-director/references/dialogue-density.md)控制展开/概述与交流段、场景、整章节奏，保留有作用的快速对答，不设比例/句数配额，不逐句堆动作；已采纳台词不擅改。并按[自述、练习与晋升铺垫](.agents/skills/novel-director/references/interiority-progression.md)展开相关章节的感知/自我判断、尝试/反馈/调整及晋升前中后变化，连接真实前证与后续作用；不强制每章升级。语料1.5.0仍为56例，新增四组教学例见独立参考。发行包、本机安装与独立网站Runner分别核验；网站使用受控语境规则投影，不等同于完整Python引擎。具体执行范围见当前验证说明。

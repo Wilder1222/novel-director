@@ -6,7 +6,7 @@ import json
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.11.0'
+VERSION = '0.13.0'
 DIRECTORIES = ('.agents/skills', '.codex/agents', 'scripts', 'tests', 'docs', 'research', 'templates')
 FILES = ('AGENTS.md', 'README.md', '.gitignore', '.gitattributes', '.codex/config.toml',
          'ENGINE-PROVENANCE.json', 'PUBLIC-SOURCE-MANIFEST.json')
@@ -64,7 +64,7 @@ def inventory(root):
 
 def refresh(root=ROOT):
     source = inventory(root)
-    manifest = {'engine_version': VERSION, 'studio_version': '0.4.1', 'hash_policy': 'utf8-lf+reference-bytes-v1',
+    manifest = {'engine_version': VERSION, 'studio_version': '0.4.3', 'hash_policy': 'utf8-lf+reference-bytes-v1',
                 'origin': 'ENGINE-PROVENANCE.json (historical, unchanged)',
                 'files': {name: hashlib.sha256(raw).hexdigest() for name, raw in sorted(source.items())},
                 'notice': 'Current local source receipt; not a signature, host test, or literary acceptance.'}
